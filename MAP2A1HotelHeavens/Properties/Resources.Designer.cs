@@ -63,9 +63,39 @@ namespace MAP2A1HotelHeavens.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Avatar_1LP {
+            get {
+                object obj = ResourceManager.GetObject("Avatar_1LP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Avatar_2LP {
+            get {
+                object obj = ResourceManager.GetObject("Avatar_2LP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cerrar {
             get {
                 object obj = ResourceManager.GetObject("cerrar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hotelImagenLP {
+            get {
+                object obj = ResourceManager.GetObject("hotelImagenLP", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
