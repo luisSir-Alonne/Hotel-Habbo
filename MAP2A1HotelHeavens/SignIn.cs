@@ -108,5 +108,10 @@ namespace MAP2A1HotelHeavens
                 return "Incluye mayúsculas, minúsculas y números.";
             return null; 
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
