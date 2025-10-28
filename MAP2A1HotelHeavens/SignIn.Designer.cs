@@ -50,6 +50,7 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblMensaje = new System.Windows.Forms.Label();
+            this.btnRegresar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -293,12 +294,23 @@
             this.lblMensaje.Size = new System.Drawing.Size(0, 21);
             this.lblMensaje.TabIndex = 40;
             // 
+            // btnRegresar
+            // 
+            this.btnRegresar.Location = new System.Drawing.Point(349, 421);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegresar.TabIndex = 41;
+            this.btnRegresar.Text = "button1";
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click_1);
+            // 
             // SignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(46)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(662, 471);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.chkMostrarPass);
             this.Controls.Add(this.mtbTelefono);
@@ -353,5 +365,6 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label lblMensaje;
+        private System.Windows.Forms.Button btnRegresar;
     }
 }
