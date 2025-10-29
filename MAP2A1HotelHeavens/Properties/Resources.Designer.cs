@@ -93,6 +93,36 @@ namespace MAP2A1HotelHeavens.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_jpc517jpc517jpc5 {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_jpc517jpc517jpc5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_ubow9ubow9ubow9u {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_ubow9ubow9ubow9u", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_ukh5zqukh5zqukh5 {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_ukh5zqukh5zqukh5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hotelImagenLP {
             get {
                 object obj = ResourceManager.GetObject("hotelImagenLP", resourceCulture);
