@@ -61,17 +61,19 @@
             this.lblMenuCerrar.BackColor = System.Drawing.Color.Peru;
             this.lblMenuCerrar.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblMenuCerrar.Location = new System.Drawing.Point(0, 0);
+            this.lblMenuCerrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMenuCerrar.Name = "lblMenuCerrar";
-            this.lblMenuCerrar.Size = new System.Drawing.Size(662, 43);
+            this.lblMenuCerrar.Size = new System.Drawing.Size(883, 53);
             this.lblMenuCerrar.TabIndex = 6;
             // 
             // picMinimizar
             // 
             this.picMinimizar.BackColor = System.Drawing.Color.Peru;
             this.picMinimizar.Image = global::MAP2A1HotelHeavens.Properties.Resources.menos;
-            this.picMinimizar.Location = new System.Drawing.Point(577, 0);
+            this.picMinimizar.Location = new System.Drawing.Point(769, 0);
+            this.picMinimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picMinimizar.Name = "picMinimizar";
-            this.picMinimizar.Size = new System.Drawing.Size(34, 43);
+            this.picMinimizar.Size = new System.Drawing.Size(45, 53);
             this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picMinimizar.TabIndex = 8;
             this.picMinimizar.TabStop = false;
@@ -80,9 +82,10 @@
             // 
             this.picCerrar.BackColor = System.Drawing.Color.Peru;
             this.picCerrar.Image = global::MAP2A1HotelHeavens.Properties.Resources.cerrar;
-            this.picCerrar.Location = new System.Drawing.Point(617, 0);
+            this.picCerrar.Location = new System.Drawing.Point(823, 0);
+            this.picCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picCerrar.Name = "picCerrar";
-            this.picCerrar.Size = new System.Drawing.Size(34, 43);
+            this.picCerrar.Size = new System.Drawing.Size(45, 53);
             this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picCerrar.TabIndex = 7;
             this.picCerrar.TabStop = false;
@@ -92,10 +95,10 @@
             this.chkMostrarPass.AutoSize = true;
             this.chkMostrarPass.Font = new System.Drawing.Font("Elephant", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkMostrarPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(227)))), ((int)(((byte)(220)))));
-            this.chkMostrarPass.Location = new System.Drawing.Point(28, 380);
-            this.chkMostrarPass.Margin = new System.Windows.Forms.Padding(2);
+            this.chkMostrarPass.Location = new System.Drawing.Point(37, 468);
+            this.chkMostrarPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkMostrarPass.Name = "chkMostrarPass";
-            this.chkMostrarPass.Size = new System.Drawing.Size(172, 22);
+            this.chkMostrarPass.Size = new System.Drawing.Size(209, 26);
             this.chkMostrarPass.TabIndex = 39;
             this.chkMostrarPass.Text = "Mostrar contraseñas";
             this.chkMostrarPass.UseVisualStyleBackColor = true;
@@ -104,11 +107,11 @@
             // 
             this.mtbTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(220)))), ((int)(((byte)(207)))));
             this.mtbTelefono.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbTelefono.Location = new System.Drawing.Point(116, 348);
-            this.mtbTelefono.Margin = new System.Windows.Forms.Padding(2);
+            this.mtbTelefono.Location = new System.Drawing.Point(155, 428);
+            this.mtbTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mtbTelefono.Mask = "000-000-0000";
             this.mtbTelefono.Name = "mtbTelefono";
-            this.mtbTelefono.Size = new System.Drawing.Size(96, 28);
+            this.mtbTelefono.Size = new System.Drawing.Size(127, 33);
             this.mtbTelefono.TabIndex = 38;
             // 
             // mtbPass2
@@ -116,10 +119,10 @@
             this.mtbPass2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(220)))), ((int)(((byte)(207)))));
             this.mtbPass2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtbPass2.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbPass2.Location = new System.Drawing.Point(216, 307);
-            this.mtbPass2.Margin = new System.Windows.Forms.Padding(2);
+            this.mtbPass2.Location = new System.Drawing.Point(288, 378);
+            this.mtbPass2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mtbPass2.Name = "mtbPass2";
-            this.mtbPass2.Size = new System.Drawing.Size(397, 28);
+            this.mtbPass2.Size = new System.Drawing.Size(529, 33);
             this.mtbPass2.TabIndex = 37;
             this.mtbPass2.UseSystemPasswordChar = true;
             // 
@@ -128,10 +131,10 @@
             this.mtbPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(220)))), ((int)(((byte)(207)))));
             this.mtbPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtbPass.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbPass.Location = new System.Drawing.Point(265, 264);
-            this.mtbPass.Margin = new System.Windows.Forms.Padding(2);
+            this.mtbPass.Location = new System.Drawing.Point(353, 325);
+            this.mtbPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mtbPass.Name = "mtbPass";
-            this.mtbPass.Size = new System.Drawing.Size(348, 28);
+            this.mtbPass.Size = new System.Drawing.Size(463, 33);
             this.mtbPass.TabIndex = 36;
             this.mtbPass.UseSystemPasswordChar = true;
             // 
@@ -140,10 +143,10 @@
             this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.btnRegistrar.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(66)))), ((int)(((byte)(46)))));
-            this.btnRegistrar.Location = new System.Drawing.Point(463, 369);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistrar.Location = new System.Drawing.Point(617, 454);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(110, 33);
+            this.btnRegistrar.Size = new System.Drawing.Size(147, 41);
             this.btnRegistrar.TabIndex = 34;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
@@ -154,10 +157,10 @@
             this.chkTyC.AutoSize = true;
             this.chkTyC.Font = new System.Drawing.Font("Elephant", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkTyC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(197)))), ((int)(((byte)(194)))));
-            this.chkTyC.Location = new System.Drawing.Point(28, 406);
-            this.chkTyC.Margin = new System.Windows.Forms.Padding(2);
+            this.chkTyC.Location = new System.Drawing.Point(37, 500);
+            this.chkTyC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkTyC.Name = "chkTyC";
-            this.chkTyC.Size = new System.Drawing.Size(279, 24);
+            this.chkTyC.Size = new System.Drawing.Size(333, 28);
             this.chkTyC.TabIndex = 33;
             this.chkTyC.Text = "Acepto los términos y condiciones";
             this.chkTyC.UseVisualStyleBackColor = true;
@@ -167,10 +170,10 @@
             this.txtCorreo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(220)))), ((int)(((byte)(207)))));
             this.txtCorreo2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCorreo2.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo2.Location = new System.Drawing.Point(127, 219);
-            this.txtCorreo2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCorreo2.Location = new System.Drawing.Point(169, 270);
+            this.txtCorreo2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCorreo2.Name = "txtCorreo2";
-            this.txtCorreo2.Size = new System.Drawing.Size(486, 28);
+            this.txtCorreo2.Size = new System.Drawing.Size(647, 33);
             this.txtCorreo2.TabIndex = 32;
             // 
             // txtNombre
@@ -178,10 +181,10 @@
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(220)))), ((int)(((byte)(207)))));
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombre.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(176, 136);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombre.Location = new System.Drawing.Point(235, 167);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(437, 28);
+            this.txtNombre.Size = new System.Drawing.Size(582, 33);
             this.txtNombre.TabIndex = 31;
             // 
             // txtCorreo
@@ -189,10 +192,10 @@
             this.txtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(220)))), ((int)(((byte)(207)))));
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCorreo.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(176, 179);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCorreo.Location = new System.Drawing.Point(235, 220);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(437, 28);
+            this.txtCorreo.Size = new System.Drawing.Size(582, 33);
             this.txtCorreo.TabIndex = 30;
             // 
             // lblTelefono
@@ -200,10 +203,9 @@
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(221)))), ((int)(((byte)(143)))));
-            this.lblTelefono.Location = new System.Drawing.Point(29, 351);
-            this.lblTelefono.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTelefono.Location = new System.Drawing.Point(39, 432);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(83, 21);
+            this.lblTelefono.Size = new System.Drawing.Size(105, 26);
             this.lblTelefono.TabIndex = 29;
             this.lblTelefono.Text = "Teléfono:";
             // 
@@ -212,10 +214,9 @@
             this.lblConfirmarPass.AutoSize = true;
             this.lblConfirmarPass.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmarPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(221)))), ((int)(((byte)(143)))));
-            this.lblConfirmarPass.Location = new System.Drawing.Point(24, 309);
-            this.lblConfirmarPass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblConfirmarPass.Location = new System.Drawing.Point(32, 380);
             this.lblConfirmarPass.Name = "lblConfirmarPass";
-            this.lblConfirmarPass.Size = new System.Drawing.Size(188, 21);
+            this.lblConfirmarPass.Size = new System.Drawing.Size(239, 26);
             this.lblConfirmarPass.TabIndex = 28;
             this.lblConfirmarPass.Text = "Confirmar contraseña:";
             // 
@@ -224,10 +225,9 @@
             this.lblPass.AutoSize = true;
             this.lblPass.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(221)))), ((int)(((byte)(143)))));
-            this.lblPass.Location = new System.Drawing.Point(18, 221);
-            this.lblPass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPass.Location = new System.Drawing.Point(24, 272);
             this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(105, 21);
+            this.lblPass.Size = new System.Drawing.Size(134, 26);
             this.lblPass.TabIndex = 27;
             this.lblPass.Text = "Contraseña:";
             // 
@@ -236,10 +236,9 @@
             this.lblConfirmarCorreo.AutoSize = true;
             this.lblConfirmarCorreo.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmarCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(221)))), ((int)(((byte)(143)))));
-            this.lblConfirmarCorreo.Location = new System.Drawing.Point(18, 266);
-            this.lblConfirmarCorreo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblConfirmarCorreo.Location = new System.Drawing.Point(24, 327);
             this.lblConfirmarCorreo.Name = "lblConfirmarCorreo";
-            this.lblConfirmarCorreo.Size = new System.Drawing.Size(243, 21);
+            this.lblConfirmarCorreo.Size = new System.Drawing.Size(308, 26);
             this.lblConfirmarCorreo.TabIndex = 26;
             this.lblConfirmarCorreo.Text = "Confirmar correo electrónico:";
             // 
@@ -248,10 +247,9 @@
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(221)))), ((int)(((byte)(143)))));
-            this.lblCorreo.Location = new System.Drawing.Point(18, 181);
-            this.lblCorreo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCorreo.Location = new System.Drawing.Point(24, 223);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(160, 21);
+            this.lblCorreo.Size = new System.Drawing.Size(203, 26);
             this.lblCorreo.TabIndex = 25;
             this.lblCorreo.Text = "Correo electrónico:";
             // 
@@ -260,24 +258,23 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(221)))), ((int)(((byte)(143)))));
-            this.lblNombre.Location = new System.Drawing.Point(18, 138);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre.Location = new System.Drawing.Point(24, 170);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(154, 21);
+            this.lblNombre.Size = new System.Drawing.Size(194, 26);
             this.lblNombre.TabIndex = 24;
             this.lblNombre.Text = "Nombre completo:";
             // 
             // lblTitulo
             // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Elephant", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(148)))), ((int)(((byte)(31)))));
-            this.lblTitulo.Location = new System.Drawing.Point(169, 64);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 20F);
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(225, 79);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(327, 41);
+            this.lblTitulo.Size = new System.Drawing.Size(547, 63);
             this.lblTitulo.TabIndex = 23;
             this.lblTitulo.Text = "Registro de usuario";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // errorProvider1
             // 
@@ -288,17 +285,17 @@
             this.lblMensaje.AutoSize = true;
             this.lblMensaje.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje.ForeColor = System.Drawing.Color.LightCoral;
-            this.lblMensaje.Location = new System.Drawing.Point(29, 432);
-            this.lblMensaje.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMensaje.Location = new System.Drawing.Point(39, 532);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(0, 21);
+            this.lblMensaje.Size = new System.Drawing.Size(0, 26);
             this.lblMensaje.TabIndex = 40;
             // 
             // btnRegresar
             // 
-            this.btnRegresar.Location = new System.Drawing.Point(349, 421);
+            this.btnRegresar.Location = new System.Drawing.Point(465, 518);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegresar.Size = new System.Drawing.Size(100, 28);
             this.btnRegresar.TabIndex = 41;
             this.btnRegresar.Text = "button1";
             this.btnRegresar.UseVisualStyleBackColor = true;
@@ -306,10 +303,10 @@
             // 
             // SignIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(46)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(662, 471);
+            this.ClientSize = new System.Drawing.Size(883, 580);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.chkMostrarPass);
@@ -332,6 +329,7 @@
             this.Controls.Add(this.picCerrar);
             this.Controls.Add(this.lblMenuCerrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SignIn";
             this.Text = "SignIn";
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
