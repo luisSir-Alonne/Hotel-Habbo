@@ -104,19 +104,22 @@
             this.textBoxUsuario.PasswordChar = '*';
             this.textBoxUsuario.Size = new System.Drawing.Size(197, 22);
             this.textBoxUsuario.TabIndex = 8;
+            this.toolTipInfoLogin.SetToolTip(this.textBoxUsuario, "Usuario");
             // 
             // textBoxContraseña
             // 
+            this.textBoxContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxContraseña.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxContraseña.Location = new System.Drawing.Point(81, 190);
             this.textBoxContraseña.Name = "textBoxContraseña";
             this.textBoxContraseña.PasswordChar = '*';
             this.textBoxContraseña.Size = new System.Drawing.Size(197, 22);
             this.textBoxContraseña.TabIndex = 9;
+            this.toolTipInfoLogin.SetToolTip(this.textBoxContraseña, "Contraseña");
             // 
             // buttonIniciar
             // 
-            this.buttonIniciar.BackColor = System.Drawing.Color.Peru;
+            this.buttonIniciar.BackColor = System.Drawing.Color.Goldenrod;
             this.buttonIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonIniciar.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonIniciar.Location = new System.Drawing.Point(107, 240);
@@ -124,6 +127,7 @@
             this.buttonIniciar.Size = new System.Drawing.Size(153, 41);
             this.buttonIniciar.TabIndex = 10;
             this.buttonIniciar.Text = "Iniciar Sesion";
+            this.toolTipInfoLogin.SetToolTip(this.buttonIniciar, "Presiona el boton una vez\r\ninsertado los datos");
             this.buttonIniciar.UseVisualStyleBackColor = false;
             // 
             // checkBoxOcultar1
@@ -150,12 +154,16 @@
             // 
             // toolTipInfoLogin
             // 
+            this.toolTipInfoLogin.BackColor = System.Drawing.Color.Black;
+            this.toolTipInfoLogin.ForeColor = System.Drawing.Color.Goldenrod;
+            this.toolTipInfoLogin.IsBalloon = true;
             this.toolTipInfoLogin.ToolTipTitle = "Login";
             // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(379, 398);
             this.ControlBox = false;
             this.Controls.Add(this.checkBoxOcultar2);
