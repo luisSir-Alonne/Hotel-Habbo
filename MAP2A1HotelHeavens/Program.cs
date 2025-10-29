@@ -16,7 +16,7 @@ namespace MAP2A1HotelHeavens
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SignIn());
+            Application.Run(new LogIn());
         }
     }
 }
