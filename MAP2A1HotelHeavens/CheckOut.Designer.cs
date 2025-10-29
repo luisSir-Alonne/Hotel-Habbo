@@ -66,7 +66,7 @@
             this.lblMenuCerrar.Location = new System.Drawing.Point(0, 0);
             this.lblMenuCerrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMenuCerrar.Name = "lblMenuCerrar";
-            this.lblMenuCerrar.Size = new System.Drawing.Size(1821, 53);
+            this.lblMenuCerrar.Size = new System.Drawing.Size(594, 53);
             this.lblMenuCerrar.TabIndex = 3;
             // 
             // picMinimizar
@@ -74,7 +74,7 @@
             this.picMinimizar.BackColor = System.Drawing.Color.Peru;
             this.picMinimizar.Image = global::MAP2A1HotelHeavens.Properties.Resources.menos;
             this.picMinimizar.Location = new System.Drawing.Point(1723, 0);
-            this.picMinimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picMinimizar.Margin = new System.Windows.Forms.Padding(4);
             this.picMinimizar.Name = "picMinimizar";
             this.picMinimizar.Size = new System.Drawing.Size(45, 53);
             this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -86,7 +86,7 @@
             this.picCerrar.BackColor = System.Drawing.Color.Peru;
             this.picCerrar.Image = global::MAP2A1HotelHeavens.Properties.Resources.cerrar;
             this.picCerrar.Location = new System.Drawing.Point(1776, 0);
-            this.picCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.picCerrar.Name = "picCerrar";
             this.picCerrar.Size = new System.Drawing.Size(45, 53);
             this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -96,60 +96,78 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(85, 124);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label1.Location = new System.Drawing.Point(6, 70);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 16);
+            this.label1.Size = new System.Drawing.Size(200, 28);
             this.label1.TabIndex = 6;
             this.label1.Text = "Nombre del huésped:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(85, 159);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label2.Location = new System.Drawing.Point(6, 120);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 16);
+            this.label2.Size = new System.Drawing.Size(111, 28);
             this.label2.TabIndex = 7;
             this.label2.Text = "Habitación:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(85, 193);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label3.Location = new System.Drawing.Point(6, 168);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 16);
+            this.label3.Size = new System.Drawing.Size(90, 28);
             this.label3.TabIndex = 8;
             this.label3.Text = "Teléfono:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(85, 228);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label4.Location = new System.Drawing.Point(6, 223);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 16);
+            this.label4.Size = new System.Drawing.Size(167, 28);
             this.label4.TabIndex = 9;
             this.label4.Text = "Fecha De entrada:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(85, 282);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label5.Location = new System.Drawing.Point(6, 278);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 16);
+            this.label5.Size = new System.Drawing.Size(148, 28);
             this.label5.TabIndex = 10;
             this.label5.Text = "Fecha de salida:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(86, 328);
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label6.Location = new System.Drawing.Point(6, 325);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 16);
+            this.label6.Size = new System.Drawing.Size(107, 28);
             this.label6.TabIndex = 11;
             this.label6.Text = "Consumos:";
             // 
@@ -159,14 +177,14 @@
             this.lvwConsumos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Serivcio,
             this.Precio});
-            this.lvwConsumos.Font = new System.Drawing.Font("Elephant", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvwConsumos.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lvwConsumos.FullRowSelect = true;
             this.lvwConsumos.GridLines = true;
             this.lvwConsumos.HideSelection = false;
-            this.lvwConsumos.Location = new System.Drawing.Point(89, 362);
+            this.lvwConsumos.Location = new System.Drawing.Point(13, 366);
             this.lvwConsumos.Margin = new System.Windows.Forms.Padding(4);
             this.lvwConsumos.Name = "lvwConsumos";
-            this.lvwConsumos.Size = new System.Drawing.Size(291, 217);
+            this.lvwConsumos.Size = new System.Drawing.Size(336, 217);
             this.lvwConsumos.TabIndex = 42;
             this.lvwConsumos.UseCompatibleStateImageBehavior = false;
             this.lvwConsumos.View = System.Windows.Forms.View.Details;
@@ -185,137 +203,166 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(90, 604);
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label7.Location = new System.Drawing.Point(356, 366);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 16);
+            this.label7.Size = new System.Drawing.Size(91, 28);
             this.label7.TabIndex = 43;
             this.label7.Text = "Subtotal:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(91, 630);
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label8.Location = new System.Drawing.Point(356, 458);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 16);
+            this.label8.Size = new System.Drawing.Size(106, 28);
             this.label8.TabIndex = 44;
-            this.label8.Text = "Impuestos";
+            this.label8.Text = "Impuestos:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(86, 662);
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label9.Location = new System.Drawing.Point(356, 555);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 16);
+            this.label9.Size = new System.Drawing.Size(129, 28);
             this.label9.TabIndex = 45;
             this.label9.Text = "Total a pagar:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(454, 97);
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label10.Location = new System.Drawing.Point(12, 608);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(110, 16);
+            this.label10.Size = new System.Drawing.Size(165, 28);
             this.label10.TabIndex = 46;
             this.label10.Text = "Metodo de pago:";
             // 
             // btnConfimar
             // 
-            this.btnConfimar.Location = new System.Drawing.Point(489, 141);
+            this.btnConfimar.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnConfimar.Location = new System.Drawing.Point(17, 701);
             this.btnConfimar.Name = "btnConfimar";
-            this.btnConfimar.Size = new System.Drawing.Size(75, 23);
+            this.btnConfimar.Size = new System.Drawing.Size(114, 45);
             this.btnConfimar.TabIndex = 47;
             this.btnConfimar.Text = "Confirmar";
             this.btnConfimar.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(599, 141);
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnCancelar.Location = new System.Drawing.Point(137, 701);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(126, 35);
             this.btnCancelar.TabIndex = 48;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(241, 121);
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(220)))), ((int)(((byte)(207)))));
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtNombre.Location = new System.Drawing.Point(213, 67);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 22);
+            this.txtNombre.Size = new System.Drawing.Size(248, 34);
             this.txtNombre.TabIndex = 49;
             // 
             // mtbHabitacion
             // 
-            this.mtbHabitacion.Location = new System.Drawing.Point(167, 159);
+            this.mtbHabitacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(220)))), ((int)(((byte)(207)))));
+            this.mtbHabitacion.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.mtbHabitacion.Location = new System.Drawing.Point(124, 117);
             this.mtbHabitacion.Mask = "000";
             this.mtbHabitacion.Name = "mtbHabitacion";
-            this.mtbHabitacion.Size = new System.Drawing.Size(100, 22);
+            this.mtbHabitacion.Size = new System.Drawing.Size(39, 34);
             this.mtbHabitacion.TabIndex = 50;
             // 
             // mtbTelefono
             // 
             this.mtbTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(220)))), ((int)(((byte)(207)))));
-            this.mtbTelefono.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbTelefono.Location = new System.Drawing.Point(156, 183);
+            this.mtbTelefono.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.mtbTelefono.Location = new System.Drawing.Point(103, 168);
             this.mtbTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mtbTelefono.Mask = "000-000-0000";
             this.mtbTelefono.Name = "mtbTelefono";
-            this.mtbTelefono.Size = new System.Drawing.Size(127, 33);
+            this.mtbTelefono.Size = new System.Drawing.Size(111, 34);
             this.mtbTelefono.TabIndex = 51;
             // 
             // dgvEntrada
             // 
-            this.dgvEntrada.Location = new System.Drawing.Point(219, 228);
+            this.dgvEntrada.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.dgvEntrada.Location = new System.Drawing.Point(180, 218);
             this.dgvEntrada.Name = "dgvEntrada";
-            this.dgvEntrada.Size = new System.Drawing.Size(200, 22);
+            this.dgvEntrada.Size = new System.Drawing.Size(343, 34);
             this.dgvEntrada.TabIndex = 52;
             // 
             // dgvSalida
             // 
-            this.dgvSalida.Location = new System.Drawing.Point(199, 282);
+            this.dgvSalida.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.dgvSalida.Location = new System.Drawing.Point(161, 272);
             this.dgvSalida.Name = "dgvSalida";
-            this.dgvSalida.Size = new System.Drawing.Size(200, 22);
+            this.dgvSalida.Size = new System.Drawing.Size(343, 34);
             this.dgvSalida.TabIndex = 53;
             // 
             // lblSubtotal
             // 
             this.lblSubtotal.AutoSize = true;
-            this.lblSubtotal.Location = new System.Drawing.Point(171, 604);
+            this.lblSubtotal.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblSubtotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.lblSubtotal.Location = new System.Drawing.Point(453, 366);
             this.lblSubtotal.Name = "lblSubtotal";
-            this.lblSubtotal.Size = new System.Drawing.Size(14, 16);
+            this.lblSubtotal.Size = new System.Drawing.Size(23, 28);
             this.lblSubtotal.TabIndex = 54;
             this.lblSubtotal.Text = "0";
             // 
             // lblImpuestos
             // 
             this.lblImpuestos.AutoSize = true;
-            this.lblImpuestos.Location = new System.Drawing.Point(171, 630);
+            this.lblImpuestos.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblImpuestos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.lblImpuestos.Location = new System.Drawing.Point(468, 458);
             this.lblImpuestos.Name = "lblImpuestos";
-            this.lblImpuestos.Size = new System.Drawing.Size(14, 16);
+            this.lblImpuestos.Size = new System.Drawing.Size(23, 28);
             this.lblImpuestos.TabIndex = 55;
             this.lblImpuestos.Text = "0";
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(196, 662);
+            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.lblTotal.Location = new System.Drawing.Point(481, 555);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(14, 16);
+            this.lblTotal.Size = new System.Drawing.Size(23, 28);
             this.lblTotal.TabIndex = 56;
             this.lblTotal.Text = "0";
             // 
             // cbmMetodo
             // 
+            this.cbmMetodo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(220)))), ((int)(((byte)(207)))));
+            this.cbmMetodo.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cbmMetodo.FormattingEnabled = true;
-            this.cbmMetodo.Location = new System.Drawing.Point(570, 94);
+            this.cbmMetodo.Location = new System.Drawing.Point(180, 608);
             this.cbmMetodo.Name = "cbmMetodo";
-            this.cbmMetodo.Size = new System.Drawing.Size(121, 24);
+            this.cbmMetodo.Size = new System.Drawing.Size(305, 36);
             this.cbmMetodo.TabIndex = 57;
             // 
             // CheckOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1821, 868);
+            this.BackColor = System.Drawing.Color.Sienna;
+            this.ClientSize = new System.Drawing.Size(594, 830);
             this.ControlBox = false;
             this.Controls.Add(this.cbmMetodo);
             this.Controls.Add(this.lblTotal);
@@ -343,7 +390,7 @@
             this.Controls.Add(this.picCerrar);
             this.Controls.Add(this.lblMenuCerrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CheckOut";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CheckOut";
