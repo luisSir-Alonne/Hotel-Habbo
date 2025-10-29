@@ -130,6 +130,27 @@
   <data name="hotelImagenLP" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hotelImagenLP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="imgHabitacionPresidencialLP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgHabitacionPresidencialLP.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgHabitacionSimpleLP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgHabitacionSimpleLP.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgHabitacionSuitLP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgHabitacionSuitLP.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgHotelFueraLP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgHotelFueraLP.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgLogin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgLoginHotelHeavensLP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgLoginHotelHeavensLP.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgLogoHotelHeavensLP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgLogoHotelHeavensLP.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="menos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

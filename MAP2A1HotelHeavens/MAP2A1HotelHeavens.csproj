@@ -207,5 +207,26 @@
   <ItemGroup>
     <None Include="Resources\hotelImagenLP.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgHabitacionPresidencialLP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgHabitacionSuitLP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgLogoHotelHeavensLP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgLogin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgLoginHotelHeavensLP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgHabitacionSimpleLP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgHotelFueraLP.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
