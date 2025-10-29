@@ -31,6 +31,7 @@
             this.lblMenuCerrar = new System.Windows.Forms.Label();
             this.picMinimizar = new System.Windows.Forms.PictureBox();
             this.picCerrar = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +69,15 @@
             this.picCerrar.TabStop = false;
             this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(491, 94);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Hola el niño";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -75,6 +85,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(198)))), ((int)(((byte)(153)))));
             this.ClientSize = new System.Drawing.Size(1366, 705);
             this.ControlBox = false;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.picMinimizar);
             this.Controls.Add(this.picCerrar);
             this.Controls.Add(this.lblMenuCerrar);
@@ -85,6 +96,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -93,6 +105,7 @@
         private System.Windows.Forms.Label lblMenuCerrar;
         private System.Windows.Forms.PictureBox picMinimizar;
         private System.Windows.Forms.PictureBox picCerrar;
+        private System.Windows.Forms.Label label1;
     }
 }
 
