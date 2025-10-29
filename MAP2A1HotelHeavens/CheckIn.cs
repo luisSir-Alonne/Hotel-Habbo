@@ -16,5 +16,18 @@ namespace MAP2A1HotelHeavens
         {
             InitializeComponent();
         }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+            toolTip1.SetToolTip(lblReserva, "Por favor teclea la hora en la terminaste el CheckIn");
+        }
+
+        private void CheckIn_Load(object sender, EventArgs e)
+        {
+            toolTip1.IsBalloon = true; 
+            toolTip1.AutoPopDelay = 6000;    
+            toolTip1.InitialDelay = 500;     
+            toolTip1.ReshowDelay = 200;
+        }
     }
 }
