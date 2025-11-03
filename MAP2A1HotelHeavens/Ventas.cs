@@ -28,11 +28,17 @@ namespace MAP2A1HotelHeavens
                 DataTable si = new DataTable();
                 adaptar.Fill(si);
                 dataGridView1.DataSource = si;
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
         }
         private void Ventas_Load(object sender, EventArgs e)
         {
             CargarDatosVentas();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
