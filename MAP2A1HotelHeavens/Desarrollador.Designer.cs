@@ -28,21 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblMenuCerrar = new System.Windows.Forms.Label();
             this.picCerrar = new System.Windows.Forms.PictureBox();
             this.picMinimizar = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblMenuCerrar
-            // 
-            this.lblMenuCerrar.BackColor = System.Drawing.Color.Peru;
-            this.lblMenuCerrar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblMenuCerrar.Location = new System.Drawing.Point(0, 0);
-            this.lblMenuCerrar.Name = "lblMenuCerrar";
-            this.lblMenuCerrar.Size = new System.Drawing.Size(1366, 43);
-            this.lblMenuCerrar.TabIndex = 0;
             // 
             // picCerrar
             // 
@@ -66,15 +58,23 @@
             this.picMinimizar.TabIndex = 2;
             this.picMinimizar.TabStop = false;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(216, 113);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(824, 255);
+            this.dataGridView1.TabIndex = 3;
+            // 
             // Desarrollador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1366, 705);
             this.ControlBox = false;
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.picMinimizar);
             this.Controls.Add(this.picCerrar);
-            this.Controls.Add(this.lblMenuCerrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Desarrollador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -82,14 +82,14 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblMenuCerrar;
         private System.Windows.Forms.PictureBox picCerrar;
         private System.Windows.Forms.PictureBox picMinimizar;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
