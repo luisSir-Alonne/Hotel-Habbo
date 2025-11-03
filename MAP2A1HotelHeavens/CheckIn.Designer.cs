@@ -55,7 +55,6 @@
             this.dtpInicioEstancia = new System.Windows.Forms.DateTimePicker();
             this.dtpFinaldeEstancia = new System.Windows.Forms.DateTimePicker();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.button1 = new System.Windows.Forms.Button();
             this.grbTipodeHabitacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -73,11 +72,11 @@
             // lblUsuario
             // 
             this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblUsuario.Location = new System.Drawing.Point(47, 96);
+            this.lblUsuario.Location = new System.Drawing.Point(17, 78);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(500, 80);
+            this.lblUsuario.Size = new System.Drawing.Size(128, 55);
             this.lblUsuario.TabIndex = 6;
             this.lblUsuario.Text = "Usuario:";
             // 
@@ -85,11 +84,11 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
-            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblNombre.Location = new System.Drawing.Point(51, 138);
+            this.lblNombre.Location = new System.Drawing.Point(24, 117);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(74, 27);
+            this.lblNombre.Size = new System.Drawing.Size(121, 43);
             this.lblNombre.TabIndex = 7;
             this.lblNombre.Text = "Nombre:";
             this.lblNombre.UseCompatibleTextRendering = true;
@@ -109,73 +108,90 @@
             // lblTipodehabitacion
             // 
             this.lblTipodehabitacion.AutoSize = true;
-            this.lblTipodehabitacion.BackColor = System.Drawing.Color.Peru;
-            this.lblTipodehabitacion.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipodehabitacion.Location = new System.Drawing.Point(96, 287);
+            this.lblTipodehabitacion.BackColor = System.Drawing.Color.Transparent;
+            this.lblTipodehabitacion.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipodehabitacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.lblTipodehabitacion.Location = new System.Drawing.Point(91, 277);
             this.lblTipodehabitacion.Name = "lblTipodehabitacion";
-            this.lblTipodehabitacion.Size = new System.Drawing.Size(261, 27);
+            this.lblTipodehabitacion.Size = new System.Drawing.Size(256, 43);
             this.lblTipodehabitacion.TabIndex = 9;
             this.lblTipodehabitacion.Text = "Tipo de Habitación:";
+            this.lblTipodehabitacion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTipodehabitacion.UseCompatibleTextRendering = true;
+            this.lblTipodehabitacion.Click += new System.EventHandler(this.lblTipodehabitacion_Click);
             // 
             // lblNumdePersonas
             // 
             this.lblNumdePersonas.AutoSize = true;
-            this.lblNumdePersonas.BackColor = System.Drawing.Color.Peru;
-            this.lblNumdePersonas.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumdePersonas.BackColor = System.Drawing.Color.Transparent;
+            this.lblNumdePersonas.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumdePersonas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.lblNumdePersonas.Location = new System.Drawing.Point(978, 90);
             this.lblNumdePersonas.Name = "lblNumdePersonas";
-            this.lblNumdePersonas.Size = new System.Drawing.Size(281, 27);
+            this.lblNumdePersonas.Size = new System.Drawing.Size(280, 43);
             this.lblNumdePersonas.TabIndex = 10;
             this.lblNumdePersonas.Text = "Número de personas:";
+            this.lblNumdePersonas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNumdePersonas.UseCompatibleTextRendering = true;
             // 
             // lblReserva
             // 
             this.lblReserva.AutoSize = true;
-            this.lblReserva.BackColor = System.Drawing.Color.Peru;
-            this.lblReserva.Font = new System.Drawing.Font("Lucida Fax", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReserva.Location = new System.Drawing.Point(924, 263);
+            this.lblReserva.BackColor = System.Drawing.Color.Transparent;
+            this.lblReserva.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReserva.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.lblReserva.Location = new System.Drawing.Point(905, 251);
             this.lblReserva.Name = "lblReserva";
-            this.lblReserva.Size = new System.Drawing.Size(99, 23);
+            this.lblReserva.Size = new System.Drawing.Size(114, 43);
             this.lblReserva.TabIndex = 11;
             this.lblReserva.Text = "Reserva:";
+            this.lblReserva.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblReserva.UseCompatibleTextRendering = true;
             // 
             // lblSalida
             // 
             this.lblSalida.AutoSize = true;
-            this.lblSalida.BackColor = System.Drawing.Color.Peru;
-            this.lblSalida.Font = new System.Drawing.Font("Lucida Fax", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalida.Location = new System.Drawing.Point(1148, 265);
+            this.lblSalida.BackColor = System.Drawing.Color.Transparent;
+            this.lblSalida.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.lblSalida.Location = new System.Drawing.Point(1136, 251);
             this.lblSalida.Name = "lblSalida";
-            this.lblSalida.Size = new System.Drawing.Size(80, 23);
+            this.lblSalida.Size = new System.Drawing.Size(92, 43);
             this.lblSalida.TabIndex = 12;
             this.lblSalida.Text = "Salida:";
+            this.lblSalida.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSalida.UseCompatibleTextRendering = true;
             // 
             // lblDiasdeEstancia
             // 
             this.lblDiasdeEstancia.AutoSize = true;
-            this.lblDiasdeEstancia.BackColor = System.Drawing.Color.Peru;
-            this.lblDiasdeEstancia.Font = new System.Drawing.Font("Lucida Fax", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiasdeEstancia.Location = new System.Drawing.Point(908, 322);
+            this.lblDiasdeEstancia.BackColor = System.Drawing.Color.Transparent;
+            this.lblDiasdeEstancia.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiasdeEstancia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.lblDiasdeEstancia.Location = new System.Drawing.Point(899, 311);
             this.lblDiasdeEstancia.Name = "lblDiasdeEstancia";
-            this.lblDiasdeEstancia.Size = new System.Drawing.Size(184, 23);
+            this.lblDiasdeEstancia.Size = new System.Drawing.Size(213, 37);
             this.lblDiasdeEstancia.TabIndex = 13;
             this.lblDiasdeEstancia.Text = "Días de Estancia";
             // 
             // lblDiasRestantes
             // 
             this.lblDiasRestantes.AutoSize = true;
-            this.lblDiasRestantes.BackColor = System.Drawing.Color.Peru;
-            this.lblDiasRestantes.Font = new System.Drawing.Font("Lucida Fax", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiasRestantes.Location = new System.Drawing.Point(1174, 322);
+            this.lblDiasRestantes.BackColor = System.Drawing.Color.Transparent;
+            this.lblDiasRestantes.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiasRestantes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.lblDiasRestantes.Location = new System.Drawing.Point(1165, 311);
             this.lblDiasRestantes.Name = "lblDiasRestantes";
-            this.lblDiasRestantes.Size = new System.Drawing.Size(167, 23);
+            this.lblDiasRestantes.Size = new System.Drawing.Size(193, 43);
             this.lblDiasRestantes.TabIndex = 14;
             this.lblDiasRestantes.Text = "Días Restantes";
+            this.lblDiasRestantes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDiasRestantes.UseCompatibleTextRendering = true;
             // 
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(126, 93);
+            this.txtUsuario.Location = new System.Drawing.Point(126, 89);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(290, 25);
             this.txtUsuario.TabIndex = 15;
@@ -183,7 +199,7 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(126, 136);
+            this.txtNombre.Location = new System.Drawing.Point(146, 131);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(290, 22);
             this.txtNombre.TabIndex = 16;
@@ -203,52 +219,64 @@
             // radHabPresidencial
             // 
             this.radHabPresidencial.AutoSize = true;
-            this.radHabPresidencial.BackColor = System.Drawing.Color.Tan;
-            this.radHabPresidencial.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radHabPresidencial.BackColor = System.Drawing.Color.Transparent;
+            this.radHabPresidencial.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radHabPresidencial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.radHabPresidencial.Location = new System.Drawing.Point(282, 19);
             this.radHabPresidencial.Name = "radHabPresidencial";
-            this.radHabPresidencial.Size = new System.Drawing.Size(118, 25);
+            this.radHabPresidencial.Size = new System.Drawing.Size(110, 28);
             this.radHabPresidencial.TabIndex = 2;
             this.radHabPresidencial.TabStop = true;
             this.radHabPresidencial.Text = "Presidencial";
+            this.radHabPresidencial.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radHabPresidencial.UseCompatibleTextRendering = true;
             this.radHabPresidencial.UseVisualStyleBackColor = false;
             // 
             // radHabSuit
             // 
             this.radHabSuit.AutoSize = true;
-            this.radHabSuit.BackColor = System.Drawing.Color.Tan;
-            this.radHabSuit.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radHabSuit.BackColor = System.Drawing.Color.Transparent;
+            this.radHabSuit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radHabSuit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.radHabSuit.Location = new System.Drawing.Point(152, 19);
             this.radHabSuit.Name = "radHabSuit";
-            this.radHabSuit.Size = new System.Drawing.Size(57, 25);
+            this.radHabSuit.Size = new System.Drawing.Size(51, 28);
             this.radHabSuit.TabIndex = 1;
             this.radHabSuit.TabStop = true;
             this.radHabSuit.Text = "Suit";
+            this.radHabSuit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radHabSuit.UseCompatibleTextRendering = true;
             this.radHabSuit.UseVisualStyleBackColor = false;
             // 
             // radHabNormal
             // 
             this.radHabNormal.AutoSize = true;
-            this.radHabNormal.BackColor = System.Drawing.Color.Tan;
-            this.radHabNormal.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radHabNormal.BackColor = System.Drawing.Color.Transparent;
+            this.radHabNormal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radHabNormal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.radHabNormal.Location = new System.Drawing.Point(10, 19);
             this.radHabNormal.Name = "radHabNormal";
-            this.radHabNormal.Size = new System.Drawing.Size(85, 25);
+            this.radHabNormal.Size = new System.Drawing.Size(78, 28);
             this.radHabNormal.TabIndex = 0;
             this.radHabNormal.TabStop = true;
             this.radHabNormal.Text = "Normal";
+            this.radHabNormal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radHabNormal.UseCompatibleTextRendering = true;
             this.radHabNormal.UseVisualStyleBackColor = false;
             // 
             // lblNumdeAdultos
             // 
             this.lblNumdeAdultos.AutoSize = true;
-            this.lblNumdeAdultos.BackColor = System.Drawing.Color.Tan;
-            this.lblNumdeAdultos.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumdeAdultos.BackColor = System.Drawing.Color.Transparent;
+            this.lblNumdeAdultos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumdeAdultos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.lblNumdeAdultos.Location = new System.Drawing.Point(1038, 135);
             this.lblNumdeAdultos.Name = "lblNumdeAdultos";
-            this.lblNumdeAdultos.Size = new System.Drawing.Size(82, 25);
+            this.lblNumdeAdultos.Size = new System.Drawing.Size(62, 27);
             this.lblNumdeAdultos.TabIndex = 19;
             this.lblNumdeAdultos.Text = "Adultos";
+            this.lblNumdeAdultos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNumdeAdultos.UseCompatibleTextRendering = true;
             // 
             // numericUpDown1
             // 
@@ -276,13 +304,16 @@
             // lblCantdeMenores
             // 
             this.lblCantdeMenores.AutoSize = true;
-            this.lblCantdeMenores.BackColor = System.Drawing.Color.Tan;
-            this.lblCantdeMenores.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantdeMenores.Location = new System.Drawing.Point(930, 184);
+            this.lblCantdeMenores.BackColor = System.Drawing.Color.Transparent;
+            this.lblCantdeMenores.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantdeMenores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.lblCantdeMenores.Location = new System.Drawing.Point(965, 180);
             this.lblCantdeMenores.Name = "lblCantdeMenores";
-            this.lblCantdeMenores.Size = new System.Drawing.Size(190, 25);
+            this.lblCantdeMenores.Size = new System.Drawing.Size(147, 27);
             this.lblCantdeMenores.TabIndex = 21;
             this.lblCantdeMenores.Text = "Menores(<12 años)";
+            this.lblCantdeMenores.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCantdeMenores.UseCompatibleTextRendering = true;
             // 
             // numericUpDown2
             // 
@@ -354,18 +385,6 @@
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 27;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Peru;
-            this.button1.Font = new System.Drawing.Font("Calisto MT", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(1184, 687);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 89);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "Terminar Check-In";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // CheckIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -374,7 +393,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1386, 788);
             this.ControlBox = false;
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.dtpFinaldeEstancia);
             this.Controls.Add(this.dtpInicioEstancia);
@@ -440,6 +458,5 @@
         private System.Windows.Forms.DateTimePicker dtpInicioEstancia;
         private System.Windows.Forms.DateTimePicker dtpFinaldeEstancia;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.Button button1;
     }
 }

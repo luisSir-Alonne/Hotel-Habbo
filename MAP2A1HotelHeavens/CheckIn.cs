@@ -29,5 +29,10 @@ namespace MAP2A1HotelHeavens
             toolTip1.InitialDelay = 500;     
             toolTip1.ReshowDelay = 200;
         }
+
+        private void lblTipodehabitacion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

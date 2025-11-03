@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using my
 
 namespace MAP2A1HotelHeavens
 {
@@ -15,6 +16,11 @@ namespace MAP2A1HotelHeavens
         public CheckOut()
         {
             InitializeComponent();
+        }
+
+        private void btnConfimar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
