@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.lblMenuCerrar = new System.Windows.Forms.Label();
-            this.picMinimizar = new System.Windows.Forms.PictureBox();
-            this.picCerrar = new System.Windows.Forms.PictureBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblNumdehabitacion = new System.Windows.Forms.Label();
@@ -58,8 +56,6 @@
             this.dtpFinaldeEstancia = new System.Windows.Forms.DateTimePicker();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             this.grbTipodeHabitacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -73,28 +69,6 @@
             this.lblMenuCerrar.Name = "lblMenuCerrar";
             this.lblMenuCerrar.Size = new System.Drawing.Size(1386, 43);
             this.lblMenuCerrar.TabIndex = 3;
-            // 
-            // picMinimizar
-            // 
-            this.picMinimizar.BackColor = System.Drawing.Color.Peru;
-            this.picMinimizar.Image = global::MAP2A1HotelHeavens.Properties.Resources.menos;
-            this.picMinimizar.Location = new System.Drawing.Point(1291, 0);
-            this.picMinimizar.Name = "picMinimizar";
-            this.picMinimizar.Size = new System.Drawing.Size(34, 43);
-            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picMinimizar.TabIndex = 5;
-            this.picMinimizar.TabStop = false;
-            // 
-            // picCerrar
-            // 
-            this.picCerrar.BackColor = System.Drawing.Color.Peru;
-            this.picCerrar.Image = global::MAP2A1HotelHeavens.Properties.Resources.cerrar;
-            this.picCerrar.Location = new System.Drawing.Point(1332, 0);
-            this.picCerrar.Name = "picCerrar";
-            this.picCerrar.Size = new System.Drawing.Size(34, 43);
-            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picCerrar.TabIndex = 4;
-            this.picCerrar.TabStop = false;
             // 
             // lblUsuario
             // 
@@ -419,8 +393,6 @@
             this.Controls.Add(this.lblNumdehabitacion);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblUsuario);
-            this.Controls.Add(this.picMinimizar);
-            this.Controls.Add(this.picCerrar);
             this.Controls.Add(this.lblMenuCerrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CheckIn";
@@ -428,8 +400,6 @@
             this.Text = "CheckIn";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.CheckIn_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             this.grbTipodeHabitacion.ResumeLayout(false);
             this.grbTipodeHabitacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -440,9 +410,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox picMinimizar;
-        private System.Windows.Forms.PictureBox picCerrar;
         private System.Windows.Forms.Label lblMenuCerrar;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblNombre;
