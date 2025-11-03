@@ -21,5 +21,10 @@ namespace MAP2A1HotelHeavens
         {
             
         }
+
+        private void CheckOut_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
