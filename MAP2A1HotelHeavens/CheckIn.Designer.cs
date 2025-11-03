@@ -72,34 +72,37 @@
             // 
             // lblUsuario
             // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.BackColor = System.Drawing.Color.Peru;
-            this.lblUsuario.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(30, 90);
+            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.lblUsuario.Location = new System.Drawing.Point(47, 96);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(116, 27);
+            this.lblUsuario.Size = new System.Drawing.Size(500, 80);
             this.lblUsuario.TabIndex = 6;
             this.lblUsuario.Text = "Usuario:";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.BackColor = System.Drawing.Color.Peru;
-            this.lblNombre.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(28, 138);
+            this.lblNombre.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.lblNombre.Location = new System.Drawing.Point(51, 138);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(120, 27);
+            this.lblNombre.Size = new System.Drawing.Size(74, 27);
             this.lblNombre.TabIndex = 7;
             this.lblNombre.Text = "Nombre:";
+            this.lblNombre.UseCompatibleTextRendering = true;
             // 
             // lblNumdehabitacion
             // 
             this.lblNumdehabitacion.AutoSize = true;
-            this.lblNumdehabitacion.BackColor = System.Drawing.Color.Peru;
-            this.lblNumdehabitacion.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumdehabitacion.BackColor = System.Drawing.Color.Transparent;
+            this.lblNumdehabitacion.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumdehabitacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.lblNumdehabitacion.Location = new System.Drawing.Point(30, 199);
             this.lblNumdehabitacion.Name = "lblNumdehabitacion";
-            this.lblNumdehabitacion.Size = new System.Drawing.Size(304, 27);
+            this.lblNumdehabitacion.Size = new System.Drawing.Size(316, 37);
             this.lblNumdehabitacion.TabIndex = 8;
             this.lblNumdehabitacion.Text = "Número de Habitación:";
             // 
@@ -171,16 +174,16 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(154, 95);
+            this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(126, 93);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(290, 22);
+            this.txtUsuario.Size = new System.Drawing.Size(290, 25);
             this.txtUsuario.TabIndex = 15;
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(154, 143);
+            this.txtNombre.Location = new System.Drawing.Point(126, 136);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(290, 22);
             this.txtNombre.TabIndex = 16;
@@ -394,6 +397,7 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.lblMenuCerrar);
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CheckIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
