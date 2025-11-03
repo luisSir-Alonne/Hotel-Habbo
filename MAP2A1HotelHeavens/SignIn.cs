@@ -19,8 +19,7 @@ namespace MAP2A1HotelHeavens
             chkTyC.CheckedChanged += (s, e) => { };
             chkMostrarPass.CheckedChanged += chkMostrarPass_CheckedChanged;
             btnRegistrar.Click += btnRegistrar_Click;
-            btnRegresar.Click += (s, e) => this.Close();
-
+            
             errorProvider1.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             mtbPass.UseSystemPasswordChar = true;
             mtbPass2.UseSystemPasswordChar = true;
