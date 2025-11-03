@@ -35,13 +35,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.msAreas = new System.Windows.Forms.MenuStrip();
-            this.imiAdmin = new FontAwesome.Sharp.IconMenuItem();
-            this.imiHotel = new FontAwesome.Sharp.IconMenuItem();
-            this.imiVentas = new FontAwesome.Sharp.IconMenuItem();
-            this.imiControlUsuario = new FontAwesome.Sharp.IconMenuItem();
-            this.imiCheckOut = new FontAwesome.Sharp.IconMenuItem();
             this.imiCheckIn = new FontAwesome.Sharp.IconMenuItem();
+            this.imiCheckOut = new FontAwesome.Sharp.IconMenuItem();
+            this.imiControlUsuario = new FontAwesome.Sharp.IconMenuItem();
+            this.imiVentas = new FontAwesome.Sharp.IconMenuItem();
+            this.imiHotel = new FontAwesome.Sharp.IconMenuItem();
             this.imiControlEmpleados = new FontAwesome.Sharp.IconMenuItem();
+            this.imiAdmin = new FontAwesome.Sharp.IconMenuItem();
             this.panMostrar = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
@@ -128,59 +128,19 @@
             this.msAreas.Size = new System.Drawing.Size(1366, 73);
             this.msAreas.TabIndex = 20;
             // 
-            // imiAdmin
+            // imiCheckIn
             // 
-            this.imiAdmin.AutoSize = false;
-            this.imiAdmin.IconChar = FontAwesome.Sharp.IconChar.UserGear;
-            this.imiAdmin.IconColor = System.Drawing.Color.Black;
-            this.imiAdmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.imiAdmin.IconSize = 50;
-            this.imiAdmin.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.imiAdmin.Name = "imiAdmin";
-            this.imiAdmin.Size = new System.Drawing.Size(122, 69);
-            this.imiAdmin.Text = "Control Jefes";
-            this.imiAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // imiHotel
-            // 
-            this.imiHotel.AutoSize = false;
-            this.imiHotel.IconChar = FontAwesome.Sharp.IconChar.Hotel;
-            this.imiHotel.IconColor = System.Drawing.Color.Black;
-            this.imiHotel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.imiHotel.IconSize = 50;
-            this.imiHotel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.imiHotel.Name = "imiHotel";
-            this.imiHotel.Size = new System.Drawing.Size(122, 69);
-            this.imiHotel.Text = "Hotel";
-            this.imiHotel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.imiHotel.Click += new System.EventHandler(this.imiHotel_Click);
-            // 
-            // imiVentas
-            // 
-            this.imiVentas.AutoSize = false;
-            this.imiVentas.IconChar = FontAwesome.Sharp.IconChar.CashRegister;
-            this.imiVentas.IconColor = System.Drawing.Color.Black;
-            this.imiVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.imiVentas.IconSize = 50;
-            this.imiVentas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.imiVentas.Name = "imiVentas";
-            this.imiVentas.Size = new System.Drawing.Size(122, 69);
-            this.imiVentas.Text = "Ventas";
-            this.imiVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // imiControlUsuario
-            // 
-            this.imiControlUsuario.AutoSize = false;
-            this.imiControlUsuario.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
-            this.imiControlUsuario.IconColor = System.Drawing.Color.Black;
-            this.imiControlUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.imiControlUsuario.IconSize = 50;
-            this.imiControlUsuario.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.imiControlUsuario.Name = "imiControlUsuario";
-            this.imiControlUsuario.Size = new System.Drawing.Size(122, 69);
-            this.imiControlUsuario.Text = "Control Usuario";
-            this.imiControlUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.imiControlUsuario.Click += new System.EventHandler(this.imiControlUsuario_Click);
+            this.imiCheckIn.AutoSize = false;
+            this.imiCheckIn.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.imiCheckIn.IconColor = System.Drawing.Color.Black;
+            this.imiCheckIn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.imiCheckIn.IconSize = 50;
+            this.imiCheckIn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.imiCheckIn.Name = "imiCheckIn";
+            this.imiCheckIn.Size = new System.Drawing.Size(122, 69);
+            this.imiCheckIn.Text = "CheckIn";
+            this.imiCheckIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.imiCheckIn.Click += new System.EventHandler(this.imiCheckIn_Click);
             // 
             // imiCheckOut
             // 
@@ -196,19 +156,47 @@
             this.imiCheckOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.imiCheckOut.Click += new System.EventHandler(this.imiCheckOut_Click);
             // 
-            // imiCheckIn
+            // imiControlUsuario
             // 
-            this.imiCheckIn.AutoSize = false;
-            this.imiCheckIn.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.imiCheckIn.IconColor = System.Drawing.Color.Black;
-            this.imiCheckIn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.imiCheckIn.IconSize = 50;
-            this.imiCheckIn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.imiCheckIn.Name = "imiCheckIn";
-            this.imiCheckIn.Size = new System.Drawing.Size(122, 69);
-            this.imiCheckIn.Text = "CheckIn";
-            this.imiCheckIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.imiCheckIn.Click += new System.EventHandler(this.imiCheckIn_Click);
+            this.imiControlUsuario.AutoSize = false;
+            this.imiControlUsuario.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
+            this.imiControlUsuario.IconColor = System.Drawing.Color.Black;
+            this.imiControlUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.imiControlUsuario.IconSize = 50;
+            this.imiControlUsuario.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.imiControlUsuario.Name = "imiControlUsuario";
+            this.imiControlUsuario.Size = new System.Drawing.Size(122, 69);
+            this.imiControlUsuario.Text = "Control Usuario";
+            this.imiControlUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.imiControlUsuario.Click += new System.EventHandler(this.imiControlUsuario_Click);
+            // 
+            // imiVentas
+            // 
+            this.imiVentas.AutoSize = false;
+            this.imiVentas.IconChar = FontAwesome.Sharp.IconChar.CashRegister;
+            this.imiVentas.IconColor = System.Drawing.Color.Black;
+            this.imiVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.imiVentas.IconSize = 50;
+            this.imiVentas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.imiVentas.Name = "imiVentas";
+            this.imiVentas.Size = new System.Drawing.Size(122, 69);
+            this.imiVentas.Text = "Ventas";
+            this.imiVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.imiVentas.Click += new System.EventHandler(this.imiVentas_Click);
+            // 
+            // imiHotel
+            // 
+            this.imiHotel.AutoSize = false;
+            this.imiHotel.IconChar = FontAwesome.Sharp.IconChar.Hotel;
+            this.imiHotel.IconColor = System.Drawing.Color.Black;
+            this.imiHotel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.imiHotel.IconSize = 50;
+            this.imiHotel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.imiHotel.Name = "imiHotel";
+            this.imiHotel.Size = new System.Drawing.Size(122, 69);
+            this.imiHotel.Text = "Hotel";
+            this.imiHotel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.imiHotel.Click += new System.EventHandler(this.imiHotel_Click);
             // 
             // imiControlEmpleados
             // 
@@ -222,6 +210,19 @@
             this.imiControlEmpleados.Size = new System.Drawing.Size(122, 69);
             this.imiControlEmpleados.Text = "Control Empleados";
             this.imiControlEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // imiAdmin
+            // 
+            this.imiAdmin.AutoSize = false;
+            this.imiAdmin.IconChar = FontAwesome.Sharp.IconChar.UserGear;
+            this.imiAdmin.IconColor = System.Drawing.Color.Black;
+            this.imiAdmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.imiAdmin.IconSize = 50;
+            this.imiAdmin.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.imiAdmin.Name = "imiAdmin";
+            this.imiAdmin.Size = new System.Drawing.Size(122, 69);
+            this.imiAdmin.Text = "Control Jefes";
+            this.imiAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // panMostrar
             // 

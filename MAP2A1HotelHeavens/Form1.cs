@@ -79,5 +79,10 @@ namespace MAP2A1HotelHeavens
             abrirFormulario(imiHotel, new HabitacionesDisponibles());
 
         }
+
+        private void imiVentas_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(imiVentas, new Ventas());
+        }
     }
 }
