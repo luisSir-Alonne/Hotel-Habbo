@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.lblMenuCerrar = new System.Windows.Forms.Label();
-            this.picMinimizar = new System.Windows.Forms.PictureBox();
-            this.picCerrar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxUsuario = new System.Windows.Forms.TextBox();
@@ -41,8 +39,6 @@
             this.checkBoxOcultar2 = new System.Windows.Forms.CheckBox();
             this.notifyIconMenu = new System.Windows.Forms.NotifyIcon(this.components);
             this.toolTipInfoLogin = new System.Windows.Forms.ToolTip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMenuCerrar
@@ -53,28 +49,6 @@
             this.lblMenuCerrar.Name = "lblMenuCerrar";
             this.lblMenuCerrar.Size = new System.Drawing.Size(379, 43);
             this.lblMenuCerrar.TabIndex = 3;
-            // 
-            // picMinimizar
-            // 
-            this.picMinimizar.BackColor = System.Drawing.Color.Peru;
-            this.picMinimizar.Image = global::MAP2A1HotelHeavens.Properties.Resources.menos;
-            this.picMinimizar.Location = new System.Drawing.Point(305, 0);
-            this.picMinimizar.Name = "picMinimizar";
-            this.picMinimizar.Size = new System.Drawing.Size(34, 43);
-            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picMinimizar.TabIndex = 5;
-            this.picMinimizar.TabStop = false;
-            // 
-            // picCerrar
-            // 
-            this.picCerrar.BackColor = System.Drawing.Color.Peru;
-            this.picCerrar.Image = global::MAP2A1HotelHeavens.Properties.Resources.cerrar;
-            this.picCerrar.Location = new System.Drawing.Point(345, 0);
-            this.picCerrar.Name = "picCerrar";
-            this.picCerrar.Size = new System.Drawing.Size(34, 43);
-            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picCerrar.TabIndex = 4;
-            this.picCerrar.TabStop = false;
             // 
             // label1
             // 
@@ -184,24 +158,17 @@
             this.Controls.Add(this.textBoxUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.picMinimizar);
-            this.Controls.Add(this.picCerrar);
             this.Controls.Add(this.lblMenuCerrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LogIn";
             this.Text = "LogIn";
             this.Load += new System.EventHandler(this.LogIn_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox picMinimizar;
-        private System.Windows.Forms.PictureBox picCerrar;
         private System.Windows.Forms.Label lblMenuCerrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
