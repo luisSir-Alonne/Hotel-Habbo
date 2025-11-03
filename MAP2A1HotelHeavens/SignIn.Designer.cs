@@ -90,12 +90,12 @@
             // 
             this.chkMostrarPass.AutoSize = true;
             this.chkMostrarPass.BackColor = System.Drawing.Color.Transparent;
-            this.chkMostrarPass.Font = new System.Drawing.Font("Elephant", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMostrarPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkMostrarPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(227)))), ((int)(((byte)(220)))));
             this.chkMostrarPass.Location = new System.Drawing.Point(42, 520);
-            this.chkMostrarPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkMostrarPass.Margin = new System.Windows.Forms.Padding(2);
             this.chkMostrarPass.Name = "chkMostrarPass";
-            this.chkMostrarPass.Size = new System.Drawing.Size(172, 22);
+            this.chkMostrarPass.Size = new System.Drawing.Size(157, 21);
             this.chkMostrarPass.TabIndex = 39;
             this.chkMostrarPass.Text = "Mostrar contraseñas";
             this.chkMostrarPass.UseVisualStyleBackColor = false;
@@ -103,23 +103,23 @@
             // mtbTelefono
             // 
             this.mtbTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(220)))), ((int)(((byte)(207)))));
-            this.mtbTelefono.Font = new System.Drawing.Font("Elephant", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbTelefono.Location = new System.Drawing.Point(228, 180);
-            this.mtbTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mtbTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.mtbTelefono.Mask = "(000)-000-0000";
             this.mtbTelefono.Name = "mtbTelefono";
-            this.mtbTelefono.Size = new System.Drawing.Size(203, 32);
+            this.mtbTelefono.Size = new System.Drawing.Size(203, 29);
             this.mtbTelefono.TabIndex = 38;
             // 
             // mtbPass2
             // 
             this.mtbPass2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(220)))), ((int)(((byte)(207)))));
             this.mtbPass2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mtbPass2.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbPass2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbPass2.Location = new System.Drawing.Point(113, 449);
-            this.mtbPass2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mtbPass2.Margin = new System.Windows.Forms.Padding(2);
             this.mtbPass2.Name = "mtbPass2";
-            this.mtbPass2.Size = new System.Drawing.Size(432, 28);
+            this.mtbPass2.Size = new System.Drawing.Size(432, 26);
             this.mtbPass2.TabIndex = 37;
             this.mtbPass2.UseSystemPasswordChar = true;
             // 
@@ -127,21 +127,21 @@
             // 
             this.mtbPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(220)))), ((int)(((byte)(207)))));
             this.mtbPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mtbPass.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbPass.Location = new System.Drawing.Point(108, 386);
-            this.mtbPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mtbPass.Margin = new System.Windows.Forms.Padding(2);
             this.mtbPass.Name = "mtbPass";
-            this.mtbPass.Size = new System.Drawing.Size(437, 28);
+            this.mtbPass.Size = new System.Drawing.Size(437, 26);
             this.mtbPass.TabIndex = 36;
             this.mtbPass.UseSystemPasswordChar = true;
             // 
             // btnRegistrar
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.btnRegistrar.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(66)))), ((int)(((byte)(46)))));
             this.btnRegistrar.Location = new System.Drawing.Point(501, 509);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(110, 33);
             this.btnRegistrar.TabIndex = 34;
@@ -153,12 +153,12 @@
             // 
             this.chkTyC.AutoSize = true;
             this.chkTyC.BackColor = System.Drawing.Color.Transparent;
-            this.chkTyC.Font = new System.Drawing.Font("Elephant", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTyC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkTyC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(197)))), ((int)(((byte)(194)))));
             this.chkTyC.Location = new System.Drawing.Point(42, 547);
-            this.chkTyC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkTyC.Margin = new System.Windows.Forms.Padding(2);
             this.chkTyC.Name = "chkTyC";
-            this.chkTyC.Size = new System.Drawing.Size(279, 24);
+            this.chkTyC.Size = new System.Drawing.Size(254, 22);
             this.chkTyC.TabIndex = 33;
             this.chkTyC.Text = "Acepto los términos y condiciones";
             this.chkTyC.UseVisualStyleBackColor = false;
@@ -167,33 +167,33 @@
             // 
             this.txtCorreo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(220)))), ((int)(((byte)(207)))));
             this.txtCorreo2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCorreo2.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo2.Location = new System.Drawing.Point(108, 311);
-            this.txtCorreo2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCorreo2.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo2.Name = "txtCorreo2";
-            this.txtCorreo2.Size = new System.Drawing.Size(437, 28);
+            this.txtCorreo2.Size = new System.Drawing.Size(437, 26);
             this.txtCorreo2.TabIndex = 32;
             // 
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(220)))), ((int)(((byte)(207)))));
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNombre.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(108, 117);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(437, 28);
+            this.txtNombre.Size = new System.Drawing.Size(437, 26);
             this.txtNombre.TabIndex = 31;
             // 
             // txtCorreo
             // 
             this.txtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(220)))), ((int)(((byte)(207)))));
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCorreo.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(108, 240);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(437, 28);
+            this.txtCorreo.Size = new System.Drawing.Size(437, 26);
             this.txtCorreo.TabIndex = 30;
             // 
             // lblTelefono
@@ -295,12 +295,12 @@
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje.ForeColor = System.Drawing.Color.LightCoral;
             this.lblMensaje.Location = new System.Drawing.Point(38, 468);
             this.lblMensaje.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(0, 21);
+            this.lblMensaje.Size = new System.Drawing.Size(0, 20);
             this.lblMensaje.TabIndex = 40;
             // 
             // SignIn
