@@ -66,7 +66,7 @@
             this.lblMenuCerrar.Location = new System.Drawing.Point(0, 0);
             this.lblMenuCerrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMenuCerrar.Name = "lblMenuCerrar";
-            this.lblMenuCerrar.Size = new System.Drawing.Size(594, 53);
+            this.lblMenuCerrar.Size = new System.Drawing.Size(1848, 53);
             this.lblMenuCerrar.TabIndex = 3;
             // 
             // picMinimizar
@@ -362,7 +362,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Sienna;
-            this.ClientSize = new System.Drawing.Size(594, 830);
+            this.ClientSize = new System.Drawing.Size(1848, 970);
             this.ControlBox = false;
             this.Controls.Add(this.cbmMetodo);
             this.Controls.Add(this.lblTotal);
