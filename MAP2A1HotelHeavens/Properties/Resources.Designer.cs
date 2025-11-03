@@ -133,6 +133,16 @@ namespace MAP2A1HotelHeavens.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imgcheckinLP {
+            get {
+                object obj = ResourceManager.GetObject("imgcheckinLP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imgHabitacionPresidencialLP {
             get {
                 object obj = ResourceManager.GetObject("imgHabitacionPresidencialLP", resourceCulture);
