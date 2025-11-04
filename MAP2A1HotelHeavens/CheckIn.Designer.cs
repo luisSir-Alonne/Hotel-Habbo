@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.lblMenuCerrar = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblNumdehabitacion = new System.Windows.Forms.Label();
             this.lblTipodehabitacion = new System.Windows.Forms.Label();
@@ -39,7 +38,6 @@
             this.lblSalida = new System.Windows.Forms.Label();
             this.lblDiasdeEstancia = new System.Windows.Forms.Label();
             this.lblDiasRestantes = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.grbTipodeHabitacion = new System.Windows.Forms.GroupBox();
             this.radHabPresidencial = new System.Windows.Forms.RadioButton();
@@ -55,6 +53,8 @@
             this.dtpInicioEstancia = new System.Windows.Forms.DateTimePicker();
             this.dtpFinaldeEstancia = new System.Windows.Forms.DateTimePicker();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.grbTipodeHabitacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -69,24 +69,13 @@
             this.lblMenuCerrar.Size = new System.Drawing.Size(1386, 43);
             this.lblMenuCerrar.TabIndex = 3;
             // 
-            // lblUsuario
-            // 
-            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.lblUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblUsuario.Location = new System.Drawing.Point(17, 78);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(128, 55);
-            this.lblUsuario.TabIndex = 6;
-            this.lblUsuario.Text = "Usuario:";
-            // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblNombre.Location = new System.Drawing.Point(24, 117);
+            this.lblNombre.Location = new System.Drawing.Point(28, 56);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(121, 43);
             this.lblNombre.TabIndex = 7;
@@ -99,7 +88,7 @@
             this.lblNumdehabitacion.BackColor = System.Drawing.Color.Transparent;
             this.lblNumdehabitacion.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumdehabitacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblNumdehabitacion.Location = new System.Drawing.Point(30, 199);
+            this.lblNumdehabitacion.Location = new System.Drawing.Point(31, 124);
             this.lblNumdehabitacion.Name = "lblNumdehabitacion";
             this.lblNumdehabitacion.Size = new System.Drawing.Size(316, 37);
             this.lblNumdehabitacion.TabIndex = 8;
@@ -111,7 +100,7 @@
             this.lblTipodehabitacion.BackColor = System.Drawing.Color.Transparent;
             this.lblTipodehabitacion.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipodehabitacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblTipodehabitacion.Location = new System.Drawing.Point(91, 277);
+            this.lblTipodehabitacion.Location = new System.Drawing.Point(95, 216);
             this.lblTipodehabitacion.Name = "lblTipodehabitacion";
             this.lblTipodehabitacion.Size = new System.Drawing.Size(256, 43);
             this.lblTipodehabitacion.TabIndex = 9;
@@ -126,7 +115,7 @@
             this.lblNumdePersonas.BackColor = System.Drawing.Color.Transparent;
             this.lblNumdePersonas.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumdePersonas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblNumdePersonas.Location = new System.Drawing.Point(978, 90);
+            this.lblNumdePersonas.Location = new System.Drawing.Point(565, 79);
             this.lblNumdePersonas.Name = "lblNumdePersonas";
             this.lblNumdePersonas.Size = new System.Drawing.Size(280, 43);
             this.lblNumdePersonas.TabIndex = 10;
@@ -140,7 +129,7 @@
             this.lblReserva.BackColor = System.Drawing.Color.Transparent;
             this.lblReserva.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReserva.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblReserva.Location = new System.Drawing.Point(905, 251);
+            this.lblReserva.Location = new System.Drawing.Point(492, 240);
             this.lblReserva.Name = "lblReserva";
             this.lblReserva.Size = new System.Drawing.Size(114, 43);
             this.lblReserva.TabIndex = 11;
@@ -154,7 +143,7 @@
             this.lblSalida.BackColor = System.Drawing.Color.Transparent;
             this.lblSalida.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSalida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblSalida.Location = new System.Drawing.Point(1136, 251);
+            this.lblSalida.Location = new System.Drawing.Point(723, 240);
             this.lblSalida.Name = "lblSalida";
             this.lblSalida.Size = new System.Drawing.Size(92, 43);
             this.lblSalida.TabIndex = 12;
@@ -168,11 +157,11 @@
             this.lblDiasdeEstancia.BackColor = System.Drawing.Color.Transparent;
             this.lblDiasdeEstancia.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiasdeEstancia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblDiasdeEstancia.Location = new System.Drawing.Point(899, 311);
+            this.lblDiasdeEstancia.Location = new System.Drawing.Point(1030, 114);
             this.lblDiasdeEstancia.Name = "lblDiasdeEstancia";
-            this.lblDiasdeEstancia.Size = new System.Drawing.Size(213, 37);
+            this.lblDiasdeEstancia.Size = new System.Drawing.Size(318, 37);
             this.lblDiasdeEstancia.TabIndex = 13;
-            this.lblDiasdeEstancia.Text = "Días de Estancia";
+            this.lblDiasdeEstancia.Text = "Dia de inicio de estancia \r\n";
             // 
             // lblDiasRestantes
             // 
@@ -180,26 +169,18 @@
             this.lblDiasRestantes.BackColor = System.Drawing.Color.Transparent;
             this.lblDiasRestantes.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiasRestantes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblDiasRestantes.Location = new System.Drawing.Point(1165, 311);
+            this.lblDiasRestantes.Location = new System.Drawing.Point(1048, 199);
             this.lblDiasRestantes.Name = "lblDiasRestantes";
-            this.lblDiasRestantes.Size = new System.Drawing.Size(193, 43);
+            this.lblDiasRestantes.Size = new System.Drawing.Size(271, 43);
             this.lblDiasRestantes.TabIndex = 14;
-            this.lblDiasRestantes.Text = "Días Restantes";
+            this.lblDiasRestantes.Text = "Dia final de estancia ";
             this.lblDiasRestantes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblDiasRestantes.UseCompatibleTextRendering = true;
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(126, 89);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(290, 25);
-            this.txtUsuario.TabIndex = 15;
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(146, 131);
+            this.txtNombre.Location = new System.Drawing.Point(150, 70);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(290, 22);
             this.txtNombre.TabIndex = 16;
@@ -210,7 +191,7 @@
             this.grbTipodeHabitacion.Controls.Add(this.radHabPresidencial);
             this.grbTipodeHabitacion.Controls.Add(this.radHabSuit);
             this.grbTipodeHabitacion.Controls.Add(this.radHabNormal);
-            this.grbTipodeHabitacion.Location = new System.Drawing.Point(24, 317);
+            this.grbTipodeHabitacion.Location = new System.Drawing.Point(28, 256);
             this.grbTipodeHabitacion.Name = "grbTipodeHabitacion";
             this.grbTipodeHabitacion.Size = new System.Drawing.Size(412, 59);
             this.grbTipodeHabitacion.TabIndex = 17;
@@ -247,6 +228,7 @@
             this.radHabSuit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radHabSuit.UseCompatibleTextRendering = true;
             this.radHabSuit.UseVisualStyleBackColor = false;
+            this.radHabSuit.CheckedChanged += new System.EventHandler(this.radHabSuit_CheckedChanged);
             // 
             // radHabNormal
             // 
@@ -270,7 +252,7 @@
             this.lblNumdeAdultos.BackColor = System.Drawing.Color.Transparent;
             this.lblNumdeAdultos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumdeAdultos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblNumdeAdultos.Location = new System.Drawing.Point(1038, 135);
+            this.lblNumdeAdultos.Location = new System.Drawing.Point(625, 124);
             this.lblNumdeAdultos.Name = "lblNumdeAdultos";
             this.lblNumdeAdultos.Size = new System.Drawing.Size(62, 27);
             this.lblNumdeAdultos.TabIndex = 19;
@@ -281,7 +263,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(1129, 134);
+            this.numericUpDown1.Location = new System.Drawing.Point(716, 123);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             10,
             0,
@@ -307,7 +289,7 @@
             this.lblCantdeMenores.BackColor = System.Drawing.Color.Transparent;
             this.lblCantdeMenores.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantdeMenores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblCantdeMenores.Location = new System.Drawing.Point(965, 180);
+            this.lblCantdeMenores.Location = new System.Drawing.Point(552, 169);
             this.lblCantdeMenores.Name = "lblCantdeMenores";
             this.lblCantdeMenores.Size = new System.Drawing.Size(147, 27);
             this.lblCantdeMenores.TabIndex = 21;
@@ -318,25 +300,15 @@
             // numericUpDown2
             // 
             this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(1129, 180);
+            this.numericUpDown2.Location = new System.Drawing.Point(716, 169);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             10,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Minimum = new decimal(new int[] {
-            1,
             0,
             0,
             0});
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(107, 26);
             this.numericUpDown2.TabIndex = 22;
-            this.numericUpDown2.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // toolTip1
             // 
@@ -346,7 +318,7 @@
             // mtbHoraLlegada
             // 
             this.mtbHoraLlegada.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbHoraLlegada.Location = new System.Drawing.Point(1029, 263);
+            this.mtbHoraLlegada.Location = new System.Drawing.Point(616, 252);
             this.mtbHoraLlegada.Mask = "00:00";
             this.mtbHoraLlegada.Name = "mtbHoraLlegada";
             this.mtbHoraLlegada.Size = new System.Drawing.Size(83, 27);
@@ -356,7 +328,7 @@
             // mtbHoraSalida
             // 
             this.mtbHoraSalida.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbHoraSalida.Location = new System.Drawing.Point(1234, 263);
+            this.mtbHoraSalida.Location = new System.Drawing.Point(821, 252);
             this.mtbHoraSalida.Mask = "00:00";
             this.mtbHoraSalida.Name = "mtbHoraSalida";
             this.mtbHoraSalida.Size = new System.Drawing.Size(83, 27);
@@ -365,14 +337,16 @@
             // 
             // dtpInicioEstancia
             // 
-            this.dtpInicioEstancia.Location = new System.Drawing.Point(892, 358);
+            this.dtpInicioEstancia.Enabled = false;
+            this.dtpInicioEstancia.Location = new System.Drawing.Point(1075, 154);
             this.dtpInicioEstancia.Name = "dtpInicioEstancia";
             this.dtpInicioEstancia.Size = new System.Drawing.Size(220, 20);
             this.dtpInicioEstancia.TabIndex = 25;
             // 
             // dtpFinaldeEstancia
             // 
-            this.dtpFinaldeEstancia.Location = new System.Drawing.Point(1152, 358);
+            this.dtpFinaldeEstancia.Enabled = false;
+            this.dtpFinaldeEstancia.Location = new System.Drawing.Point(1075, 256);
             this.dtpFinaldeEstancia.Name = "dtpFinaldeEstancia";
             this.dtpFinaldeEstancia.Size = new System.Drawing.Size(220, 20);
             this.dtpFinaldeEstancia.TabIndex = 26;
@@ -381,18 +355,47 @@
             // 
             this.monthCalendar1.BackColor = System.Drawing.Color.Tan;
             this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(4, 2);
-            this.monthCalendar1.Location = new System.Drawing.Point(51, 425);
+            this.monthCalendar1.ForeColor = System.Drawing.Color.Black;
+            this.monthCalendar1.Location = new System.Drawing.Point(61, 345);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 27;
+            this.monthCalendar1.TitleBackColor = System.Drawing.Color.Black;
+            this.monthCalendar1.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(-15, -15);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(1140, 525);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(190, 99);
+            this.button2.TabIndex = 29;
+            this.button2.Text = "Agregar reserva ";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // CheckIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Tan;
             this.BackgroundImage = global::MAP2A1HotelHeavens.Properties.Resources.imgcheckinLP;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1386, 788);
             this.ControlBox = false;
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.dtpFinaldeEstancia);
             this.Controls.Add(this.dtpInicioEstancia);
@@ -404,7 +407,6 @@
             this.Controls.Add(this.lblNumdeAdultos);
             this.Controls.Add(this.grbTipodeHabitacion);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblDiasRestantes);
             this.Controls.Add(this.lblDiasdeEstancia);
             this.Controls.Add(this.lblSalida);
@@ -413,7 +415,6 @@
             this.Controls.Add(this.lblTipodehabitacion);
             this.Controls.Add(this.lblNumdehabitacion);
             this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.lblMenuCerrar);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -433,7 +434,6 @@
 
         #endregion
         private System.Windows.Forms.Label lblMenuCerrar;
-        private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblNumdehabitacion;
         private System.Windows.Forms.Label lblTipodehabitacion;
@@ -442,7 +442,6 @@
         private System.Windows.Forms.Label lblSalida;
         private System.Windows.Forms.Label lblDiasdeEstancia;
         private System.Windows.Forms.Label lblDiasRestantes;
-        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.GroupBox grbTipodeHabitacion;
         private System.Windows.Forms.RadioButton radHabPresidencial;
@@ -458,5 +457,7 @@
         private System.Windows.Forms.DateTimePicker dtpInicioEstancia;
         private System.Windows.Forms.DateTimePicker dtpFinaldeEstancia;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
