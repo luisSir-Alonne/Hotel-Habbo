@@ -16,5 +16,10 @@ namespace MAP2A1HotelHeavens
         {
             InitializeComponent();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
