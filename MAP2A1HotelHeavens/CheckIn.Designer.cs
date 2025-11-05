@@ -48,13 +48,14 @@
             this.lblCantdeMenores = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.mtbHoraLlegada = new System.Windows.Forms.MaskedTextBox();
-            this.mtbHoraSalida = new System.Windows.Forms.MaskedTextBox();
             this.dtpInicioEstancia = new System.Windows.Forms.DateTimePicker();
             this.dtpFinaldeEstancia = new System.Windows.Forms.DateTimePicker();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.dtpHoraReserva = new System.Windows.Forms.DateTimePicker();
+            this.dtpHoraSalida = new System.Windows.Forms.DateTimePicker();
             this.grbTipodeHabitacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -184,6 +185,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(290, 22);
             this.txtNombre.TabIndex = 16;
+            this.toolTip1.SetToolTip(this.txtNombre, "Nombre del cliente que se\r\nva a quedar en el hotel");
             // 
             // grbTipodeHabitacion
             // 
@@ -196,6 +198,7 @@
             this.grbTipodeHabitacion.Size = new System.Drawing.Size(412, 59);
             this.grbTipodeHabitacion.TabIndex = 17;
             this.grbTipodeHabitacion.TabStop = false;
+            this.toolTip1.SetToolTip(this.grbTipodeHabitacion, "Tipo de habitacion a elegir");
             // 
             // radHabPresidencial
             // 
@@ -277,6 +280,7 @@
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(107, 26);
             this.numericUpDown1.TabIndex = 20;
+            this.toolTip1.SetToolTip(this.numericUpDown1, "Numero de personas adultas en el hotel");
             this.numericUpDown1.Value = new decimal(new int[] {
             1,
             0,
@@ -313,27 +317,9 @@
             // toolTip1
             // 
             this.toolTip1.BackColor = System.Drawing.Color.Tan;
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ToolTipTitle = "Check-In";
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
-            // 
-            // mtbHoraLlegada
-            // 
-            this.mtbHoraLlegada.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbHoraLlegada.Location = new System.Drawing.Point(616, 252);
-            this.mtbHoraLlegada.Mask = "00:00";
-            this.mtbHoraLlegada.Name = "mtbHoraLlegada";
-            this.mtbHoraLlegada.Size = new System.Drawing.Size(83, 27);
-            this.mtbHoraLlegada.TabIndex = 23;
-            this.mtbHoraLlegada.ValidatingType = typeof(System.DateTime);
-            // 
-            // mtbHoraSalida
-            // 
-            this.mtbHoraSalida.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbHoraSalida.Location = new System.Drawing.Point(821, 252);
-            this.mtbHoraSalida.Mask = "00:00";
-            this.mtbHoraSalida.Name = "mtbHoraSalida";
-            this.mtbHoraSalida.Size = new System.Drawing.Size(83, 27);
-            this.mtbHoraSalida.TabIndex = 24;
-            this.mtbHoraSalida.ValidatingType = typeof(System.DateTime);
             // 
             // dtpInicioEstancia
             // 
@@ -342,6 +328,7 @@
             this.dtpInicioEstancia.Name = "dtpInicioEstancia";
             this.dtpInicioEstancia.Size = new System.Drawing.Size(220, 20);
             this.dtpInicioEstancia.TabIndex = 25;
+            this.toolTip1.SetToolTip(this.dtpInicioEstancia, "Dia del inicio de \r\ntu estancia en el hotel");
             // 
             // dtpFinaldeEstancia
             // 
@@ -350,6 +337,7 @@
             this.dtpFinaldeEstancia.Name = "dtpFinaldeEstancia";
             this.dtpFinaldeEstancia.Size = new System.Drawing.Size(220, 20);
             this.dtpFinaldeEstancia.TabIndex = 26;
+            this.toolTip1.SetToolTip(this.dtpFinaldeEstancia, "Dia ultimo de tu\r\nestancia en el hotel");
             // 
             // monthCalendar1
             // 
@@ -361,6 +349,7 @@
             this.monthCalendar1.TabIndex = 27;
             this.monthCalendar1.TitleBackColor = System.Drawing.Color.Black;
             this.monthCalendar1.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.toolTip1.SetToolTip(this.monthCalendar1, "Agregar de que dia a que dia \r\ndurara tu estancia en el hotel");
             this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
             // 
             // button1
@@ -385,6 +374,29 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
+            // dtpHoraReserva
+            // 
+            this.dtpHoraReserva.Enabled = false;
+            this.dtpHoraReserva.Location = new System.Drawing.Point(470, 279);
+            this.dtpHoraReserva.Name = "dtpHoraReserva";
+            this.dtpHoraReserva.Size = new System.Drawing.Size(160, 20);
+            this.dtpHoraReserva.TabIndex = 30;
+            this.toolTip1.SetToolTip(this.dtpHoraReserva, "Dia ultimo de tu\r\nestancia en el hotel");
+            // 
+            // dtpHoraSalida
+            // 
+            this.dtpHoraSalida.Enabled = false;
+            this.dtpHoraSalida.Location = new System.Drawing.Point(686, 279);
+            this.dtpHoraSalida.Name = "dtpHoraSalida";
+            this.dtpHoraSalida.Size = new System.Drawing.Size(159, 20);
+            this.dtpHoraSalida.TabIndex = 31;
+            this.toolTip1.SetToolTip(this.dtpHoraSalida, "Dia ultimo de tu\r\nestancia en el hotel");
+            // 
             // CheckIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,13 +406,13 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1386, 788);
             this.ControlBox = false;
+            this.Controls.Add(this.dtpHoraSalida);
+            this.Controls.Add(this.dtpHoraReserva);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.dtpFinaldeEstancia);
             this.Controls.Add(this.dtpInicioEstancia);
-            this.Controls.Add(this.mtbHoraSalida);
-            this.Controls.Add(this.mtbHoraLlegada);
             this.Controls.Add(this.numericUpDown2);
             this.Controls.Add(this.lblCantdeMenores);
             this.Controls.Add(this.numericUpDown1);
@@ -452,12 +464,13 @@
         private System.Windows.Forms.Label lblCantdeMenores;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.MaskedTextBox mtbHoraLlegada;
-        private System.Windows.Forms.MaskedTextBox mtbHoraSalida;
         private System.Windows.Forms.DateTimePicker dtpInicioEstancia;
         private System.Windows.Forms.DateTimePicker dtpFinaldeEstancia;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.DateTimePicker dtpHoraReserva;
+        private System.Windows.Forms.DateTimePicker dtpHoraSalida;
     }
 }

@@ -29,10 +29,10 @@ namespace MAP2A1HotelHeavens
 
         private void CheckIn_Load(object sender, EventArgs e)
         {
-            toolTip1.IsBalloon = true; 
-            toolTip1.AutoPopDelay = 6000;    
-            toolTip1.InitialDelay = 500;     
-            toolTip1.ReshowDelay = 200;
+            dtpHoraReserva.Format = DateTimePickerFormat.Time;
+            dtpHoraReserva.ShowUpDown = true;
+            dtpHoraSalida.Format = DateTimePickerFormat.Time;
+            dtpHoraSalida.ShowUpDown = true;
         }
 
         private void lblTipodehabitacion_Click(object sender, EventArgs e)
@@ -55,8 +55,8 @@ namespace MAP2A1HotelHeavens
         {
             string nombre,  horadellegada, horadesalida, adultos, menores, diadellegada,diadesalida,a;
             nombre = txtNombre.Text;
-            horadellegada = mtbHoraLlegada.Text.ToString();
-            horadesalida = mtbHoraSalida.Text.ToString();
+            horadellegada = dtpHoraReserva.Text.ToString();
+            horadesalida = dtpHoraSalida.Text.ToString();
             adultos = numericUpDown1.Value.ToString();
             menores = numericUpDown2.Value.ToString();
             if (radHabNormal.Checked)
@@ -76,22 +76,30 @@ namespace MAP2A1HotelHeavens
 
             string si=verify();
 
-            if(string.IsNullOrEmpty(si))
+            if(!string.IsNullOrEmpty(si))
             {
                 MessageBox.Show($"Te falta \n {si}");
             }
             else
             {
+                
                 txtNombre.Clear();
                 numericUpDown1.Value=numericUpDown1.Minimum;
                 numericUpDown2.Value=numericUpDown2.Minimum;
-                mtbHoraLlegada.Clear();
-                mtbHoraSalida.Clear();
+
+                dtpHoraSalida.Value = DateTime.Today.AddHours(00);
+                dtpHoraReserva.Value = DateTime.Today.AddHours(00);
+
                 monthCalendar1.SelectionStart=DateTime.Today;
                 foreach (RadioButton simon in select)
                 {
                     simon.Checked = false;
                 }
+
+                notifyIcon1.BalloonTipTitle = "Check_In";
+                notifyIcon1.BalloonTipText = "Reistro Completado";
+                notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
+                notifyIcon1.ShowBalloonTip(1000);
             }
         }
         private string verify()
@@ -105,14 +113,23 @@ namespace MAP2A1HotelHeavens
             {
                 llenado += "- Tipo de habitación\n";
             }
-            if (string.IsNullOrEmpty(mtbHoraLlegada.Text) || mtbHoraLlegada.Text.Contains("_"))
+            if (string.IsNullOrEmpty(dtpHoraReserva.Text) || dtpHoraReserva.Text.Contains("_"))
             {
                 llenado += "- Hora de llegada\n";
             }
-            if (string.IsNullOrEmpty(mtbHoraSalida.Text) || mtbHoraSalida.Text.Contains("_"))
+            if(dtpHoraReserva.Value.Hour<1 || dtpHoraReserva.Value.Hour >24)
+            {
+                llenado += "- Hora de llegada fuera del rango";
+            }
+            if (string.IsNullOrEmpty(dtpHoraSalida.Text) || dtpHoraSalida.Text.Contains("_"))
             {
                 llenado += "- Hora de salida\n";
             }
+            if(dtpHoraSalida.Value.Hour<1 || dtpHoraSalida.Value.Hour>24)
+            {
+                llenado += "- Hora salida fuera del rango";
+            }
+
             
             return llenado;
 
