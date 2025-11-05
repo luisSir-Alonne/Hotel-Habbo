@@ -20,16 +20,7 @@ namespace MAP2A1HotelHeavens
 
         private void CargarDatosVentas()
         {
-            Funciones_MySQL usar = new Funciones_MySQL();
-            using (MySqlConnection cone = usar.obtenerconexion())
-            {
-                string info = "SELECT idUsuario,monto_bruto,impuesto,servicios,monto_total FROM ingresos";
-                MySqlDataAdapter adaptar = new MySqlDataAdapter(info, cone);
-                DataTable si = new DataTable();
-                adaptar.Fill(si);
-                dataGridView1.DataSource = si;
-                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            }
+            
         }
         private void Ventas_Load(object sender, EventArgs e)
         {
