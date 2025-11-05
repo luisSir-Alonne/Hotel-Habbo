@@ -114,6 +114,12 @@
     <Compile Include="CheckOut.Designer.cs">
       <DependentUpon>CheckOut.cs</DependentUpon>
     </Compile>
+    <Compile Include="Control de Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control de Empleados.Designer.cs">
+      <DependentUpon>Control de Empleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control de Jefes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CheckOut.resx">
       <DependentUpon>CheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control de Empleados.resx">
+      <DependentUpon>Control de Empleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control de Jefes.resx">
       <DependentUpon>Control de Jefes.cs</DependentUpon>
