@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Capa_Negocio
 {
-    internal class CN_Hotel
+    public class CN_Hotel
     {
     }
 }

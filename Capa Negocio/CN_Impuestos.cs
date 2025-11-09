@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Capa_Negocio
 {
-    internal class CN_Impuestos
+    public class CN_Impuestos
     {
     }
 }

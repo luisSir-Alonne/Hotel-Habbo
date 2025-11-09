@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Capa_Entidad
 {
-    internal class Impuestos
+    public class Impuestos
     {
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Capa_Negocio
 {
-    internal class CN_Rol
+    public class CN_Rol
     {
     }
 }

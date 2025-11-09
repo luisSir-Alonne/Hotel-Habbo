@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Capa_Datos
 {
-    internal class CD_Habitaciones
+    public class CD_Habitaciones
     {
     }
 }
