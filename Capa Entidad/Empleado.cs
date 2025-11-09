@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Capa_Entidad
 {
-    internal class Empleado
+    public class Empleado
     {
+        public int idEmpleado { get; set; }
+        public string nombre { get; set; }
+        public Rol oRol { get; set; }
+
+        public string correo { get; set; }
+        public string clave { get; set; }
+        public string fecha { get; set; }
+
     }
 }

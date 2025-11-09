@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Capa_Entidad
 {
-    internal class Usuario
+    public class Usuario
     {
     }
 }
