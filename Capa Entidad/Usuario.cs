@@ -15,6 +15,7 @@ namespace Capa_Entidad
         public string correo { get; set; }
         public string edad { get; set; }
         public bool membresia { get; set; }
+        public string fecha_registro { get; set; }
 
     }
 }
