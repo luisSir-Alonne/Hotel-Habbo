@@ -8,5 +8,13 @@ namespace Capa_Entidad
 {
     public class Usuario
     {
+        public int id { get; set; }
+        public string nombre { get; set; }
+        public string numeroTelefono { get; set; }
+        public string sexo { get; set; }
+        public string correo { get; set; }
+        public string edad { get; set; }
+        public bool membresia { get; set; }
+
     }
 }
