@@ -27,14 +27,14 @@ namespace Capa_Datos
                         {
                             empleados.Add(new Usuario()
                             {
-                                id = Convert.ToInt32(dr["idUsuario"]),
+                                id = Convert.ToInt32(dr["id"]),
                                 nombre = dr["nombre"].ToString(),
-                                correo = dr["correo"].ToString(),
-                                numeroTelefono = dr["numero_telefonico"].ToString(),
-                                fecha_registro = dr["fecha_registro"].ToString(),
+                                numeroTelefono = dr["numero_telefono"].ToString(),
                                 sexo = dr["sexo"].ToString(),
+                                correo = dr["correo_electronicio"].ToString(),
                                 edad = dr["edad"].ToString(),
-                                membresia = Convert.ToBoolean(dr["membresia_activa"])
+                                membresia = Convert.ToBoolean(dr["membresia_activa"]),
+                                fecha_registro = dr["fecha_registro"].ToString()
                             });
                         }
                     }
@@ -93,11 +93,13 @@ namespace Capa_Datos
                 {
                     MySqlCommand cmd = new MySqlCommand("SP_EDITARUSUARIO", oconexion);
                     cmd.Parameters.AddWithValue("idP", obj.id);
+                    cmd.Parameters.AddWithValue("telefonoP", obj.numeroTelefono);
                     cmd.Parameters.AddWithValue("nombreP", obj.nombre);
-                    cmd.Parameters.AddWithValue("numeroP", obj.numeroTelefono);
                     cmd.Parameters.AddWithValue("correoP", obj.correo);
-                    cmd.Parameters.AddWithValue("sexoP", obj.sexo);
+                    cmd.Parameters.AddWithValue("edadP", obj.edad);
                     cmd.Parameters.AddWithValue("mem", obj.membresia);
+                    cmd.Parameters.AddWithValue("sexoP", obj.sexo);
+
 
                     cmd.Parameters.Add("respuesta", MySqlDbType.Bit).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("mensaje", MySqlDbType.VarChar, 500).Direction = ParameterDirection.Output;

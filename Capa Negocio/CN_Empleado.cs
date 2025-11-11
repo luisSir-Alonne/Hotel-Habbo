@@ -71,5 +71,22 @@ namespace Capa_Negocio
 
             }
         }
+        public bool Eliminar(Empleado obj, out string mensaje)
+        {
+            mensaje = string.Empty;
+            if (obj.idEmpleado == 0)
+            {
+                mensaje += " Es necesario el Id del Usuario";
+
+            }
+            if (mensaje != string.Empty)
+            {
+                return false;
+            }
+            else
+            {
+                return obj_empleado.Eliminar(obj, out mensaje);
+            }
+        }
     }
 }
