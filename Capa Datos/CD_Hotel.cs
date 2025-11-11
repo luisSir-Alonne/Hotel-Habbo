@@ -13,7 +13,7 @@ namespace Capa_Datos
     {
         public List<Hotel> Leer()
         {
-            List<Hotel> empleados = new List<Hotel>();
+            List<Hotel> hotel = new List<Hotel>();
             using (MySqlConnection oconexion = new MySqlConnection(Conexion.cadena))
             {
                 try
@@ -26,7 +26,7 @@ namespace Capa_Datos
                     {
                         while (dr.Read())
                         {
-                            empleados.Add(new Hotel()
+                            hotel.Add(new Hotel()
                             {
                                 idUsuario = Convert.ToInt32(dr["idUsuario"]),
                                 nombre = dr["nombre"].ToString(),
@@ -43,31 +43,39 @@ namespace Capa_Datos
                 }
                 catch
                 {
-                    empleados = new List<Hotel>();
+                    hotel = new List<Hotel>();
                 }
             }
 
-            return empleados;
+            return hotel;
         }
 
-        public int Registrar(Hotel obj, out string mensaje)
+        public bool Registrar(Hotel obj, out string mensaje)
         {
-            int generado = 0;
+            bool generado = false;
             mensaje = String.Empty;
             try
             {
                 using (MySqlConnection oconexion = new MySqlConnection(Conexion.cadena))
                 {
                     MySqlCommand cmd = new MySqlCommand("SP_CHECKIN", oconexion);
-                   
+                    cmd.Parameters.AddWithValue("idP", obj.idUsuario);
 
-                    cmd.Parameters.Add("idgenerado", MySqlDbType.Int32).Direction = ParameterDirection.Output;
+                    cmd.Parameters.AddWithValue("nombreP", obj.nombre);
+                    cmd.Parameters.AddWithValue("numerohabitacionP", obj.numero_habitacion);
+                    cmd.Parameters.AddWithValue("personasP", obj.numeroPersonas);
+                    cmd.Parameters.AddWithValue("salidaP", obj.salida);
+                    cmd.Parameters.AddWithValue("tipoP", obj.tipo_habitacion);
+                    cmd.Parameters.AddWithValue("restantesP", obj.dias_restantes);
+                    cmd.Parameters.AddWithValue("estanciaP", obj.dias_estancia);
+
+                    cmd.Parameters.Add("idgenerado", MySqlDbType.Bit).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("mensaje", MySqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
                     oconexion.Open();
                     cmd.ExecuteNonQuery();
-                    generado = Convert.ToInt32(cmd.Parameters["idgenerado"].Value);
+                    generado = Convert.ToBoolean(cmd.Parameters["idgenerado"].Value);
                     mensaje = cmd.Parameters["mensaje"].Value.ToString();
 
                 }
@@ -75,7 +83,7 @@ namespace Capa_Datos
             catch (MySqlException ex)
             {
                 mensaje = ex.Message;
-                generado = 0;
+                generado = false;
             }
             return generado;
 
@@ -91,7 +99,14 @@ namespace Capa_Datos
                 {
                     MySqlCommand cmd = new MySqlCommand("SP_EDITARCLIENTE", oconexion);
                     cmd.Parameters.AddWithValue("idP", obj.idUsuario);
+
                     cmd.Parameters.AddWithValue("nombreP", obj.nombre);
+                    cmd.Parameters.AddWithValue("numerohabitacionP", obj.numero_habitacion);
+                    cmd.Parameters.AddWithValue("personasP", obj.numeroPersonas);
+                    cmd.Parameters.AddWithValue("salidaP", obj.salida);
+                    cmd.Parameters.AddWithValue("tipoP", obj.tipo_habitacion);
+                    cmd.Parameters.AddWithValue("restantesP", obj.dias_restantes);
+                    cmd.Parameters.AddWithValue("estanciaP", obj.dias_estancia);
 
 
                     cmd.Parameters.Add("respuesta", MySqlDbType.Bit).Direction = ParameterDirection.Output;
