@@ -20,8 +20,7 @@ namespace MAP2A1HotelHeavens
         private void btnConfimar_Click(object sender, EventArgs e)
         {
             string Huesped, Habitacíon, Telefono;
-            Huesped = Convert.ToString(txtNombre.Text);
-            Habitacíon = Convert.ToString
+            
         }
 
         private void CheckOut_Load(object sender, EventArgs e)
