@@ -12,6 +12,7 @@ namespace MAP2A1HotelHeavens
 {
     public partial class CheckOut : Form
     {
+        
         public CheckOut()
         {
             InitializeComponent();
@@ -31,6 +32,12 @@ namespace MAP2A1HotelHeavens
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
+            ListViewItem item1 = new ListViewItem(nombre);
         }
     }
 }
