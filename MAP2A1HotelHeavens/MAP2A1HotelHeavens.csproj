@@ -267,5 +267,15 @@
   <ItemGroup>
     <None Include="Resources\imgcheckinLP.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
+      <Project>{52913402-A9D8-4C8E-8347-6F9324C9137D}</Project>
+      <Name>CapaEntidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
+      <Project>{81E57727-0847-45D8-BBB5-2B31F2BEF62C}</Project>
+      <Name>CapaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
