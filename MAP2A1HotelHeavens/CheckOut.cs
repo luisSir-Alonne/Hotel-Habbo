@@ -37,7 +37,7 @@ namespace MAP2A1HotelHeavens
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
           
-            ListViewItem item1 = new ListViewItem(nombre);
+            /* ji ji ji ja ListViewItem item1 = new ListViewItem(nombre);*/
         }
     }
 }
