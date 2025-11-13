@@ -149,5 +149,37 @@ namespace CapaDatos
             }
             return respuesta;
         }
+        public bool activarMembresia(Usuario obj, out string mensaje)
+        {
+            mensaje = string.Empty;
+            bool respuesta = false;
+            try
+            {
+                using (MySqlConnection oconexion = new MySqlConnection(Conexion.cadena))
+                {
+                    MySqlCommand cmd = new MySqlCommand("SP_MEMBRESIA", oconexion);
+                    cmd.Parameters.AddWithValue("idP", obj.id);
+                    cmd.Parameters.AddWithValue("correoP", obj.correo);
+                    cmd.Parameters.AddWithValue("numeroP", obj.numeroTelefono);
+                    cmd.Parameters.AddWithValue("activar", obj.membresia);
+
+                    cmd.Parameters.Add("respuesta", MySqlDbType.Bit).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("mensaje", MySqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    oconexion.Open();
+                    cmd.ExecuteNonQuery();
+                    respuesta = Convert.ToBoolean(cmd.Parameters["respuesta"].Value);
+                    mensaje = cmd.Parameters["mensaje"].ToString();
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex);
+                respuesta = false;
+            }
+            return respuesta;
+
+        }
     }
 }

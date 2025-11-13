@@ -53,6 +53,46 @@ namespace CapaNegocio
 
             }
         }
+        public bool ImplementarMembresia(Usuario obj, out string mensaje)
+        {
+            mensaje = string.Empty;
+            if (obj.id == 0)
+            {
+                mensaje += " Es necesario el Identificador del Usuario";
+                   
+            }
+            if (obj.nombre == "")
+            {
+                mensaje += " Es necesario el Nombre del Usuario";
+
+            }
+            if(obj.numeroTelefono == "")
+            {
+                mensaje += " Es necesario el Numero Telefonico del Usuario";
+
+            }
+            if(obj.correo == "")
+            {
+                mensaje += " Es necesario el Correo del Usuario";
+
+            }
+            if (obj.edad == "")
+            {
+                mensaje += " Es necesario la Edad del Usuario";
+
+            }
+            if (mensaje != string.Empty)
+            {
+                return false;
+            }
+            else
+            {
+                return obj_usuario.activarMembresia(obj, out mensaje);
+            }
+
+
+
+        }
         public bool Eliminar(Usuario obj, out string mensaje)
         {
             mensaje = string.Empty;
