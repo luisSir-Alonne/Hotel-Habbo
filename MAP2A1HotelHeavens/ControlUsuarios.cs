@@ -16,5 +16,10 @@ namespace MAP2A1HotelHeavens
         {
             InitializeComponent();
         }
+
+        private void ControlUsuarios_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

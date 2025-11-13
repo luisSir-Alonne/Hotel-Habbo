@@ -38,14 +38,13 @@
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMenuCerrar
             // 
-            this.lblMenuCerrar.BackColor = System.Drawing.Color.Peru;
+            this.lblMenuCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
             this.lblMenuCerrar.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblMenuCerrar.Location = new System.Drawing.Point(0, 0);
             this.lblMenuCerrar.Name = "lblMenuCerrar";
@@ -55,9 +54,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MAP2A1HotelHeavens.Properties.Resources.Gemini_Generated_Image_ubow9ubow9ubow9u;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 46);
+            this.pictureBox1.Location = new System.Drawing.Point(33, 119);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(466, 647);
+            this.pictureBox1.Size = new System.Drawing.Size(370, 521);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -69,7 +68,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label1.Location = new System.Drawing.Point(544, 67);
+            this.label1.Location = new System.Drawing.Point(428, 119);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(203, 30);
             this.label1.TabIndex = 7;
@@ -84,7 +83,7 @@
             "Normal",
             "Suite",
             "Presidencial"});
-            this.comboBoxTipo.Location = new System.Drawing.Point(547, 125);
+            this.comboBoxTipo.Location = new System.Drawing.Point(431, 162);
             this.comboBoxTipo.Name = "comboBoxTipo";
             this.comboBoxTipo.Size = new System.Drawing.Size(378, 38);
             this.comboBoxTipo.TabIndex = 8;
@@ -108,7 +107,7 @@
             this.checkedListBoxOcupadas.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBoxOcupadas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.checkedListBoxOcupadas.FormattingEnabled = true;
-            this.checkedListBoxOcupadas.Location = new System.Drawing.Point(549, 271);
+            this.checkedListBoxOcupadas.Location = new System.Drawing.Point(431, 236);
             this.checkedListBoxOcupadas.Name = "checkedListBoxOcupadas";
             this.checkedListBoxOcupadas.Size = new System.Drawing.Size(363, 394);
             this.checkedListBoxOcupadas.TabIndex = 10;
@@ -117,7 +116,7 @@
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = global::MAP2A1HotelHeavens.Properties.Resources.imgLogoHotelHeavensLP;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(1225, 52);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(1099, 66);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(129, 111);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -137,22 +136,14 @@
             this.toolTip1.IsBalloon = true;
             this.toolTip1.ToolTipTitle = "Hotel Havens";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(-15, -15);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 12;
-            // 
             // HabitacionesDisponibles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MAP2A1HotelHeavens.Properties.Resources.imgHabitacionPresidencialLP;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1366, 705);
+            this.ClientSize = new System.Drawing.Size(1366, 637);
             this.ControlBox = false;
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.checkedListBoxOcupadas);
             this.Controls.Add(this.label2);
@@ -182,6 +173,5 @@
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

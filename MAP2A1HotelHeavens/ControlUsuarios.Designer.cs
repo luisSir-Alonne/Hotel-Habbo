@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // ControlUsuarios
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "ControlUsuarios";
             this.Text = "ControlUsuarios";
+            this.Load += new System.EventHandler(this.ControlUsuarios_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

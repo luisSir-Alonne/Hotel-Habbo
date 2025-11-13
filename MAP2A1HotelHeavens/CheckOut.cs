@@ -13,11 +13,11 @@ using System.Windows.Forms;
 
 namespace MAP2A1HotelHeavens
 {
-    public partial class CheckOut : Form
+    public partial class Checkout : Form
     {
 
         
-        public CheckOut()
+        public Checkout()
         {
             InitializeComponent();
         }
@@ -40,7 +40,7 @@ namespace MAP2A1HotelHeavens
 
         private void CheckOut_Load(object sender, EventArgs e)
         {
-
+            this.BackColor = Color.FromArgb(93, 64, 55);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

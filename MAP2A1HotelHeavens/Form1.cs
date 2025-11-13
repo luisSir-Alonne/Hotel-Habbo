@@ -32,26 +32,11 @@ namespace MAP2A1HotelHeavens
             }
 
                 InitializeComponent();
-            var menu = new MenuStrip();
-            menu.Renderer = new CustomMenuRenderer();
+          
 
         }
-        public class CustomMenuRenderer : ToolStripProfessionalRenderer
-        {
-            public CustomMenuRenderer() : base(new CustomColorTable()) { }
-        }
-
-        public class CustomColorTable : ProfessionalColorTable
-        {
-            public override Color MenuItemSelected => ColorTranslator.FromHtml("6D4C41"); 
-            public override Color MenuItemSelectedGradientBegin => ColorTranslator.FromHtml("#6D4C41");
-            public override Color MenuItemSelectedGradientEnd => ColorTranslator.FromHtml("#6D4C41");
-            public override Color MenuItemBorder => ColorTranslator.FromHtml("#D7B377"); 
-            public override Color MenuItemPressedGradientBegin => ColorTranslator.FromHtml("#A1887F"); 
-            public override Color MenuItemPressedGradientEnd => ColorTranslator.FromHtml("#A1887F");
-            public override Color ToolStripDropDownBackground => ColorTranslator.FromHtml("#4E342E"); 
-            public override Color MenuBorder => ColorTranslator.FromHtml("#A1887F"); 
-        }
+      
+        
 
         private static IconMenuItem MenuActivo = null;
         private static Form FormActivo = null;
@@ -75,6 +60,7 @@ namespace MAP2A1HotelHeavens
             formulario.BackColor = System.Drawing.Color.White;
             panMostrar.Controls.Add(formulario);
             formulario.Show();
+            Console.WriteLine("Se mostro el formulario");
         }
 
         private void picCerrar_Click(object sender, EventArgs e)
@@ -101,7 +87,7 @@ namespace MAP2A1HotelHeavens
 
         private void imiCheckOut_Click(object sender, EventArgs e)
         {
-            abrirFormulario(imiCheckOut, new CheckOut());
+            abrirFormulario(imiCheckOut, new Checkout());
             cambiarColor();
 
 
