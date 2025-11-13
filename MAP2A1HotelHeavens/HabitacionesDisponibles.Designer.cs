@@ -88,6 +88,7 @@
             this.comboBoxTipo.Size = new System.Drawing.Size(378, 38);
             this.comboBoxTipo.TabIndex = 8;
             this.toolTip1.SetToolTip(this.comboBoxTipo, "Tipo de habitaciones.");
+            this.comboBoxTipo.SelectedIndexChanged += new System.EventHandler(this.comboBoxTipo_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -156,6 +157,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HabitacionesDisponibles";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.HabitacionesDisponibles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
