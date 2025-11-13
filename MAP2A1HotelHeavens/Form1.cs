@@ -85,7 +85,7 @@ namespace MAP2A1HotelHeavens
 
         private void imiControlUsuario_Click(object sender, EventArgs e)
         {
-            abrirFormulario(imiControlUsuario, new ControlUsurio());
+            abrirFormulario(imiControlUsuario, new ControlUsuarios());
 
         }
 
