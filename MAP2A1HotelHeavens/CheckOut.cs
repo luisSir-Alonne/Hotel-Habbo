@@ -53,5 +53,10 @@ namespace MAP2A1HotelHeavens
           
             
         }
+
+        private void lvwConsumos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -67,11 +67,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("HP Simplified", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(25, 290);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(223, 32);
+            this.label4.Size = new System.Drawing.Size(259, 31);
             this.label4.TabIndex = 9;
             this.label4.Text = "Fecha De Entrada:";
             // 
@@ -79,11 +79,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("HP Simplified", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(307, 290);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(201, 32);
+            this.label5.Size = new System.Drawing.Size(238, 31);
             this.label5.TabIndex = 10;
             this.label5.Text = "Fecha De Salida:";
             // 
@@ -116,6 +116,7 @@
             this.lvwConsumos.TabIndex = 42;
             this.lvwConsumos.UseCompatibleStateImageBehavior = false;
             this.lvwConsumos.View = System.Windows.Forms.View.Details;
+            this.lvwConsumos.SelectedIndexChanged += new System.EventHandler(this.lvwConsumos_SelectedIndexChanged);
             // 
             // Nombre
             // 
@@ -137,12 +138,12 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("HP Simplified", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(24, 415);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 32);
+            this.label7.Size = new System.Drawing.Size(131, 31);
             this.label7.TabIndex = 43;
             this.label7.Text = "Subtotal:";
             // 
@@ -150,12 +151,12 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("HP Simplified", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(25, 457);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(144, 32);
+            this.label8.Size = new System.Drawing.Size(158, 31);
             this.label8.TabIndex = 44;
             this.label8.Text = "Impuestos:";
             // 
@@ -163,12 +164,12 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("HP Simplified", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(25, 506);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(173, 32);
+            this.label9.Size = new System.Drawing.Size(195, 31);
             this.label9.TabIndex = 45;
             this.label9.Text = "Total a pagar:";
             // 
@@ -176,12 +177,12 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("HP Simplified", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(24, 368);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(209, 32);
+            this.label10.Size = new System.Drawing.Size(231, 31);
             this.label10.TabIndex = 46;
             this.label10.Text = "Metodo de pago:";
             // 
@@ -233,36 +234,36 @@
             // lblSubtotal
             // 
             this.lblSubtotal.AutoSize = true;
-            this.lblSubtotal.Font = new System.Drawing.Font("HP Simplified", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.lblSubtotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.lblSubtotal.Location = new System.Drawing.Point(152, 415);
             this.lblSubtotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSubtotal.Name = "lblSubtotal";
-            this.lblSubtotal.Size = new System.Drawing.Size(28, 32);
+            this.lblSubtotal.Size = new System.Drawing.Size(30, 31);
             this.lblSubtotal.TabIndex = 54;
             this.lblSubtotal.Text = "0";
             // 
             // lblImpuestos
             // 
             this.lblImpuestos.AutoSize = true;
-            this.lblImpuestos.Font = new System.Drawing.Font("HP Simplified", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblImpuestos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.lblImpuestos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.lblImpuestos.Location = new System.Drawing.Point(173, 457);
             this.lblImpuestos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblImpuestos.Name = "lblImpuestos";
-            this.lblImpuestos.Size = new System.Drawing.Size(28, 32);
+            this.lblImpuestos.Size = new System.Drawing.Size(30, 31);
             this.lblImpuestos.TabIndex = 55;
             this.lblImpuestos.Text = "0";
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("HP Simplified", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.lblTotal.Location = new System.Drawing.Point(205, 506);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(28, 32);
+            this.lblTotal.Size = new System.Drawing.Size(30, 31);
             this.lblTotal.TabIndex = 56;
             this.lblTotal.Text = "0";
             // 
