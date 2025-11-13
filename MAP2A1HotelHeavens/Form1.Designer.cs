@@ -210,6 +210,7 @@
             this.imiControlEmpleados.Size = new System.Drawing.Size(122, 69);
             this.imiControlEmpleados.Text = "Control Empleados";
             this.imiControlEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.imiControlEmpleados.Click += new System.EventHandler(this.imiControlEmpleados_Click);
             // 
             // imiAdmin
             // 
@@ -223,6 +224,7 @@
             this.imiAdmin.Size = new System.Drawing.Size(122, 69);
             this.imiAdmin.Text = "Control Jefes";
             this.imiAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.imiAdmin.Click += new System.EventHandler(this.imiAdmin_Click);
             // 
             // panMostrar
             // 
@@ -231,6 +233,7 @@
             this.panMostrar.Name = "panMostrar";
             this.panMostrar.Size = new System.Drawing.Size(1366, 469);
             this.panMostrar.TabIndex = 21;
+            this.panMostrar.Paint += new System.Windows.Forms.PaintEventHandler(this.panMostrar_Paint);
             // 
             // Form1
             // 
@@ -254,6 +257,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             this.msAreas.ResumeLayout(false);

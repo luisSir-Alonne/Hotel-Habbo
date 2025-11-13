@@ -126,6 +126,12 @@
     <Compile Include="Control de Jefes.Designer.cs">
       <DependentUpon>Control de Jefes.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlUsuarios.Designer.cs">
+      <DependentUpon>ControlUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Desarrollador.cs">
       <SubType>Form</SubType>
     </Compile>

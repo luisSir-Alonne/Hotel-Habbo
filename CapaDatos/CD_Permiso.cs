@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    public class CN_Permiso
+    public class CD_Permiso
     {
         public List<Permiso> Leer(int idUsuario)
         {
@@ -17,9 +17,9 @@ namespace CapaDatos
             {
                 try
                 {
-                    string query = "Select p.IdRol, p.descripcion FROM permiso p INNER JOIN rol r on r.IdRol = p.IdRol INNER JOIN empleados_hotel h ON h.IdRol = r.IdRol   WHERE h.idEmpleado = idP";
+                    string query = "Select p.IdRol, p.descripcion FROM permisos p INNER JOIN rol r on r.IdRol = p.IdRol INNER JOIN empleados_hotel h ON h.IdRol = r.IdRol WHERE h.idEmpleado = @idP";
                     MySqlCommand cmd = new MySqlCommand(query, oconexion);
-                    cmd.Parameters.AddWithValue("idP", idUsuario);
+                    cmd.Parameters.AddWithValue("@idP", idUsuario);
                     cmd.CommandType = System.Data.CommandType.Text;
                     oconexion.Open();
                     using (MySqlDataReader dr = cmd.ExecuteReader())

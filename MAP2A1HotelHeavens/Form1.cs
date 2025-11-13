@@ -1,4 +1,6 @@
-﻿using FontAwesome.Sharp;
+﻿using CapaEntidad;
+using CapaNegocio;
+using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +16,21 @@ namespace MAP2A1HotelHeavens
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        private static Empleado empleadoActual; 
+        // Esto es para llamar al usuario actual, es practicamente un nuevo objeto pero en si el objeto que se va a utilizar en el programa para cargar los privilegios
+        public Form1(Empleado obj_empleado = null)
         {
-            InitializeComponent();
+            if (obj_empleado == null)
+            {
+                empleadoActual = new Empleado() { nombre = "Luis Angel Ponce Prieto", idEmpleado = 1}; 
+            }
+            else
+            {
+                empleadoActual = obj_empleado; 
+
+            }
+
+                InitializeComponent();
         }
         private static IconMenuItem MenuActivo = null;
         private static Form FormActivo = null;
@@ -71,6 +85,7 @@ namespace MAP2A1HotelHeavens
 
         private void imiControlUsuario_Click(object sender, EventArgs e)
         {
+            abrirFormulario(imiControlUsuario, new ControlUsurio());
 
         }
 
@@ -83,6 +98,39 @@ namespace MAP2A1HotelHeavens
         private void imiVentas_Click(object sender, EventArgs e)
         {
             abrirFormulario(imiVentas, new Ventas());
+        }
+
+        private void panMostrar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            List<Permiso> lista = new CN_Permiso().Listar(empleadoActual.idEmpleado);
+            foreach (IconMenuItem iconmenu in msAreas.Items)
+            {
+                bool encontrado = lista.Any(m => m.descripcion == iconmenu.Name);
+                if (encontrado == false)
+                {
+                    iconmenu.Visible = false;
+
+                }
+            }
+            lblUsuario.Text = empleadoActual.nombre;
+
+        }
+
+        private void imiAdmin_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(imiAdmin, new Control_de_Jefes());
+
+        }
+
+        private void imiControlEmpleados_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(imiControlEmpleados, new Control_de_Empleados());
+
         }
     }
 }
