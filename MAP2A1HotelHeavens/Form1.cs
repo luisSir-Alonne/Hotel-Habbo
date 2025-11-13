@@ -16,6 +16,7 @@ namespace MAP2A1HotelHeavens
 {
     public partial class Form1 : Form
     {
+
         private static Empleado empleadoActual; 
         // Esto es para llamar al usuario actual, es practicamente un nuevo objeto pero en si el objeto que se va a utilizar en el programa para cargar los privilegios
         public Form1(Empleado obj_empleado = null)
@@ -31,7 +32,27 @@ namespace MAP2A1HotelHeavens
             }
 
                 InitializeComponent();
+            var menu = new MenuStrip();
+            menu.Renderer = new CustomMenuRenderer();
+
         }
+        public class CustomMenuRenderer : ToolStripProfessionalRenderer
+        {
+            public CustomMenuRenderer() : base(new CustomColorTable()) { }
+        }
+
+        public class CustomColorTable : ProfessionalColorTable
+        {
+            public override Color MenuItemSelected => ColorTranslator.FromHtml("6D4C41"); 
+            public override Color MenuItemSelectedGradientBegin => ColorTranslator.FromHtml("#6D4C41");
+            public override Color MenuItemSelectedGradientEnd => ColorTranslator.FromHtml("#6D4C41");
+            public override Color MenuItemBorder => ColorTranslator.FromHtml("#D7B377"); 
+            public override Color MenuItemPressedGradientBegin => ColorTranslator.FromHtml("#A1887F"); 
+            public override Color MenuItemPressedGradientEnd => ColorTranslator.FromHtml("#A1887F");
+            public override Color ToolStripDropDownBackground => ColorTranslator.FromHtml("#4E342E"); 
+            public override Color MenuBorder => ColorTranslator.FromHtml("#A1887F"); 
+        }
+
         private static IconMenuItem MenuActivo = null;
         private static Form FormActivo = null;
 
@@ -75,29 +96,36 @@ namespace MAP2A1HotelHeavens
         private void imiCheckIn_Click(object sender, EventArgs e)
         {
             abrirFormulario(imiCheckIn, new CheckIn());
+            cambiarColor();
         }
 
         private void imiCheckOut_Click(object sender, EventArgs e)
         {
             abrirFormulario(imiCheckOut, new CheckOut());
+            cambiarColor();
+
 
         }
 
         private void imiControlUsuario_Click(object sender, EventArgs e)
         {
             abrirFormulario(imiControlUsuario, new ControlUsuarios());
+            cambiarColor();
 
         }
 
         private void imiHotel_Click(object sender, EventArgs e)
         {
             abrirFormulario(imiHotel, new HabitacionesDisponibles());
+            cambiarColor();
 
         }
 
         private void imiVentas_Click(object sender, EventArgs e)
         {
             abrirFormulario(imiVentas, new Ventas());
+            cambiarColor();
+
         }
 
         private void panMostrar_Paint(object sender, PaintEventArgs e)
@@ -124,13 +152,31 @@ namespace MAP2A1HotelHeavens
         private void imiAdmin_Click(object sender, EventArgs e)
         {
             abrirFormulario(imiAdmin, new Control_de_Jefes());
+            cambiarColor();
 
         }
 
         private void imiControlEmpleados_Click(object sender, EventArgs e)
         {
             abrirFormulario(imiControlEmpleados, new Control_de_Empleados());
+            cambiarColor();
+        }
 
+        private void msAreas_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            cambiarColor();
+        }
+        public void cambiarColor()
+        {
+            foreach (IconMenuItem item in msAreas.Items)
+            {
+                item.BackColor = Color.FromArgb(93, 64, 55);
+                if (item.Selected)
+                {
+                    item.BackColor = Color.FromArgb(62, 39, 35);
+
+                }
+            }
         }
     }
 }

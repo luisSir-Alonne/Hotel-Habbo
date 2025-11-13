@@ -47,8 +47,8 @@ namespace MAP2A1HotelHeavens
 
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
-            dtpInicioEstancia.Value = monthCalendar1.SelectionRange.Start;
-            dtpFinaldeEstancia.Value = monthCalendar1.SelectionRange.End;
+            dtpInicioEstancia.Value = mtcFecha.SelectionRange.Start;
+            dtpFinaldeEstancia.Value = mtcFecha.SelectionRange.End;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -90,7 +90,7 @@ namespace MAP2A1HotelHeavens
                 dtpHoraSalida.Value = DateTime.Today.AddHours(00);
                 dtpHoraReserva.Value = DateTime.Today.AddHours(00);
 
-                monthCalendar1.SelectionStart=DateTime.Today;
+                mtcFecha.SelectionStart=DateTime.Today;
                 foreach (RadioButton simon in select)
                 {
                     simon.Checked = false;

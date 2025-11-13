@@ -32,7 +32,6 @@
             this.lblMenuCerrar = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblNumdehabitacion = new System.Windows.Forms.Label();
-            this.lblTipodehabitacion = new System.Windows.Forms.Label();
             this.lblNumdePersonas = new System.Windows.Forms.Label();
             this.lblReserva = new System.Windows.Forms.Label();
             this.lblSalida = new System.Windows.Forms.Label();
@@ -50,35 +49,37 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.dtpInicioEstancia = new System.Windows.Forms.DateTimePicker();
             this.dtpFinaldeEstancia = new System.Windows.Forms.DateTimePicker();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.mtcFecha = new System.Windows.Forms.MonthCalendar();
             this.dtpHoraReserva = new System.Windows.Forms.DateTimePicker();
             this.dtpHoraSalida = new System.Windows.Forms.DateTimePicker();
+            this.button2 = new System.Windows.Forms.Button();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.gpbFecha = new System.Windows.Forms.GroupBox();
             this.grbTipodeHabitacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.gpbFecha.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblMenuCerrar
             // 
-            this.lblMenuCerrar.BackColor = System.Drawing.Color.Peru;
+            this.lblMenuCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
             this.lblMenuCerrar.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblMenuCerrar.Location = new System.Drawing.Point(0, 0);
             this.lblMenuCerrar.Name = "lblMenuCerrar";
-            this.lblMenuCerrar.Size = new System.Drawing.Size(1386, 43);
+            this.lblMenuCerrar.Size = new System.Drawing.Size(1366, 43);
             this.lblMenuCerrar.TabIndex = 3;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
-            this.lblNombre.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("HP Simplified", 12.25F, System.Drawing.FontStyle.Bold);
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblNombre.Location = new System.Drawing.Point(28, 56);
+            this.lblNombre.Location = new System.Drawing.Point(22, 129);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(121, 43);
+            this.lblNombre.Size = new System.Drawing.Size(68, 24);
             this.lblNombre.TabIndex = 7;
             this.lblNombre.Text = "Nombre:";
             this.lblNombre.UseCompatibleTextRendering = true;
@@ -87,38 +88,23 @@
             // 
             this.lblNumdehabitacion.AutoSize = true;
             this.lblNumdehabitacion.BackColor = System.Drawing.Color.Transparent;
-            this.lblNumdehabitacion.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumdehabitacion.Font = new System.Drawing.Font("HP Simplified", 12.25F, System.Drawing.FontStyle.Bold);
             this.lblNumdehabitacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblNumdehabitacion.Location = new System.Drawing.Point(31, 124);
+            this.lblNumdehabitacion.Location = new System.Drawing.Point(22, 158);
             this.lblNumdehabitacion.Name = "lblNumdehabitacion";
-            this.lblNumdehabitacion.Size = new System.Drawing.Size(316, 37);
+            this.lblNumdehabitacion.Size = new System.Drawing.Size(175, 21);
             this.lblNumdehabitacion.TabIndex = 8;
             this.lblNumdehabitacion.Text = "Número de Habitación:";
-            // 
-            // lblTipodehabitacion
-            // 
-            this.lblTipodehabitacion.AutoSize = true;
-            this.lblTipodehabitacion.BackColor = System.Drawing.Color.Transparent;
-            this.lblTipodehabitacion.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipodehabitacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblTipodehabitacion.Location = new System.Drawing.Point(95, 216);
-            this.lblTipodehabitacion.Name = "lblTipodehabitacion";
-            this.lblTipodehabitacion.Size = new System.Drawing.Size(256, 43);
-            this.lblTipodehabitacion.TabIndex = 9;
-            this.lblTipodehabitacion.Text = "Tipo de Habitación:";
-            this.lblTipodehabitacion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTipodehabitacion.UseCompatibleTextRendering = true;
-            this.lblTipodehabitacion.Click += new System.EventHandler(this.lblTipodehabitacion_Click);
             // 
             // lblNumdePersonas
             // 
             this.lblNumdePersonas.AutoSize = true;
             this.lblNumdePersonas.BackColor = System.Drawing.Color.Transparent;
-            this.lblNumdePersonas.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumdePersonas.Font = new System.Drawing.Font("HP Simplified", 12.25F, System.Drawing.FontStyle.Bold);
             this.lblNumdePersonas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblNumdePersonas.Location = new System.Drawing.Point(565, 79);
+            this.lblNumdePersonas.Location = new System.Drawing.Point(22, 288);
             this.lblNumdePersonas.Name = "lblNumdePersonas";
-            this.lblNumdePersonas.Size = new System.Drawing.Size(280, 43);
+            this.lblNumdePersonas.Size = new System.Drawing.Size(158, 24);
             this.lblNumdePersonas.TabIndex = 10;
             this.lblNumdePersonas.Text = "Número de personas:";
             this.lblNumdePersonas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -128,11 +114,11 @@
             // 
             this.lblReserva.AutoSize = true;
             this.lblReserva.BackColor = System.Drawing.Color.Transparent;
-            this.lblReserva.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReserva.Font = new System.Drawing.Font("HP Simplified", 12.25F, System.Drawing.FontStyle.Bold);
             this.lblReserva.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblReserva.Location = new System.Drawing.Point(492, 240);
+            this.lblReserva.Location = new System.Drawing.Point(22, 244);
             this.lblReserva.Name = "lblReserva";
-            this.lblReserva.Size = new System.Drawing.Size(114, 43);
+            this.lblReserva.Size = new System.Drawing.Size(69, 24);
             this.lblReserva.TabIndex = 11;
             this.lblReserva.Text = "Reserva:";
             this.lblReserva.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -142,11 +128,11 @@
             // 
             this.lblSalida.AutoSize = true;
             this.lblSalida.BackColor = System.Drawing.Color.Transparent;
-            this.lblSalida.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalida.Font = new System.Drawing.Font("HP Simplified", 12.25F, System.Drawing.FontStyle.Bold);
             this.lblSalida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblSalida.Location = new System.Drawing.Point(723, 240);
+            this.lblSalida.Location = new System.Drawing.Point(249, 244);
             this.lblSalida.Name = "lblSalida";
-            this.lblSalida.Size = new System.Drawing.Size(92, 43);
+            this.lblSalida.Size = new System.Drawing.Size(56, 24);
             this.lblSalida.TabIndex = 12;
             this.lblSalida.Text = "Salida:";
             this.lblSalida.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -156,11 +142,11 @@
             // 
             this.lblDiasdeEstancia.AutoSize = true;
             this.lblDiasdeEstancia.BackColor = System.Drawing.Color.Transparent;
-            this.lblDiasdeEstancia.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiasdeEstancia.Font = new System.Drawing.Font("HP Simplified", 10.25F, System.Drawing.FontStyle.Bold);
             this.lblDiasdeEstancia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblDiasdeEstancia.Location = new System.Drawing.Point(1030, 114);
+            this.lblDiasdeEstancia.Location = new System.Drawing.Point(308, 280);
             this.lblDiasdeEstancia.Name = "lblDiasdeEstancia";
-            this.lblDiasdeEstancia.Size = new System.Drawing.Size(318, 37);
+            this.lblDiasdeEstancia.Size = new System.Drawing.Size(157, 18);
             this.lblDiasdeEstancia.TabIndex = 13;
             this.lblDiasdeEstancia.Text = "Dia de inicio de estancia \r\n";
             // 
@@ -168,11 +154,11 @@
             // 
             this.lblDiasRestantes.AutoSize = true;
             this.lblDiasRestantes.BackColor = System.Drawing.Color.Transparent;
-            this.lblDiasRestantes.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiasRestantes.Font = new System.Drawing.Font("HP Simplified", 10.25F, System.Drawing.FontStyle.Bold);
             this.lblDiasRestantes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblDiasRestantes.Location = new System.Drawing.Point(1048, 199);
+            this.lblDiasRestantes.Location = new System.Drawing.Point(311, 324);
             this.lblDiasRestantes.Name = "lblDiasRestantes";
-            this.lblDiasRestantes.Size = new System.Drawing.Size(271, 43);
+            this.lblDiasRestantes.Size = new System.Drawing.Size(130, 21);
             this.lblDiasRestantes.TabIndex = 14;
             this.lblDiasRestantes.Text = "Dia final de estancia ";
             this.lblDiasRestantes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -180,10 +166,13 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(150, 70);
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombre.Font = new System.Drawing.Font("HP Simplified", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtNombre.ForeColor = System.Drawing.Color.White;
+            this.txtNombre.Location = new System.Drawing.Point(96, 133);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(290, 22);
+            this.txtNombre.Size = new System.Drawing.Size(290, 16);
             this.txtNombre.TabIndex = 16;
             this.toolTip1.SetToolTip(this.txtNombre, "Nombre del cliente que se\r\nva a quedar en el hotel");
             // 
@@ -193,22 +182,24 @@
             this.grbTipodeHabitacion.Controls.Add(this.radHabPresidencial);
             this.grbTipodeHabitacion.Controls.Add(this.radHabSuit);
             this.grbTipodeHabitacion.Controls.Add(this.radHabNormal);
-            this.grbTipodeHabitacion.Location = new System.Drawing.Point(28, 256);
+            this.grbTipodeHabitacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.grbTipodeHabitacion.Location = new System.Drawing.Point(26, 182);
             this.grbTipodeHabitacion.Name = "grbTipodeHabitacion";
-            this.grbTipodeHabitacion.Size = new System.Drawing.Size(412, 59);
+            this.grbTipodeHabitacion.Size = new System.Drawing.Size(388, 47);
             this.grbTipodeHabitacion.TabIndex = 17;
             this.grbTipodeHabitacion.TabStop = false;
+            this.grbTipodeHabitacion.Text = "Tipo de Habitacion";
             this.toolTip1.SetToolTip(this.grbTipodeHabitacion, "Tipo de habitacion a elegir");
             // 
             // radHabPresidencial
             // 
             this.radHabPresidencial.AutoSize = true;
             this.radHabPresidencial.BackColor = System.Drawing.Color.Transparent;
-            this.radHabPresidencial.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radHabPresidencial.Font = new System.Drawing.Font("HP Simplified", 12F);
             this.radHabPresidencial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.radHabPresidencial.Location = new System.Drawing.Point(282, 19);
+            this.radHabPresidencial.Location = new System.Drawing.Point(266, 16);
             this.radHabPresidencial.Name = "radHabPresidencial";
-            this.radHabPresidencial.Size = new System.Drawing.Size(110, 28);
+            this.radHabPresidencial.Size = new System.Drawing.Size(107, 25);
             this.radHabPresidencial.TabIndex = 2;
             this.radHabPresidencial.TabStop = true;
             this.radHabPresidencial.Text = "Presidencial";
@@ -220,11 +211,11 @@
             // 
             this.radHabSuit.AutoSize = true;
             this.radHabSuit.BackColor = System.Drawing.Color.Transparent;
-            this.radHabSuit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radHabSuit.Font = new System.Drawing.Font("HP Simplified", 12F);
             this.radHabSuit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.radHabSuit.Location = new System.Drawing.Point(152, 19);
+            this.radHabSuit.Location = new System.Drawing.Point(155, 16);
             this.radHabSuit.Name = "radHabSuit";
-            this.radHabSuit.Size = new System.Drawing.Size(51, 28);
+            this.radHabSuit.Size = new System.Drawing.Size(50, 25);
             this.radHabSuit.TabIndex = 1;
             this.radHabSuit.TabStop = true;
             this.radHabSuit.Text = "Suit";
@@ -237,11 +228,11 @@
             // 
             this.radHabNormal.AutoSize = true;
             this.radHabNormal.BackColor = System.Drawing.Color.Transparent;
-            this.radHabNormal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radHabNormal.Font = new System.Drawing.Font("HP Simplified", 12F);
             this.radHabNormal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.radHabNormal.Location = new System.Drawing.Point(10, 19);
+            this.radHabNormal.Location = new System.Drawing.Point(9, 15);
             this.radHabNormal.Name = "radHabNormal";
-            this.radHabNormal.Size = new System.Drawing.Size(78, 28);
+            this.radHabNormal.Size = new System.Drawing.Size(74, 25);
             this.radHabNormal.TabIndex = 0;
             this.radHabNormal.TabStop = true;
             this.radHabNormal.Text = "Normal";
@@ -253,11 +244,11 @@
             // 
             this.lblNumdeAdultos.AutoSize = true;
             this.lblNumdeAdultos.BackColor = System.Drawing.Color.Transparent;
-            this.lblNumdeAdultos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumdeAdultos.Font = new System.Drawing.Font("HP Simplified", 12F);
             this.lblNumdeAdultos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblNumdeAdultos.Location = new System.Drawing.Point(625, 124);
+            this.lblNumdeAdultos.Location = new System.Drawing.Point(22, 312);
             this.lblNumdeAdultos.Name = "lblNumdeAdultos";
-            this.lblNumdeAdultos.Size = new System.Drawing.Size(62, 27);
+            this.lblNumdeAdultos.Size = new System.Drawing.Size(58, 24);
             this.lblNumdeAdultos.TabIndex = 19;
             this.lblNumdeAdultos.Text = "Adultos";
             this.lblNumdeAdultos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -265,8 +256,10 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(716, 123);
+            this.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
+            this.numericUpDown1.Font = new System.Drawing.Font("HP Simplified", 9F, System.Drawing.FontStyle.Bold);
+            this.numericUpDown1.ForeColor = System.Drawing.Color.White;
+            this.numericUpDown1.Location = new System.Drawing.Point(160, 313);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             10,
             0,
@@ -278,7 +271,7 @@
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(107, 26);
+            this.numericUpDown1.Size = new System.Drawing.Size(107, 21);
             this.numericUpDown1.TabIndex = 20;
             this.toolTip1.SetToolTip(this.numericUpDown1, "Numero de personas adultas en el hotel");
             this.numericUpDown1.Value = new decimal(new int[] {
@@ -291,11 +284,11 @@
             // 
             this.lblCantdeMenores.AutoSize = true;
             this.lblCantdeMenores.BackColor = System.Drawing.Color.Transparent;
-            this.lblCantdeMenores.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantdeMenores.Font = new System.Drawing.Font("HP Simplified", 12F);
             this.lblCantdeMenores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblCantdeMenores.Location = new System.Drawing.Point(552, 169);
+            this.lblCantdeMenores.Location = new System.Drawing.Point(22, 343);
             this.lblCantdeMenores.Name = "lblCantdeMenores";
-            this.lblCantdeMenores.Size = new System.Drawing.Size(147, 27);
+            this.lblCantdeMenores.Size = new System.Drawing.Size(137, 24);
             this.lblCantdeMenores.TabIndex = 21;
             this.lblCantdeMenores.Text = "Menores(<12 años)";
             this.lblCantdeMenores.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -303,15 +296,17 @@
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(716, 169);
+            this.numericUpDown2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
+            this.numericUpDown2.Font = new System.Drawing.Font("HP Simplified", 9F, System.Drawing.FontStyle.Bold);
+            this.numericUpDown2.ForeColor = System.Drawing.Color.White;
+            this.numericUpDown2.Location = new System.Drawing.Point(160, 347);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(107, 26);
+            this.numericUpDown2.Size = new System.Drawing.Size(107, 21);
             this.numericUpDown2.TabIndex = 22;
             // 
             // toolTip1
@@ -323,8 +318,9 @@
             // 
             // dtpInicioEstancia
             // 
+            this.dtpInicioEstancia.CalendarMonthBackground = System.Drawing.Color.White;
             this.dtpInicioEstancia.Enabled = false;
-            this.dtpInicioEstancia.Location = new System.Drawing.Point(1075, 154);
+            this.dtpInicioEstancia.Location = new System.Drawing.Point(311, 301);
             this.dtpInicioEstancia.Name = "dtpInicioEstancia";
             this.dtpInicioEstancia.Size = new System.Drawing.Size(220, 20);
             this.dtpInicioEstancia.TabIndex = 25;
@@ -332,43 +328,55 @@
             // 
             // dtpFinaldeEstancia
             // 
+            this.dtpFinaldeEstancia.CalendarMonthBackground = System.Drawing.Color.White;
             this.dtpFinaldeEstancia.Enabled = false;
-            this.dtpFinaldeEstancia.Location = new System.Drawing.Point(1075, 256);
+            this.dtpFinaldeEstancia.Location = new System.Drawing.Point(311, 348);
             this.dtpFinaldeEstancia.Name = "dtpFinaldeEstancia";
             this.dtpFinaldeEstancia.Size = new System.Drawing.Size(220, 20);
             this.dtpFinaldeEstancia.TabIndex = 26;
             this.toolTip1.SetToolTip(this.dtpFinaldeEstancia, "Dia ultimo de tu\r\nestancia en el hotel");
             // 
-            // monthCalendar1
+            // mtcFecha
             // 
-            this.monthCalendar1.BackColor = System.Drawing.Color.Tan;
-            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(4, 2);
-            this.monthCalendar1.ForeColor = System.Drawing.Color.Black;
-            this.monthCalendar1.Location = new System.Drawing.Point(61, 345);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 27;
-            this.monthCalendar1.TitleBackColor = System.Drawing.Color.Black;
-            this.monthCalendar1.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.toolTip1.SetToolTip(this.monthCalendar1, "Agregar de que dia a que dia \r\ndurara tu estancia en el hotel");
-            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
+            this.mtcFecha.BackColor = System.Drawing.Color.Tan;
+            this.mtcFecha.CalendarDimensions = new System.Drawing.Size(3, 1);
+            this.mtcFecha.ForeColor = System.Drawing.Color.Black;
+            this.mtcFecha.Location = new System.Drawing.Point(0, 24);
+            this.mtcFecha.Name = "mtcFecha";
+            this.mtcFecha.TabIndex = 27;
+            this.mtcFecha.TitleBackColor = System.Drawing.Color.Black;
+            this.mtcFecha.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.toolTip1.SetToolTip(this.mtcFecha, "Agregar de que dia a que dia \r\ndurara tu estancia en el hotel");
+            this.mtcFecha.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
             // 
-            // button1
+            // dtpHoraReserva
             // 
-            this.button1.Location = new System.Drawing.Point(-15, -15);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.dtpHoraReserva.CalendarMonthBackground = System.Drawing.Color.White;
+            this.dtpHoraReserva.Enabled = false;
+            this.dtpHoraReserva.Location = new System.Drawing.Point(86, 248);
+            this.dtpHoraReserva.Name = "dtpHoraReserva";
+            this.dtpHoraReserva.Size = new System.Drawing.Size(160, 20);
+            this.dtpHoraReserva.TabIndex = 30;
+            this.toolTip1.SetToolTip(this.dtpHoraReserva, "Dia ultimo de tu\r\nestancia en el hotel");
+            // 
+            // dtpHoraSalida
+            // 
+            this.dtpHoraSalida.CalendarMonthBackground = System.Drawing.Color.White;
+            this.dtpHoraSalida.Enabled = false;
+            this.dtpHoraSalida.Location = new System.Drawing.Point(311, 248);
+            this.dtpHoraSalida.Name = "dtpHoraSalida";
+            this.dtpHoraSalida.Size = new System.Drawing.Size(159, 20);
+            this.dtpHoraSalida.TabIndex = 31;
+            this.toolTip1.SetToolTip(this.dtpHoraSalida, "Dia ultimo de tu\r\nestancia en el hotel");
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1140, 525);
+            this.button2.Location = new System.Drawing.Point(949, 501);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(190, 99);
+            this.button2.Size = new System.Drawing.Size(395, 60);
             this.button2.TabIndex = 29;
             this.button2.Text = "Agregar reserva ";
             this.button2.UseVisualStyleBackColor = false;
@@ -379,23 +387,31 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
-            // dtpHoraReserva
+            // label1
             // 
-            this.dtpHoraReserva.Enabled = false;
-            this.dtpHoraReserva.Location = new System.Drawing.Point(470, 279);
-            this.dtpHoraReserva.Name = "dtpHoraReserva";
-            this.dtpHoraReserva.Size = new System.Drawing.Size(160, 20);
-            this.dtpHoraReserva.TabIndex = 30;
-            this.toolTip1.SetToolTip(this.dtpHoraReserva, "Dia ultimo de tu\r\nestancia en el hotel");
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("HP Simplified", 40.25F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(204)))), ((int)(((byte)(200)))));
+            this.label1.Location = new System.Drawing.Point(22, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(204, 72);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "CheckIn";
+            this.label1.UseCompatibleTextRendering = true;
             // 
-            // dtpHoraSalida
+            // gpbFecha
             // 
-            this.dtpHoraSalida.Enabled = false;
-            this.dtpHoraSalida.Location = new System.Drawing.Point(686, 279);
-            this.dtpHoraSalida.Name = "dtpHoraSalida";
-            this.dtpHoraSalida.Size = new System.Drawing.Size(159, 20);
-            this.dtpHoraSalida.TabIndex = 31;
-            this.toolTip1.SetToolTip(this.dtpHoraSalida, "Dia ultimo de tu\r\nestancia en el hotel");
+            this.gpbFecha.BackColor = System.Drawing.Color.Transparent;
+            this.gpbFecha.Controls.Add(this.mtcFecha);
+            this.gpbFecha.Font = new System.Drawing.Font("HP Simplified", 12.25F);
+            this.gpbFecha.ForeColor = System.Drawing.Color.White;
+            this.gpbFecha.Location = new System.Drawing.Point(22, 370);
+            this.gpbFecha.Name = "gpbFecha";
+            this.gpbFecha.Size = new System.Drawing.Size(752, 191);
+            this.gpbFecha.TabIndex = 34;
+            this.gpbFecha.TabStop = false;
+            this.gpbFecha.Text = "Fecha de Reserva";
             // 
             // CheckIn
             // 
@@ -404,13 +420,13 @@
             this.BackColor = System.Drawing.Color.Tan;
             this.BackgroundImage = global::MAP2A1HotelHeavens.Properties.Resources.imgcheckinLP;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(1366, 637);
             this.ControlBox = false;
+            this.Controls.Add(this.gpbFecha);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpHoraSalida);
             this.Controls.Add(this.dtpHoraReserva);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.dtpFinaldeEstancia);
             this.Controls.Add(this.dtpInicioEstancia);
             this.Controls.Add(this.numericUpDown2);
@@ -424,10 +440,10 @@
             this.Controls.Add(this.lblSalida);
             this.Controls.Add(this.lblReserva);
             this.Controls.Add(this.lblNumdePersonas);
-            this.Controls.Add(this.lblTipodehabitacion);
             this.Controls.Add(this.lblNumdehabitacion);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblMenuCerrar);
+            this.Font = new System.Drawing.Font("HP Simplified", 8.25F);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CheckIn";
@@ -439,6 +455,7 @@
             this.grbTipodeHabitacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            this.gpbFecha.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -448,7 +465,6 @@
         private System.Windows.Forms.Label lblMenuCerrar;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblNumdehabitacion;
-        private System.Windows.Forms.Label lblTipodehabitacion;
         private System.Windows.Forms.Label lblNumdePersonas;
         private System.Windows.Forms.Label lblReserva;
         private System.Windows.Forms.Label lblSalida;
@@ -466,11 +482,12 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.DateTimePicker dtpInicioEstancia;
         private System.Windows.Forms.DateTimePicker dtpFinaldeEstancia;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MonthCalendar mtcFecha;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.DateTimePicker dtpHoraReserva;
         private System.Windows.Forms.DateTimePicker dtpHoraSalida;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox gpbFecha;
     }
 }
