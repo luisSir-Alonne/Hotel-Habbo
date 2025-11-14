@@ -1,4 +1,5 @@
-﻿using CapaEntidad;
+﻿using CapaDatos;
+using CapaEntidad;
 using CapaNegocio;
 using System;
 using System.Collections.Generic;
@@ -38,9 +39,20 @@ namespace MAP2A1HotelHeavens
 
         }
 
+
         private void CheckOut_Load(object sender, EventArgs e)
         {
             this.BackColor = Color.FromArgb(93, 64, 55);
+            List<Impuestos> LImpuestos = new CN_Impuestos().Leer();
+
+            decimal totalImpuestos = 0;
+
+            foreach (Impuestos item in LImpuestos)
+            {
+                totalImpuestos += item.costo;  
+            }
+
+            lblImpuestos.Text = totalImpuestos.ToString("0.00");
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

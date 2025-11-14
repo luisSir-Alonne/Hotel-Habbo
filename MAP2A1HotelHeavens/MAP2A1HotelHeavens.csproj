@@ -277,6 +277,10 @@
     <None Include="Resources\imgcheckinLP.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
+      <Project>{D6E68E5B-9D1F-4BF4-BB31-C04D14F6352F}</Project>
+      <Name>CapaDatos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
       <Project>{52913402-A9D8-4C8E-8347-6F9324C9137D}</Project>
       <Name>CapaEntidad</Name>
