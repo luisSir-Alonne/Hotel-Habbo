@@ -39,10 +39,10 @@ namespace MAP2A1HotelHeavens
 
             var filtradas = listas.Where(h => h.tipo == tipo).ToList();
 
-            foreach(var hab2 in listas)
+            foreach(var hab2 in filtradas)
             {
                 int indice = checkedListBoxOcupadas.Items.Add(hab2);
-                if(hab2.disponible)
+                if(!hab2.disponible)
                 {
                     checkedListBoxOcupadas.SetItemChecked(indice, true);
                 }
