@@ -29,18 +29,27 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblMenuCerrar = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblMensaje = new System.Windows.Forms.Label();
             this.dgbUsuarios = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.membresia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_registro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.mtbTelefono = new System.Windows.Forms.MaskedTextBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
@@ -56,15 +65,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cboEstado = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.membresia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_registro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgbUsuarios)).BeginInit();
@@ -115,6 +115,115 @@
             this.dgbUsuarios.TabIndex = 41;
             this.dgbUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbUsuarios_CellContentClick);
             // 
+            // Id
+            // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.Id.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
+            // nombre
+            // 
+            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
+            this.nombre.DefaultCellStyle = dataGridViewCellStyle2;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // Correo
+            // 
+            this.Correo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.Correo.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Correo.HeaderText = "Correo Electronico";
+            this.Correo.Name = "Correo";
+            this.Correo.ReadOnly = true;
+            // 
+            // telefono
+            // 
+            this.telefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.telefono.DefaultCellStyle = dataGridViewCellStyle4;
+            this.telefono.HeaderText = "Telefono";
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
+            // 
+            // edad
+            // 
+            this.edad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.edad.DefaultCellStyle = dataGridViewCellStyle5;
+            this.edad.HeaderText = "Edad";
+            this.edad.Name = "edad";
+            this.edad.ReadOnly = true;
+            // 
+            // sexo
+            // 
+            this.sexo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.sexo.DefaultCellStyle = dataGridViewCellStyle6;
+            this.sexo.HeaderText = "Sexo";
+            this.sexo.Name = "sexo";
+            this.sexo.ReadOnly = true;
+            // 
+            // estado
+            // 
+            this.estado.HeaderText = "estado";
+            this.estado.Name = "estado";
+            this.estado.Visible = false;
+            // 
+            // membresia
+            // 
+            this.membresia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            this.membresia.DefaultCellStyle = dataGridViewCellStyle7;
+            this.membresia.HeaderText = "Membresia Activa/Inactiva";
+            this.membresia.Name = "membresia";
+            this.membresia.ReadOnly = true;
+            // 
+            // fecha_registro
+            // 
+            this.fecha_registro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.fecha_registro.DefaultCellStyle = dataGridViewCellStyle8;
+            this.fecha_registro.HeaderText = "Registro";
+            this.fecha_registro.Name = "fecha_registro";
+            this.fecha_registro.ReadOnly = true;
+            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
@@ -128,20 +237,20 @@
             // mtbTelefono
             // 
             this.mtbTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            this.mtbTelefono.Font = new System.Drawing.Font("HP Simplified", 14.25F);
+            this.mtbTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.mtbTelefono.ForeColor = System.Drawing.Color.White;
             this.mtbTelefono.Location = new System.Drawing.Point(42, 161);
             this.mtbTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.mtbTelefono.Mask = "(000)-000-0000";
             this.mtbTelefono.Name = "mtbTelefono";
-            this.mtbTelefono.Size = new System.Drawing.Size(206, 30);
+            this.mtbTelefono.Size = new System.Drawing.Size(206, 29);
             this.mtbTelefono.TabIndex = 2;
             // 
             // btnRegistrar
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRegistrar.Font = new System.Drawing.Font("HP Simplified", 12F);
+            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
             this.btnRegistrar.Location = new System.Drawing.Point(42, 411);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
@@ -170,7 +279,7 @@
             // 
             this.txtCorreo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
             this.txtCorreo2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCorreo2.Font = new System.Drawing.Font("HP Simplified", 12F);
+            this.txtCorreo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCorreo2.ForeColor = System.Drawing.Color.White;
             this.txtCorreo2.Location = new System.Drawing.Point(42, 270);
             this.txtCorreo2.Margin = new System.Windows.Forms.Padding(2);
@@ -182,7 +291,7 @@
             // 
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNombre.Font = new System.Drawing.Font("HP Simplified", 12F);
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtNombre.ForeColor = System.Drawing.Color.White;
             this.txtNombre.Location = new System.Drawing.Point(42, 112);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
@@ -194,7 +303,7 @@
             // 
             this.txtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCorreo.Font = new System.Drawing.Font("HP Simplified", 12F);
+            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCorreo.ForeColor = System.Drawing.Color.White;
             this.txtCorreo.Location = new System.Drawing.Point(42, 213);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
@@ -206,12 +315,12 @@
             // 
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.BackColor = System.Drawing.Color.Transparent;
-            this.lblTelefono.Font = new System.Drawing.Font("HP Simplified", 12F);
+            this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.lblTelefono.Location = new System.Drawing.Point(42, 140);
             this.lblTelefono.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(69, 19);
+            this.lblTelefono.Size = new System.Drawing.Size(75, 20);
             this.lblTelefono.TabIndex = 49;
             this.lblTelefono.Text = "Teléfono:";
             // 
@@ -219,12 +328,12 @@
             // 
             this.lblConfirmarCorreo.AutoSize = true;
             this.lblConfirmarCorreo.BackColor = System.Drawing.Color.Transparent;
-            this.lblConfirmarCorreo.Font = new System.Drawing.Font("HP Simplified", 12F);
+            this.lblConfirmarCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblConfirmarCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.lblConfirmarCorreo.Location = new System.Drawing.Point(42, 249);
             this.lblConfirmarCorreo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblConfirmarCorreo.Name = "lblConfirmarCorreo";
-            this.lblConfirmarCorreo.Size = new System.Drawing.Size(200, 19);
+            this.lblConfirmarCorreo.Size = new System.Drawing.Size(212, 20);
             this.lblConfirmarCorreo.TabIndex = 46;
             this.lblConfirmarCorreo.Text = "Confirmar correo electrónico:";
             // 
@@ -232,12 +341,12 @@
             // 
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.BackColor = System.Drawing.Color.Transparent;
-            this.lblCorreo.Font = new System.Drawing.Font("HP Simplified", 12F);
+            this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.lblCorreo.Location = new System.Drawing.Point(42, 192);
             this.lblCorreo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(133, 19);
+            this.lblCorreo.Size = new System.Drawing.Size(142, 20);
             this.lblCorreo.TabIndex = 45;
             this.lblCorreo.Text = "Correo electrónico:";
             // 
@@ -245,19 +354,19 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
-            this.lblNombre.Font = new System.Drawing.Font("HP Simplified", 12F);
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.lblNombre.Location = new System.Drawing.Point(42, 91);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(131, 19);
+            this.lblNombre.Size = new System.Drawing.Size(138, 20);
             this.lblNombre.TabIndex = 44;
             this.lblNombre.Text = "Nombre completo:";
             // 
             // lblTitulo
             // 
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitulo.Font = new System.Drawing.Font("HP Simplified", 20F);
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(42, 50);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -271,153 +380,44 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("HP Simplified", 12F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.label2.Location = new System.Drawing.Point(345, 90);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 19);
+            this.label2.Size = new System.Drawing.Size(76, 20);
             this.label2.TabIndex = 59;
             this.label2.Text = "Usuarios:";
             // 
             // cboEstado
             // 
             this.cboEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            this.cboEstado.Font = new System.Drawing.Font("HP Simplified", 12.25F);
+            this.cboEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.cboEstado.ForeColor = System.Drawing.Color.White;
             this.cboEstado.FormattingEnabled = true;
             this.cboEstado.Location = new System.Drawing.Point(42, 329);
             this.cboEstado.Name = "cboEstado";
-            this.cboEstado.Size = new System.Drawing.Size(206, 27);
+            this.cboEstado.Size = new System.Drawing.Size(206, 28);
             this.cboEstado.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("HP Simplified", 12F);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.label3.Location = new System.Drawing.Point(42, 307);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 19);
+            this.label3.Size = new System.Drawing.Size(136, 20);
             this.label3.TabIndex = 61;
             this.label3.Text = "Activar/Desactivar";
-            // 
-            // Id
-            // 
-            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            dataGridViewCellStyle41.Font = new System.Drawing.Font("HP Simplified", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle41.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.White;
-            this.Id.DefaultCellStyle = dataGridViewCellStyle41;
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
-            // 
-            // nombre
-            // 
-            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            dataGridViewCellStyle42.Font = new System.Drawing.Font("HP Simplified", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
-            this.nombre.DefaultCellStyle = dataGridViewCellStyle42;
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // Correo
-            // 
-            this.Correo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            dataGridViewCellStyle43.Font = new System.Drawing.Font("HP Simplified", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle43.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.Color.White;
-            this.Correo.DefaultCellStyle = dataGridViewCellStyle43;
-            this.Correo.HeaderText = "Correo Electronico";
-            this.Correo.Name = "Correo";
-            this.Correo.ReadOnly = true;
-            // 
-            // telefono
-            // 
-            this.telefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            dataGridViewCellStyle44.Font = new System.Drawing.Font("HP Simplified", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle44.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.Color.White;
-            this.telefono.DefaultCellStyle = dataGridViewCellStyle44;
-            this.telefono.HeaderText = "Telefono";
-            this.telefono.Name = "telefono";
-            this.telefono.ReadOnly = true;
-            // 
-            // edad
-            // 
-            this.edad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            dataGridViewCellStyle45.Font = new System.Drawing.Font("HP Simplified", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle45.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.White;
-            this.edad.DefaultCellStyle = dataGridViewCellStyle45;
-            this.edad.HeaderText = "Edad";
-            this.edad.Name = "edad";
-            this.edad.ReadOnly = true;
-            // 
-            // sexo
-            // 
-            this.sexo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            dataGridViewCellStyle46.Font = new System.Drawing.Font("HP Simplified", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle46.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle46.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle46.SelectionForeColor = System.Drawing.Color.White;
-            this.sexo.DefaultCellStyle = dataGridViewCellStyle46;
-            this.sexo.HeaderText = "Sexo";
-            this.sexo.Name = "sexo";
-            this.sexo.ReadOnly = true;
-            // 
-            // estado
-            // 
-            this.estado.HeaderText = "estado";
-            this.estado.Name = "estado";
-            this.estado.Visible = false;
-            // 
-            // membresia
-            // 
-            this.membresia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            dataGridViewCellStyle47.Font = new System.Drawing.Font("HP Simplified", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle47.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.Color.White;
-            this.membresia.DefaultCellStyle = dataGridViewCellStyle47;
-            this.membresia.HeaderText = "Membresia Activa/Inactiva";
-            this.membresia.Name = "membresia";
-            this.membresia.ReadOnly = true;
-            // 
-            // fecha_registro
-            // 
-            this.fecha_registro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            dataGridViewCellStyle48.Font = new System.Drawing.Font("HP Simplified", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle48.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.Color.White;
-            this.fecha_registro.DefaultCellStyle = dataGridViewCellStyle48;
-            this.fecha_registro.HeaderText = "Registro";
-            this.fecha_registro.Name = "fecha_registro";
-            this.fecha_registro.ReadOnly = true;
             // 
             // txtId
             // 
             this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
             this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtId.Font = new System.Drawing.Font("HP Simplified", 12F);
+            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtId.ForeColor = System.Drawing.Color.White;
             this.txtId.Location = new System.Drawing.Point(375, 57);
             this.txtId.Margin = new System.Windows.Forms.Padding(2);

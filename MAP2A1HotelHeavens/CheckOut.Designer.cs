@@ -272,7 +272,10 @@
             this.cbmMetodo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.cbmMetodo.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cbmMetodo.FormattingEnabled = true;
-            this.cbmMetodo.Location = new System.Drawing.Point(237, 371);
+            this.cbmMetodo.Items.AddRange(new object[] {
+            "Tarjeta",
+            "Efectivo"});
+            this.cbmMetodo.Location = new System.Drawing.Point(259, 374);
             this.cbmMetodo.Margin = new System.Windows.Forms.Padding(2);
             this.cbmMetodo.Name = "cbmMetodo";
             this.cbmMetodo.Size = new System.Drawing.Size(230, 29);
