@@ -92,6 +92,9 @@ namespace MAP2A1HotelHeavens
                     string texto = clm.HeaderText;
                     cbobusqueda.Items.Add(new Funciones_MySQL() { Valor = clm.Name, Texto = Convert.ToString(texto)});
                 }
+                cbobusqueda.DisplayMember = "Texto";
+                cbobusqueda.ValueMember = "Valor";
+
                 Console.WriteLine(clm.HeaderText);
                 Console.WriteLine("jijijija");
 
