@@ -31,7 +31,7 @@ namespace CapaDatos
                                 nombre = dr["nombre"].ToString(),
                                 numeroTelefono = dr["numero_telefono"].ToString(),
                                 sexo = dr["sexo"].ToString(),
-                                correo = dr["correo_electronicio"].ToString(),
+                                correo = dr["correo_electronico"].ToString(),
                                 edad = dr["edad"].ToString(),
                                 membresia = Convert.ToBoolean(dr["membresia_activa"]),
                                 fecha_registro = dr["fecha_registro"].ToString()
@@ -39,9 +39,11 @@ namespace CapaDatos
                         }
                     }
                 }
-                catch
+                catch (MySqlException ex)
                 {
                     empleados = new List<Usuario>();
+                    Console.WriteLine(ex);
+
                 }
             }
 

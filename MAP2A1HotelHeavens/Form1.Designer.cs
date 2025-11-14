@@ -44,6 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.imiMembresia = new FontAwesome.Sharp.IconMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             this.msAreas.SuspendLayout();
@@ -107,6 +108,7 @@
             this.imiVentas,
             this.imiHotel,
             this.imiControlEmpleados,
+            this.imiMembresia,
             this.imiAdmin});
             this.msAreas.Location = new System.Drawing.Point(0, 58);
             this.msAreas.Name = "msAreas";
@@ -268,6 +270,22 @@
             this.label2.TabIndex = 42;
             this.label2.Text = "Usuario:";
             // 
+            // imiMembresia
+            // 
+            this.imiMembresia.AutoSize = false;
+            this.imiMembresia.Font = new System.Drawing.Font("HP Simplified", 9F);
+            this.imiMembresia.ForeColor = System.Drawing.Color.White;
+            this.imiMembresia.IconChar = FontAwesome.Sharp.IconChar.Crown;
+            this.imiMembresia.IconColor = System.Drawing.Color.White;
+            this.imiMembresia.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.imiMembresia.IconSize = 50;
+            this.imiMembresia.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.imiMembresia.Name = "imiMembresia";
+            this.imiMembresia.Size = new System.Drawing.Size(122, 69);
+            this.imiMembresia.Text = "Activar Membresia";
+            this.imiMembresia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.imiMembresia.Click += new System.EventHandler(this.imiMembresia_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,6 +336,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label label2;
+        private FontAwesome.Sharp.IconMenuItem imiMembresia;
     }
 }
 

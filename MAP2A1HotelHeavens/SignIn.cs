@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaEntidad;
+using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +10,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media;
 
 namespace MAP2A1HotelHeavens
 {
@@ -17,64 +20,20 @@ namespace MAP2A1HotelHeavens
         {
             InitializeComponent();
             chkTyC.CheckedChanged += (s, e) => { };
-            chkMostrarPass.CheckedChanged += chkMostrarPass_CheckedChanged;
             btnRegistrar.Click += btnRegistrar_Click;
             
             errorProvider1.BlinkStyle = ErrorBlinkStyle.NeverBlink;
-            mtbPass.UseSystemPasswordChar = true;
-            mtbPass2.UseSystemPasswordChar = true;
             lblMensaje.Text = "";
         }
         private void chkMostrarPass_CheckedChanged(object sender, EventArgs e)
         {
-            bool mostrar = chkMostrarPass.Checked;
-            mtbPass.UseSystemPasswordChar = !mostrar;
-            mtbPass2.UseSystemPasswordChar = !mostrar;
+          
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            lblMensaje.Text = "";
-            errorProvider1.Clear();
-
-            if (string.IsNullOrWhiteSpace(txtNombre.Text))
-            { Fail(txtNombre, "Escribe tu nombre completo."); return; }
-
-            if (string.IsNullOrWhiteSpace(txtCorreo.Text))
-            { Fail(txtCorreo, "Escribe tu correo."); return; }
-
-            if (!EsEmailValido(txtCorreo.Text))
-            { Fail(txtCorreo, "Correo no válido."); return; }
-
-            if (string.IsNullOrWhiteSpace(txtCorreo2.Text))
-            { Fail(txtCorreo2, "Confirma tu correo."); return; }
-
-            if (!txtCorreo.Text.Equals(txtCorreo2.Text, StringComparison.OrdinalIgnoreCase))
-            { Fail(txtCorreo2, "Los correos no coinciden."); return; }
-
-            if (!mtbTelefono.MaskFull)
-            { Fail(mtbTelefono, "Completa el teléfono (10 dígitos)."); return; }
-
-            var passMsg = ValidaPassword(mtbPass.Text);
-            if (passMsg != null)
-            { Fail(mtbPass, passMsg); return; }
-
-            if (string.IsNullOrEmpty(mtbPass2.Text))
-            { Fail(mtbPass2, "Confirma tu contraseña."); return; }
-
-            if (mtbPass.Text != mtbPass2.Text)
-            { Fail(mtbPass2, "Las contraseñas no coinciden."); return; }
-
-
-            if (!chkTyC.Checked)
-            { Fail(chkTyC, "Debes aceptar los Términos y Condiciones."); return; }
-
-            MessageBox.Show($"¡Registro exitoso!\n\nBienvenido/a, {txtNombre.Text}.",
-                            "Aerolínea", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+           
+            
         }
 
 
@@ -109,6 +68,147 @@ namespace MAP2A1HotelHeavens
         }
      
         private void btnRegresar_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SignIn_Load(object sender, EventArgs e)
+        {
+            cboEstado.Items.Add(new Funciones_MySQL() { Valor = 1, Texto = "Activo" });
+            cboEstado.Items.Add(new Funciones_MySQL() { Valor = 0, Texto = "Inactivo" });
+            cboEstado.DisplayMember = "Texto";
+            cboEstado.ValueMember = "Valor";
+            cboEstado.SelectedIndex = 0;
+            List<Usuario> listaUsuario = new CN_Usuario().Listar();
+            foreach (Usuario item in listaUsuario)
+            {
+                dgbUsuarios.Rows.Add(new object[] { item.id, item.nombre, item.correo, item.numeroTelefono, item.edad,item.sexo, item.membresia == true ? 1:0,item.membresia == true ? "Activo":"Inactivo", item.fecha_registro });
+
+            }
+
+        }
+
+        private void btnRegistrar_Click_1(object sender, EventArgs e)
+        {
+            lblMensaje.Text = "";
+            errorProvider1.Clear();
+
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
+            { Fail(txtNombre, "Escribe tu nombre completo."); return; }
+
+            if (string.IsNullOrWhiteSpace(txtCorreo.Text))
+            { Fail(txtCorreo, "Escribe tu correo."); return; }
+
+            if (!EsEmailValido(txtCorreo.Text))
+            { Fail(txtCorreo, "Correo no válido."); return; }
+
+            if (string.IsNullOrWhiteSpace(txtCorreo2.Text))
+            { Fail(txtCorreo2, "Confirma tu correo."); return; }
+
+            if (!txtCorreo.Text.Equals(txtCorreo2.Text, StringComparison.OrdinalIgnoreCase))
+            { Fail(txtCorreo2, "Los correos no coinciden."); return; }
+
+            if (!mtbTelefono.MaskFull)
+            { Fail(mtbTelefono, "Completa el teléfono (10 dígitos)."); return; }
+
+            
+            if (!chkTyC.Checked)
+            { Fail(chkTyC, "Debes aceptar los Términos y Condiciones."); return; }
+
+            MessageBox.Show($"Membresia modificada correctamente",
+                            "Cambios establecidos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            int id = Convert.ToInt32(txtId.Text);
+            string tele = mtbTelefono.Text.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "");
+            string genero = "", edad = "", fecha_registro = "" ;
+            txtId.Visible = true;
+            bool encontrado = false;
+            if (id == 0)
+            {
+                foreach (DataGridViewRow row in dgbUsuarios.Rows)
+                {
+
+
+
+                    if (Convert.ToString(row.Cells["Nombre"].Value) == txtNombre.Text && Convert.ToString(row.Cells["Correo"].Value) == txtCorreo.Text && Convert.ToString(row.Cells["telefono"].Value) == tele)
+                    {
+                        id = Convert.ToInt32(row.Cells["Id"].Value);
+
+                        genero = Convert.ToString(row.Cells["sexo"].Value);
+                        edad = Convert.ToString(row.Cells["edad"].Value);
+                        fecha_registro = Convert.ToString(row.Cells["fecha_registro"].Value);
+
+                        Console.WriteLine("Este es el id");
+                        Console.WriteLine(id);
+                        txtId.Text = id.ToString();
+                        encontrado = true;
+                    }
+                    
+                }
+            }
+            else
+            {
+
+                foreach (DataGridViewRow row in dgbUsuarios.Rows)
+                {
+                    if (Convert.ToString(row.Cells["Nombre"].Value) == txtNombre.Text && Convert.ToString(row.Cells["Correo"].Value) == txtCorreo.Text && Convert.ToString(row.Cells["telefono"].Value) == tele)
+                    {
+                        id = Convert.ToInt32(row.Cells["Id"].Value);
+                        Console.WriteLine("Estes es el id del else: " + id.ToString());
+
+                        if (Convert.ToString(row.Cells["Id"].Value) == id.ToString())
+                        {
+                            genero = Convert.ToString(row.Cells["sexo"].Value);
+                            edad = Convert.ToString(row.Cells["edad"].Value);
+                            fecha_registro = Convert.ToString(row.Cells["fecha_registro"].Value);
+                            txtId.Text = id.ToString();
+                            encontrado = true;
+                        }
+                    }
+                }
+
+            }
+            if (!encontrado)
+            {
+                
+                    MessageBox.Show("No se encontro al usuario especificado, inserte los datos correctamente", "Usuario no Encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+
+                
+            }
+                Usuario obj_usuario = new Usuario()
+                {
+                    id = id,
+                    nombre = txtNombre.Text,
+                    correo = txtCorreo.Text,
+                    numeroTelefono = tele,
+                    sexo = genero,
+                    edad = edad,
+                    fecha_registro = fecha_registro,
+                    membresia = Convert.ToInt32((((Funciones_MySQL)cboEstado.SelectedItem).Valor)) == 1 ? true : false
+                    
+                };
+            string mensaje = string.Empty;
+            bool resultado = new CN_Usuario().ImplementarMembresia(obj_usuario, out mensaje);
+            Console.WriteLine("Este es el mensaje: " + mensaje);
+
+            if (resultado)
+            {
+                foreach (DataGridViewRow row in dgbUsuarios.Rows)
+                {
+                    if (Convert.ToString(row.Cells["Id"].Value) == id.ToString())
+                    {
+                        row.Cells["membresia"].Value = (((Funciones_MySQL)cboEstado.SelectedItem).Texto);
+                        row.Cells["estado"].Value = (((Funciones_MySQL)cboEstado.SelectedItem).Valor);
+
+                    }
+                }
+            }
+            this.DialogResult = DialogResult.OK;
+            
+        }
+
+        private void dgbUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

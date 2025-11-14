@@ -9,6 +9,7 @@ namespace MAP2A1HotelHeavens
 {
     public class Funciones_MySQL
     {
-       
+        public string Texto { get; set; }
+        public object Valor { get; set;}
     }
 }

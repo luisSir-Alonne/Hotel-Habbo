@@ -164,5 +164,11 @@ namespace MAP2A1HotelHeavens
                 }
             }
         }
+
+        private void imiMembresia_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(imiMembresia, new SignIn());
+            cambiarColor();
+        }
     }
 }
