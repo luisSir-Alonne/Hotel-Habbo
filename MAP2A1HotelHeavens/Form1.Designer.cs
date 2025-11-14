@@ -39,12 +39,12 @@
             this.imiVentas = new FontAwesome.Sharp.IconMenuItem();
             this.imiHotel = new FontAwesome.Sharp.IconMenuItem();
             this.imiControlEmpleados = new FontAwesome.Sharp.IconMenuItem();
+            this.imiMembresia = new FontAwesome.Sharp.IconMenuItem();
             this.imiAdmin = new FontAwesome.Sharp.IconMenuItem();
             this.panMostrar = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.imiMembresia = new FontAwesome.Sharp.IconMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             this.msAreas.SuspendLayout();
@@ -212,6 +212,22 @@
             this.imiControlEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.imiControlEmpleados.Click += new System.EventHandler(this.imiControlEmpleados_Click);
             // 
+            // imiMembresia
+            // 
+            this.imiMembresia.AutoSize = false;
+            this.imiMembresia.Font = new System.Drawing.Font("HP Simplified", 9F);
+            this.imiMembresia.ForeColor = System.Drawing.Color.White;
+            this.imiMembresia.IconChar = FontAwesome.Sharp.IconChar.Crown;
+            this.imiMembresia.IconColor = System.Drawing.Color.White;
+            this.imiMembresia.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.imiMembresia.IconSize = 50;
+            this.imiMembresia.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.imiMembresia.Name = "imiMembresia";
+            this.imiMembresia.Size = new System.Drawing.Size(122, 69);
+            this.imiMembresia.Text = "Activar Membresia";
+            this.imiMembresia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.imiMembresia.Click += new System.EventHandler(this.imiMembresia_Click);
+            // 
             // imiAdmin
             // 
             this.imiAdmin.AutoSize = false;
@@ -230,6 +246,8 @@
             // 
             // panMostrar
             // 
+            this.panMostrar.BackgroundImage = global::MAP2A1HotelHeavens.Properties.Resources.imgHotelFueraLP;
+            this.panMostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panMostrar.Font = new System.Drawing.Font("HP Simplified", 8.25F);
             this.panMostrar.Location = new System.Drawing.Point(0, 131);
             this.panMostrar.Name = "panMostrar";
@@ -269,22 +287,6 @@
             this.label2.Size = new System.Drawing.Size(104, 30);
             this.label2.TabIndex = 42;
             this.label2.Text = "Usuario:";
-            // 
-            // imiMembresia
-            // 
-            this.imiMembresia.AutoSize = false;
-            this.imiMembresia.Font = new System.Drawing.Font("HP Simplified", 9F);
-            this.imiMembresia.ForeColor = System.Drawing.Color.White;
-            this.imiMembresia.IconChar = FontAwesome.Sharp.IconChar.Crown;
-            this.imiMembresia.IconColor = System.Drawing.Color.White;
-            this.imiMembresia.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.imiMembresia.IconSize = 50;
-            this.imiMembresia.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.imiMembresia.Name = "imiMembresia";
-            this.imiMembresia.Size = new System.Drawing.Size(122, 69);
-            this.imiMembresia.Text = "Activar Membresia";
-            this.imiMembresia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.imiMembresia.Click += new System.EventHandler(this.imiMembresia_Click);
             // 
             // Form1
             // 
