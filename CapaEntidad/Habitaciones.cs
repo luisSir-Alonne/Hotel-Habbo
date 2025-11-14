@@ -13,10 +13,5 @@ namespace CapaEntidad
         public bool disponible { get; set; }
         public string tipo { get; set; }
 
-        public override string ToString()
-        {
-            string estado = disponible ? "Disponible" : "Ocupada";
-            return $"{habitacion} - {tipo} - {estado}";
-        }
     }
 }

@@ -24,30 +24,23 @@ namespace MAP2A1HotelHeavens
 
         private void btnConfimar_Click(object sender, EventArgs e)
         {
-            
-            
-
-        }
-
-        private void CheckOut_Load(object sender, EventArgs e)
-        {
-            this.BackColor = Color.FromArgb(93, 64, 55);
             List<Hotel> hotel = new List<Hotel>();
             Hotel objusuario = new Hotel();
             string mensaje = string.Empty;
             bool respuesta = new CN_Hotel().Registrar(objusuario,out mensaje);
-            hotel = new CN_Hotel().Listar();
+           hotel = new CN_Hotel().Listar();
 
             if (!respuesta)
             {
                 MessageBox.Show(mensaje);
 
             }
-            List<Impuestos> LImpuestos = new CN_Impuestos().Leer();
-            foreach(Impuestos item in LImpuestos)
-            {
 
-            }
+        }
+
+        private void CheckOut_Load(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(93, 64, 55);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
