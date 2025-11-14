@@ -82,7 +82,7 @@ namespace MAP2A1HotelHeavens
             List<Usuario> listaUsuario = new CN_Usuario().Listar();
             foreach (Usuario item in listaUsuario)
             {
-                dgbUsuarios.Rows.Add(new object[] { item.id, item.nombre, item.correo, item.numeroTelefono, item.edad,item.sexo, item.membresia == true ? 1:0,item.membresia == true ? "Activo":"Inactivo", item.fecha_registro });
+                dgbUsuarios.Rows.Add(new object[] {"", item.id, item.nombre, item.correo, item.numeroTelefono, item.edad,item.sexo, item.membresia == true ? 1:0,item.membresia == true ? "Activo":"Inactivo", item.fecha_registro });
 
             }
 
@@ -210,7 +210,31 @@ namespace MAP2A1HotelHeavens
 
         private void dgbUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (dgbUsuarios.Columns[e.ColumnIndex].Name == "btnSeleccionar")
+            {
+                int indice = e.RowIndex;
+                Console.WriteLine("Este es el indice" + indice.ToString());
 
+                if (indice >= 0)
+                {
+                    txtIndice.Text = indice.ToString();
+                    txtId.Text = dgbUsuarios.Rows[indice].Cells["Id"].Value.ToString();
+                    txtCorreo.Text = dgbUsuarios.Rows[indice].Cells["Correo"].Value.ToString();
+                    txtCorreo2.Text = dgbUsuarios.Rows[indice].Cells["Correo"].Value.ToString();
+                    txtNombre.Text = dgbUsuarios.Rows[indice].Cells["nombre"].Value.ToString();
+                    mtbTelefono.Text = dgbUsuarios.Rows[indice].Cells["telefono"].Value.ToString();
+                    foreach (Funciones_MySQL fc in cboEstado.Items)
+                    {
+                        if (Convert.ToInt32(fc.Valor) == Convert.ToInt32(dgbUsuarios.Rows[indice].Cells["estado"].Value.ToString()))
+                        {
+                            int indice_estado = cboEstado.Items.IndexOf(fc);
+                            cboEstado.SelectedIndex = indice_estado;
+                            break;
+                        }
+
+                    }
+                }
+            }
         }
     }
 }
