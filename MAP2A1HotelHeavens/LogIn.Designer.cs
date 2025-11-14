@@ -80,7 +80,6 @@
             this.textBoxUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textBoxUsuario.Location = new System.Drawing.Point(87, 120);
             this.textBoxUsuario.Name = "textBoxUsuario";
-            this.textBoxUsuario.PasswordChar = '*';
             this.textBoxUsuario.Size = new System.Drawing.Size(197, 25);
             this.textBoxUsuario.TabIndex = 8;
             this.toolTipInfoLogin.SetToolTip(this.textBoxUsuario, "Usuario");
@@ -110,6 +109,7 @@
             this.buttonIniciar.Text = "Iniciar Sesion";
             this.toolTipInfoLogin.SetToolTip(this.buttonIniciar, "Presiona el boton una vez\r\ninsertado los datos");
             this.buttonIniciar.UseVisualStyleBackColor = false;
+            this.buttonIniciar.Click += new System.EventHandler(this.buttonIniciar_Click);
             // 
             // checkBoxOcultar1
             // 
@@ -120,6 +120,7 @@
             this.checkBoxOcultar1.Size = new System.Drawing.Size(15, 14);
             this.checkBoxOcultar1.TabIndex = 11;
             this.checkBoxOcultar1.UseVisualStyleBackColor = true;
+            this.checkBoxOcultar1.CheckedChanged += new System.EventHandler(this.checkBoxOcultar1_CheckedChanged);
             // 
             // checkBoxOcultar2
             // 
@@ -130,6 +131,7 @@
             this.checkBoxOcultar2.Size = new System.Drawing.Size(15, 14);
             this.checkBoxOcultar2.TabIndex = 12;
             this.checkBoxOcultar2.UseVisualStyleBackColor = true;
+            this.checkBoxOcultar2.CheckedChanged += new System.EventHandler(this.checkBoxOcultar2_CheckedChanged);
             // 
             // notifyIconMenu
             // 
