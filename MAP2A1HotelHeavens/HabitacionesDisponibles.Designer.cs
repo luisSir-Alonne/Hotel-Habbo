@@ -105,7 +105,6 @@
             // checkedListBoxOcupadas
             // 
             this.checkedListBoxOcupadas.BackColor = System.Drawing.Color.Black;
-            this.checkedListBoxOcupadas.Enabled = false;
             this.checkedListBoxOcupadas.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBoxOcupadas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.checkedListBoxOcupadas.FormattingEnabled = true;
