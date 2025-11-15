@@ -26,6 +26,7 @@ namespace MAP2A1HotelHeavens
 
         private void buttonIniciar_Click(object sender, EventArgs e)
         {
+            buttonIniciar.Enabled = false;
             List<Empleado> listaUsuarios = new CN_Empleado().Listar();
             Empleado ousuario = new CN_Empleado().Listar().Where(u => u.nombre == textBoxUsuario.Text && u.clave == textBoxContraseña.Text).FirstOrDefault();
             if (ousuario != null)
@@ -37,6 +38,7 @@ namespace MAP2A1HotelHeavens
             }
             else
             {
+                buttonIniciar.Enabled = true;
                 MessageBox.Show("No se encontro al usuario");
                 return;
             }
@@ -50,7 +52,7 @@ namespace MAP2A1HotelHeavens
             }
             else
             {
-                textBoxUsuario.PasswordChar = ' ';
+                textBoxUsuario.PasswordChar = '\0';
             }
         }
 
@@ -58,12 +60,19 @@ namespace MAP2A1HotelHeavens
         {
             if (checkBoxOcultar2.Checked)
             {
-                textBoxContraseña.PasswordChar = '*';
+                textBoxContraseña.PasswordChar = '\0';
             }
             else
             {
-                
+                textBoxContraseña.PasswordChar = '*';
+
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            
+            Application.Exit();
         }
     }
 }
