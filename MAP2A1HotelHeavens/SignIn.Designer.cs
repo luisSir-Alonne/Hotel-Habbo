@@ -40,7 +40,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblMenuCerrar = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lblMensaje = new System.Windows.Forms.Label();
             this.dgbUsuarios = new System.Windows.Forms.DataGridView();
             this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,7 +62,6 @@
             this.lblConfirmarCorreo = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cboEstado = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -75,6 +73,8 @@
             this.cbobusqueda = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.lblMensaje = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgbUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -91,17 +91,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // lblMensaje
-            // 
-            this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensaje.ForeColor = System.Drawing.Color.LightCoral;
-            this.lblMensaje.Location = new System.Drawing.Point(38, 468);
-            this.lblMensaje.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(0, 20);
-            this.lblMensaje.TabIndex = 40;
             // 
             // dgbUsuarios
             // 
@@ -384,19 +373,6 @@
             this.lblNombre.TabIndex = 44;
             this.lblNombre.Text = "Nombre completo:";
             // 
-            // lblTitulo
-            // 
-            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitulo.Font = new System.Drawing.Font("HP Simplified", 20F);
-            this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(42, 50);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(153, 41);
-            this.lblTitulo.TabIndex = 43;
-            this.lblTitulo.Text = "Membresía";
-            this.lblTitulo.UseCompatibleTextRendering = true;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -446,6 +422,7 @@
             this.txtId.Size = new System.Drawing.Size(57, 26);
             this.txtId.TabIndex = 62;
             this.txtId.Text = "0";
+            this.txtId.Visible = false;
             // 
             // txtIndice
             // 
@@ -459,6 +436,7 @@
             this.txtIndice.Size = new System.Drawing.Size(57, 26);
             this.txtIndice.TabIndex = 63;
             this.txtIndice.Text = "0";
+            this.txtIndice.Visible = false;
             // 
             // btnlimpiarbuscador
             // 
@@ -476,6 +454,7 @@
             this.btnlimpiarbuscador.Size = new System.Drawing.Size(54, 23);
             this.btnlimpiarbuscador.TabIndex = 69;
             this.btnlimpiarbuscador.UseVisualStyleBackColor = false;
+            this.btnlimpiarbuscador.Click += new System.EventHandler(this.btnlimpiarbuscador_Click);
             // 
             // btnbuscar
             // 
@@ -505,7 +484,7 @@
             // cbobusqueda
             // 
             this.cbobusqueda.FormattingEnabled = true;
-            this.cbobusqueda.Location = new System.Drawing.Point(688, 113);
+            this.cbobusqueda.Location = new System.Drawing.Point(668, 113);
             this.cbobusqueda.Name = "cbobusqueda";
             this.cbobusqueda.Size = new System.Drawing.Size(141, 21);
             this.cbobusqueda.TabIndex = 66;
@@ -515,7 +494,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(621, 117);
+            this.label11.Location = new System.Drawing.Point(601, 117);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(65, 13);
             this.label11.TabIndex = 65;
@@ -524,7 +503,7 @@
             // label10
             // 
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("HP Simplified", 20.25F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(349, 100);
             this.label10.Name = "label10";
@@ -532,6 +511,31 @@
             this.label10.TabIndex = 64;
             this.label10.Text = "Lista De Usuarios";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblMensaje
+            // 
+            this.lblMensaje.AutoSize = true;
+            this.lblMensaje.BackColor = System.Drawing.Color.Transparent;
+            this.lblMensaje.Font = new System.Drawing.Font("HP Simplified", 12F);
+            this.lblMensaje.ForeColor = System.Drawing.Color.White;
+            this.lblMensaje.Location = new System.Drawing.Point(15, 458);
+            this.lblMensaje.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(0, 19);
+            this.lblMensaje.TabIndex = 70;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("HP Simplified", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(204)))), ((int)(((byte)(200)))));
+            this.label4.Location = new System.Drawing.Point(42, 49);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(140, 38);
+            this.label4.TabIndex = 71;
+            this.label4.Text = "Membresia";
+            this.label4.UseCompatibleTextRendering = true;
             // 
             // SignIn
             // 
@@ -542,6 +546,8 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1366, 637);
             this.ControlBox = false;
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.btnlimpiarbuscador);
             this.Controls.Add(this.btnbuscar);
             this.Controls.Add(this.txtbusqueda);
@@ -563,10 +569,8 @@
             this.Controls.Add(this.lblConfirmarCorreo);
             this.Controls.Add(this.lblCorreo);
             this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgbUsuarios);
-            this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.lblMenuCerrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SignIn";
@@ -583,7 +587,6 @@
         #endregion
         private System.Windows.Forms.Label lblMenuCerrar;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Label lblMensaje;
         private System.Windows.Forms.MaskedTextBox mtbTelefono;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.CheckBox chkTyC;
@@ -594,7 +597,6 @@
         private System.Windows.Forms.Label lblConfirmarCorreo;
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgbUsuarios;
         private System.Windows.Forms.Label label2;
@@ -618,5 +620,7 @@
         private System.Windows.Forms.ComboBox cbobusqueda;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblMensaje;
+        private System.Windows.Forms.Label label4;
     }
 }

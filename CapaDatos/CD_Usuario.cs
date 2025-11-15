@@ -64,11 +64,9 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("correoP", obj.correo);
                     cmd.Parameters.AddWithValue("sexoP", obj.sexo);
                     cmd.Parameters.AddWithValue("edadP", obj.edad);
-
                     cmd.Parameters.Add("idgenerado", MySqlDbType.Int32).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("mensaje", MySqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-
                     oconexion.Open();
                     cmd.ExecuteNonQuery();
                     generado = Convert.ToInt32(cmd.Parameters["idgenerado"].Value);
@@ -79,6 +77,8 @@ namespace CapaDatos
             catch (MySqlException ex)
             {
                 mensaje = ex.Message;
+                Console.WriteLine(ex);
+
                 generado = 0;
             }
             return generado;
@@ -93,13 +93,12 @@ namespace CapaDatos
             {
                 using (MySqlConnection oconexion = new MySqlConnection(Conexion.cadena))
                 {
-                    MySqlCommand cmd = new MySqlCommand("SP_EDITARUSUARIO", oconexion);
+                    MySqlCommand cmd = new MySqlCommand("SP_EDITARCLIENTE", oconexion);
                     cmd.Parameters.AddWithValue("idP", obj.id);
                     cmd.Parameters.AddWithValue("telefonoP", obj.numeroTelefono);
                     cmd.Parameters.AddWithValue("nombreP", obj.nombre);
                     cmd.Parameters.AddWithValue("correoP", obj.correo);
                     cmd.Parameters.AddWithValue("edadP", obj.edad);
-                    cmd.Parameters.AddWithValue("mem", obj.membresia);
                     cmd.Parameters.AddWithValue("sexoP", obj.sexo);
 
 
@@ -119,6 +118,7 @@ namespace CapaDatos
             {
                 idgenerado = false;
                 mensaje = ex.Message;
+                Console.WriteLine(ex);
 
             }
             return idgenerado;

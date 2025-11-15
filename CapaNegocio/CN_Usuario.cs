@@ -16,7 +16,7 @@ namespace CapaNegocio
         {
             return obj_usuario.Leer();
         }
-        public bool Registrar(Usuario obj, out string mensaje)
+        public int Registrar(Usuario obj, out string mensaje)
         {
             mensaje = string.Empty;
             if (obj.nombre == "")
@@ -45,12 +45,49 @@ namespace CapaNegocio
             }
             if (mensaje != string.Empty)
             {
+                return 0;
+            }
+            else
+            {
+                return obj_usuario.Registrar(obj, out mensaje);
+
+            }
+        }
+        public bool Editar(Usuario obj, out string mensaje)
+        {
+            mensaje = string.Empty;
+
+            if (obj.id == 0)
+            {
+                mensaje += " Es necesario el Identificador del Usuario";
+            }
+            if (obj.nombre == "")
+            {
+                mensaje += " Es necesario el Nombre del Usuario";
+            }
+            if (obj.numeroTelefono == "")
+            {
+                mensaje += " Es necesario el Numero Telefonico del Usuario";
+            }
+            if (obj.correo == "")
+            {
+                mensaje += " Es necesario el Correo Electronico del Usuario";
+            }
+            if (obj.edad == "")
+            {
+                mensaje += " Es necesaria la Edad del Usuario";
+            }
+            if (obj.sexo == "")
+            {
+                mensaje += " Es necesario el Sexo del Usuario";
+            }
+            if (mensaje != string.Empty)
+            {
                 return false;
             }
             else
             {
                 return obj_usuario.Editar(obj, out mensaje);
-
             }
         }
         public bool ImplementarMembresia(Usuario obj, out string mensaje)

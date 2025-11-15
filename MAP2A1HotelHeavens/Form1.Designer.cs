@@ -246,6 +246,7 @@
             // 
             // panMostrar
             // 
+            this.panMostrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
             this.panMostrar.BackgroundImage = global::MAP2A1HotelHeavens.Properties.Resources.imgHotelFueraLP;
             this.panMostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panMostrar.Font = new System.Drawing.Font("HP Simplified", 8.25F);

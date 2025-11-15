@@ -20,7 +20,6 @@ namespace MAP2A1HotelHeavens
         {
             InitializeComponent();
             chkTyC.CheckedChanged += (s, e) => { };
-            btnRegistrar.Click += btnRegistrar_Click;
             
             errorProvider1.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             lblMensaje.Text = "";
@@ -40,7 +39,7 @@ namespace MAP2A1HotelHeavens
         private void Fail(Control ctrl, string msg)
         {
             errorProvider1.SetError(ctrl, msg);
-            lblMensaje.Text = "❌ " + msg;
+            lblMensaje.Text = "❌ " + msg.ToString();
             ctrl.Focus();
         }
 
@@ -50,22 +49,6 @@ namespace MAP2A1HotelHeavens
             const string pat = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
             return Regex.IsMatch(email, pat, RegexOptions.IgnoreCase);
         }
-
-        private string ValidaPassword(string p)
-        {
-            if (string.IsNullOrEmpty(p)) return "Escribe una contraseña.";
-            if (p.Length < 8) return "La contraseña debe tener al menos 8 caracteres.";
-            bool may = false, min = false, dig = false;
-            foreach (char c in p)
-            {
-                if (char.IsUpper(c)) may = true;
-                else if (char.IsLower(c)) min = true;
-                else if (char.IsDigit(c)) dig = true;
-            }
-            if (!may || !min || !dig)
-                return "Incluye mayúsculas, minúsculas y números.";
-            return null; 
-        }
      
         private void btnRegresar_Click_1(object sender, EventArgs e)
         {
@@ -74,6 +57,7 @@ namespace MAP2A1HotelHeavens
 
         private void SignIn_Load(object sender, EventArgs e)
         {
+            lblMensaje.ForeColor = System.Drawing.Color.White;
             cboEstado.Items.Add(new Funciones_MySQL() { Valor = 1, Texto = "Activo" });
             cboEstado.Items.Add(new Funciones_MySQL() { Valor = 0, Texto = "Inactivo" });
             cboEstado.DisplayMember = "Texto";
@@ -104,7 +88,6 @@ namespace MAP2A1HotelHeavens
 
         private void btnRegistrar_Click_1(object sender, EventArgs e)
         {
-            lblMensaje.Text = "";
             errorProvider1.Clear();
 
             if (string.IsNullOrWhiteSpace(txtNombre.Text))
@@ -124,8 +107,6 @@ namespace MAP2A1HotelHeavens
 
             if (!mtbTelefono.MaskFull)
             { Fail(mtbTelefono, "Completa el teléfono (10 dígitos)."); return; }
-
-            
             if (!chkTyC.Checked)
             { Fail(chkTyC, "Debes aceptar los Términos y Condiciones."); return; }
 
@@ -139,23 +120,17 @@ namespace MAP2A1HotelHeavens
             {
                 foreach (DataGridViewRow row in dgbUsuarios.Rows)
                 {
-
-
-
                     if (Convert.ToString(row.Cells["Nombre"].Value) == txtNombre.Text && Convert.ToString(row.Cells["Correo"].Value) == txtCorreo.Text && Convert.ToString(row.Cells["telefono"].Value) == tele)
                     {
                         id = Convert.ToInt32(row.Cells["Id"].Value);
-
                         genero = Convert.ToString(row.Cells["sexo"].Value);
                         edad = Convert.ToString(row.Cells["edad"].Value);
                         fecha_registro = Convert.ToString(row.Cells["fecha_registro"].Value);
-
                         Console.WriteLine("Este es el id");
                         Console.WriteLine(id);
                         txtId.Text = id.ToString();
                         encontrado = true;
                     }
-                    
                 }
             }
             else
@@ -216,11 +191,15 @@ namespace MAP2A1HotelHeavens
                     }
                 }
             }
+            else
+            {
+                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
-            MessageBox.Show($"Membresia modificada correctamente",
-                            "Cambios establecidos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Membresia modificada correctamente",
+                                "Cambios establecidos", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.DialogResult = DialogResult.OK;
-            
+            Limpiar();
         }
 
         private void dgbUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -251,9 +230,26 @@ namespace MAP2A1HotelHeavens
                 }
             }
         }
+        private void Limpiar()
+        {
+            txtNombre.Text = "";
+            txtCorreo.Text = "";
+            txtCorreo2.Text = "";
+            txtId.Text = "0";
+            txtIndice.Text = "";
+            txtbusqueda.Text = "";
+            mtbTelefono.Text = "";
+            cboEstado.SelectedIndex = 0;
 
+        }
+        
         private void btnbuscar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(cbobusqueda.Text))
+            {
+                Fail(cbobusqueda, "Selecciona una opcion");
+                return;
+            }
             string columnaFiltro = (((Funciones_MySQL)cbobusqueda.SelectedItem).Valor.ToString());  
             if (dgbUsuarios.Rows.Count > 0)
             {
@@ -268,6 +264,15 @@ namespace MAP2A1HotelHeavens
                         row.Visible = false;
                     }
                 }
+            }
+        }
+
+        private void btnlimpiarbuscador_Click(object sender, EventArgs e)
+        {
+            txtbusqueda.Text = "";
+            foreach (DataGridViewRow row in dgbUsuarios.Rows)
+            {
+                row.Visible = true;
             }
         }
     }

@@ -166,7 +166,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("HP Simplified", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtNombre.ForeColor = System.Drawing.Color.White;
@@ -256,7 +256,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
+            this.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
             this.numericUpDown1.Font = new System.Drawing.Font("HP Simplified", 9F, System.Drawing.FontStyle.Bold);
             this.numericUpDown1.ForeColor = System.Drawing.Color.White;
             this.numericUpDown1.Location = new System.Drawing.Point(160, 313);
@@ -296,7 +296,7 @@
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
+            this.numericUpDown2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
             this.numericUpDown2.Font = new System.Drawing.Font("HP Simplified", 9F, System.Drawing.FontStyle.Bold);
             this.numericUpDown2.ForeColor = System.Drawing.Color.White;
             this.numericUpDown2.Location = new System.Drawing.Point(160, 347);
