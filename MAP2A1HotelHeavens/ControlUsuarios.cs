@@ -235,7 +235,7 @@ namespace MAP2A1HotelHeavens
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtId.Text))
+            if ((txtId.Text == "0"))
             {
                 Fail(btnEliminar, "Selecciona el Usuario a Eliminar");
                 return;
@@ -262,7 +262,8 @@ namespace MAP2A1HotelHeavens
                     else
                     {
                         MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
+                        btnEliminar.Enabled = true;
+
                     }
                 }
             }

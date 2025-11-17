@@ -205,7 +205,6 @@ namespace MAP2A1HotelHeavens
         private void btnDegradar_Click(object sender, EventArgs e)
         {
             revisar();
-            btnDegradar.Enabled = false;
             string nombre = txtNombre.Text, clave = txtClave.Text, correo = txtCorreo.Text;
             string mensaje = string.Empty;
             Empleado usr = new Empleado()
@@ -222,6 +221,8 @@ namespace MAP2A1HotelHeavens
             }
             else
             {
+                btnDegradar.Enabled = false;
+
                 bool resultado = new CN_Empleado().Degradar(usr, out mensaje);
                 if (resultado)
                 {
@@ -252,7 +253,7 @@ namespace MAP2A1HotelHeavens
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtId.Text))
+            if ((txtId.Text == "0"))
             {
                 Fail(btnEliminar, "Selecciona el Usuario a Eliminar");
                 return;
@@ -295,6 +296,30 @@ namespace MAP2A1HotelHeavens
             foreach (DataGridViewRow row in dgbUsuarios.Rows)
             {
                 row.Visible = true;
+            }
+        }
+
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(cbobusqueda.Text))
+            {
+                Fail(cbobusqueda, "Selecciona una opcion");
+                return;
+            }
+            string columnaFiltro = (((Funciones_MySQL)cbobusqueda.SelectedItem).Valor.ToString());
+            if (dgbUsuarios.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dgbUsuarios.Rows)
+                {
+                    if (row.Cells[columnaFiltro].Value.ToString().Trim().ToUpper().Contains(txtbusqueda.Text.Trim().ToUpper()))
+                    {
+                        row.Visible = true;
+                    }
+                    else
+                    {
+                        row.Visible = false;
+                    }
+                }
             }
         }
     }
