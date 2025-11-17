@@ -132,8 +132,8 @@ namespace MAP2A1HotelHeavens
                 Console.WriteLine("Este es el mensaje " + mensaje.ToString());
                 if (idusuario != 0)
                 {
-                    dgbUsuarios.Rows.Add(new object[] { "", usr.idEmpleado, usr.nombre, usr.correo, usr.clave, usr.oRol.IdRol, usr.oRol.descripcion, usr.fecha });
-
+                    dgbUsuarios.Rows.Clear();
+                    cargar();
                 }
                 else
                 {
@@ -148,15 +148,8 @@ namespace MAP2A1HotelHeavens
                 bool resultado = new CN_Empleado().Editar(usr, out mensaje);
                 if (resultado)
                 {
-                    DataGridViewRow row = dgbUsuarios.Rows[Convert.ToInt32(txtIndice.Text)];
-                    row.Cells["Id"].Value = txtId.Text;
-                    row.Cells["nombre"].Value = nombre;
-                    row.Cells["clave"].Value = clave;
-                    row.Cells["Correo"].Value = correo;
-                    row.Cells["estado"].Value = usr.oRol.IdRol;
-                    row.Cells["rol"].Value = usr.oRol.descripcion;
-                    row.Cells["fecha_registro"].Value = usr.fecha;
-
+                    dgbUsuarios.Rows.Clear();
+                    cargar();
                 }
                 else
                 {
@@ -285,7 +278,7 @@ namespace MAP2A1HotelHeavens
                     }
                 }
             }
-            btnDegradar.Enabled = true;
+            btnEliminar.Enabled = true;
             Limpiar();
 
         }

@@ -250,7 +250,7 @@
             this.panMostrar.BackgroundImage = global::MAP2A1HotelHeavens.Properties.Resources.imgHotelFueraLP;
             this.panMostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panMostrar.Font = new System.Drawing.Font("HP Simplified", 8.25F);
-            this.panMostrar.Location = new System.Drawing.Point(0, 131);
+            this.panMostrar.Location = new System.Drawing.Point(0, 133);
             this.panMostrar.Name = "panMostrar";
             this.panMostrar.Size = new System.Drawing.Size(1366, 637);
             this.panMostrar.TabIndex = 21;

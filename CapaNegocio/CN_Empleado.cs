@@ -105,5 +105,24 @@ namespace CapaNegocio
                 return obj_empleado.Degradar(obj, out mensaje);
             }
         }
+        public bool Ascender(Empleado obj, out string mensaje)
+        {
+            mensaje = string.Empty;
+            if (obj.idEmpleado == 0)
+            {
+                mensaje += " Es necesario el Id del Empleado";
+
+            }
+            if (mensaje != string.Empty)
+            {
+                return false;
+
+            }
+            else
+            {
+                return obj_empleado.Ascender(obj, out mensaje);
+
+            }
+        }
     }
 }
