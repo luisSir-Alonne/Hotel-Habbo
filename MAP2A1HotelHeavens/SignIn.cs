@@ -110,7 +110,7 @@ namespace MAP2A1HotelHeavens
             if (!chkTyC.Checked)
             { Fail(chkTyC, "Debes aceptar los Términos y Condiciones."); return; }
 
-
+            btnRegistrar.Enabled = false;
             int id = Convert.ToInt32(txtId.Text);
             string tele = mtbTelefono.Text.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "");
             string genero = "", edad = "", fecha_registro = "" ;
@@ -199,6 +199,7 @@ namespace MAP2A1HotelHeavens
                 MessageBox.Show($"Membresia modificada correctamente",
                                 "Cambios establecidos", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.DialogResult = DialogResult.OK;
+            btnRegistrar.Enabled = true;
             Limpiar();
         }
 

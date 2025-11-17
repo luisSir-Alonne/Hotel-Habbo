@@ -242,6 +242,7 @@ namespace MAP2A1HotelHeavens
             }
             else
             {
+                btnEliminar.Enabled = false;
                 DialogResult respuesta = MessageBox.Show("¿Desea eliminar el Usuario?", "Eliminar Usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (respuesta == DialogResult.Yes)
                 {
@@ -265,6 +266,9 @@ namespace MAP2A1HotelHeavens
                     }
                 }
             }
+            btnEliminar.Enabled = true;
+            Limpiar();
+
 
         }
 

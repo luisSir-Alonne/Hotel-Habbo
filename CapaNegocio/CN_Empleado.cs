@@ -11,8 +11,8 @@ namespace CapaNegocio
 {
     public class CN_Empleado
     {
-        private CD_Empleados obj_empleado = new CD_Empleados() ;
-       public List<Empleado> Listar()
+        private CD_Empleados obj_empleado = new CD_Empleados();
+        public List<Empleado> Listar()
         {
             return obj_empleado.Leer();
         }
@@ -36,7 +36,7 @@ namespace CapaNegocio
             }
             if (mensaje != string.Empty)
             {
-                return 0; 
+                return 0;
 
             }
             else
@@ -62,7 +62,7 @@ namespace CapaNegocio
                 mensaje += " Es necesario el correo electronico del Empleado";
 
             }
-            if ( mensaje != string.Empty)
+            if (mensaje != string.Empty)
             {
                 return false;
             }
@@ -77,7 +77,7 @@ namespace CapaNegocio
             mensaje = string.Empty;
             if (obj.idEmpleado == 0)
             {
-                mensaje += " Es necesario el Id del Usuario";
+                mensaje += " Es necesario el Id del Empleado";
 
             }
             if (mensaje != string.Empty)
@@ -87,6 +87,22 @@ namespace CapaNegocio
             else
             {
                 return obj_empleado.Eliminar(obj, out mensaje);
+            }
+        }
+        public bool Degradar(Empleado obj, out string mensaje)
+        {
+            mensaje = string.Empty;
+            if (obj.idEmpleado == 0)
+            {
+                mensaje += " Es necesario el Id del Empleado";
+            }
+            if (mensaje != string.Empty)
+            {
+                return false;
+            }
+            else
+            {
+                return obj_empleado.Degradar(obj, out mensaje);
             }
         }
     }

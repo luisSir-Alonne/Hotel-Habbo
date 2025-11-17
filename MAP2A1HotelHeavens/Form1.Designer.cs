@@ -240,7 +240,7 @@
             this.imiAdmin.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.imiAdmin.Name = "imiAdmin";
             this.imiAdmin.Size = new System.Drawing.Size(122, 69);
-            this.imiAdmin.Text = "Control Jefes";
+            this.imiAdmin.Text = "Administradores";
             this.imiAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.imiAdmin.Click += new System.EventHandler(this.imiAdmin_Click);
             // 

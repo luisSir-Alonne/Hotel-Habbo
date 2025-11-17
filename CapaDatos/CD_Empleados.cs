@@ -91,10 +91,12 @@ namespace CapaDatos
                 using (MySqlConnection oconexion = new MySqlConnection(Conexion.cadena))
                 {
                     MySqlCommand cmd = new MySqlCommand("SP_EDITARUSUARIO", oconexion);
+                    cmd.Parameters.AddWithValue("idP", obj.idEmpleado);
+
                     cmd.Parameters.AddWithValue("nombreP", obj.nombre);
                     cmd.Parameters.AddWithValue("claveP", obj.clave);
                     cmd.Parameters.AddWithValue("correoP", obj.correo);
-                    cmd.Parameters.AddWithValue("idRol", obj.oRol.IdRol);
+                    cmd.Parameters.AddWithValue("idRolP", obj.oRol.IdRol);
 
                     cmd.Parameters.Add("respuesta", MySqlDbType.Bit).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("mensaje", MySqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
@@ -143,6 +145,32 @@ namespace CapaDatos
                 respuesta = false;
             }
             return respuesta;
+        }
+        public bool Degradar(Empleado obj, out string mensaje)
+        {
+            bool respuesta = false;
+            mensaje = string.Empty;
+            try
+            {
+                using (MySqlConnection oconexion = new MySqlConnection(Conexion.cadena))
+                {
+                    MySqlCommand cmd = new MySqlCommand("SP_DEGRADAR", oconexion);
+                    cmd.Parameters.AddWithValue("IdP", obj.idEmpleado);
+                    cmd.Parameters.Add("respuesta", MySqlDbType.Bit).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("mensaje", MySqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    oconexion.Open();
+                    cmd.ExecuteNonQuery();
+                    respuesta = Convert.ToBoolean(cmd.Parameters["respuesta"].Value);
+                    mensaje = cmd.Parameters["mensaje"].Value.ToString();
+                }
+            }
+            catch(MySqlException ex)
+            {
+                mensaje = ex.ToString();
+                respuesta = false;
+            }
+            return respuesta; 
         }
     }
 }
