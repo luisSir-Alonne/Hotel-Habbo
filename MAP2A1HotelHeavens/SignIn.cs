@@ -114,7 +114,6 @@ namespace MAP2A1HotelHeavens
             int id = Convert.ToInt32(txtId.Text);
             string tele = mtbTelefono.Text.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "");
             string genero = "", edad = "", fecha_registro = "" ;
-            txtId.Visible = true;
             bool encontrado = false;
             if (id == 0)
             {
@@ -158,8 +157,11 @@ namespace MAP2A1HotelHeavens
             if (!encontrado)
             {
                 
-                    MessageBox.Show("No se encontro al usuario especificado, inserte los datos correctamente", "Usuario no Encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
+                   
+                MessageBox.Show("No se encontro al usuario especificado, inserte los datos correctamente", "Usuario no Encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                btnRegistrar.Enabled = true;
+                Limpiar();
+                return;
 
                 
             }
