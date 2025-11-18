@@ -86,5 +86,23 @@ namespace MAP2A1HotelHeavens
         {
 
         }
+
+        private void dgbUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgbUsuarios.Columns[e.ColumnIndex].Name== "btnSeleccionar")
+            {
+                int indice = e.RowIndex;
+                if (indice >= 0)
+                {
+                    txtIndice.Text = indice.ToString();
+                    txtId.Text = dgbUsuarios.Rows[indice].Cells["Id"].Value.ToString();
+                }
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
