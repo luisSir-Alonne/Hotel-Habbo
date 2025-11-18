@@ -10,6 +10,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using System.Windows.Forms;
 
 namespace MAP2A1HotelHeavens
@@ -49,10 +50,25 @@ namespace MAP2A1HotelHeavens
 
             foreach (Impuestos item in LImpuestos)
             {
-                totalImpuestos += item.costo;  
+                totalImpuestos += item.costo;
             }
 
-            lblImpuestos.Text = totalImpuestos.ToString("0.00");
+        
+
+
+
+
+            /*Cargar datos*/
+            List<Hotel> gertrudis = new CN_Hotel().Listar();
+            foreach (Hotel obj in gertrudis)
+            {
+                dgbUsuarios.Rows.Add(new object[] { "", obj.idUsuario, obj.nombre, obj.numero_habitacion, obj.tipo_habitacion, obj.numeroPersonas, obj.reserva, obj.salida, obj.dias_estancia, obj.dias_restantes });
+                
+            }
+
+
+
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
