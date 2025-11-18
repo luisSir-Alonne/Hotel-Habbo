@@ -73,6 +73,7 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblMenuCerrar = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgbUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epValidacion)).BeginInit();
             this.SuspendLayout();
@@ -378,6 +379,7 @@
             this.txtIndice.Size = new System.Drawing.Size(57, 26);
             this.txtIndice.TabIndex = 146;
             this.txtIndice.Text = "0";
+            this.txtIndice.Visible = false;
             // 
             // txtId
             // 
@@ -391,6 +393,7 @@
             this.txtId.Size = new System.Drawing.Size(57, 26);
             this.txtId.TabIndex = 145;
             this.txtId.Text = "0";
+            this.txtId.Visible = false;
             // 
             // label2
             // 
@@ -539,6 +542,21 @@
             this.lblMenuCerrar.Size = new System.Drawing.Size(1366, 43);
             this.lblMenuCerrar.TabIndex = 133;
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLimpiar.Font = new System.Drawing.Font("HP Simplified", 12F);
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.Location = new System.Drawing.Point(17, 547);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(332, 33);
+            this.btnLimpiar.TabIndex = 161;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // Control_de_Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -548,6 +566,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1366, 637);
             this.ControlBox = false;
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnAscender);
             this.Controls.Add(this.txtConfirmarClave);
             this.Controls.Add(this.label3);
@@ -628,5 +647,6 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblMenuCerrar;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

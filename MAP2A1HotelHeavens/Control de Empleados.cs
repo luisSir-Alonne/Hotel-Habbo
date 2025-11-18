@@ -323,5 +323,10 @@ namespace MAP2A1HotelHeavens
                 row.Visible = true;
             }
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
     }
 }

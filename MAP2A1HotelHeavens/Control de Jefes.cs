@@ -338,5 +338,10 @@ namespace MAP2A1HotelHeavens
                 }
             }
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
     }
 }
