@@ -199,5 +199,33 @@ namespace CapaDatos
             return respuesta;
 
         }
+        public bool Llave(string clave, out string mensaje)
+        {
+            bool respuesta = false;
+            mensaje = string.Empty;
+            try
+            {
+                using (MySqlConnection oconexion = new MySqlConnection(Conexion.cadena))
+                {
+                    MySqlCommand cmd = new MySqlCommand("SP_LLAVE", oconexion);
+                    cmd.Parameters.AddWithValue("claveP", clave);
+                    cmd.Parameters.Add("respuesta", MySqlDbType.Bit).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("mensaje", MySqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    oconexion.Open();
+                    cmd.ExecuteNonQuery();
+                    respuesta = Convert.ToBoolean(cmd.Parameters["respuesta"].Value);
+                    mensaje = cmd.Parameters["mensaje"].Value.ToString();
+                }
+            }
+            catch (MySqlException ex)
+            {
+                mensaje = ex.ToString();
+                respuesta = false;
+
+            }
+            return respuesta;
+
+        }
     }
 }

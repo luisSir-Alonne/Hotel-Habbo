@@ -1,5 +1,7 @@
 ﻿using CapaEntidad;
 using CapaNegocio;
+using MAP2A1HotelHeavens.Modales;
+using MySqlX.XDevAPI.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +21,7 @@ namespace MAP2A1HotelHeavens
         {
             InitializeComponent();
         }
-
+        
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             revisar();
@@ -162,13 +164,35 @@ namespace MAP2A1HotelHeavens
         {
             if (!dgbUsuarios.Columns["Clave"].Visible)
             {
-                dgbUsuarios.Columns["Clave"].Visible = true;
+                btnVerClaves.Enabled = false;
+                using (var modal = new mdClave())
+                {
+                    var result = modal.ShowDialog();
+                    if (result == DialogResult.Yes)
+                    {
+                        if (!dgbUsuarios.Columns["Clave"].Visible)
+                        {
+                            dgbUsuarios.Columns["Clave"].Visible = true;
+                        }
+                        else
+                        {
+                            dgbUsuarios.Columns["Clave"].Visible = false;
+
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Clave no valida");
+
+                    }
+                }
             }
             else
             {
                 dgbUsuarios.Columns["Clave"].Visible = false;
-
             }
+            btnVerClaves.Enabled = true;
+                
         }
 
         private void dgbUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)

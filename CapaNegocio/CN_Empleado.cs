@@ -124,5 +124,22 @@ namespace CapaNegocio
 
             }
         }
+        public bool Llave(string clave, out string mensaje)
+        {
+            mensaje = string.Empty;
+            if (string.IsNullOrWhiteSpace(clave))
+            {
+                mensaje += " Es necesaria la Llave de Acceso";
+
+            }
+            if (mensaje != string.Empty)
+            {
+                return false;
+            }
+            else
+            {
+                return obj_empleado.Llave(clave, out mensaje);
+            }
+        }
     }
 }
