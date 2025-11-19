@@ -1,6 +1,7 @@
 ﻿using CapaEntidad;
 using CapaNegocio;
 using FontAwesome.Sharp;
+using MAP2A1HotelHeavens.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,7 +33,7 @@ namespace MAP2A1HotelHeavens
             }
 
                 InitializeComponent();
-          
+                
 
         }
       
