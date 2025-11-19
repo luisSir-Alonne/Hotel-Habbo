@@ -67,6 +67,20 @@ namespace MAP2A1HotelHeavens
             }
 
 
+            foreach (DataGridViewColumn clm in dgbUsuarios.Columns)
+            {
+                if (clm.Visible == true && clm.Name != "btnSeleccionar")
+                {
+                    string texto = clm.HeaderText;
+                    cboBuscar.Items.Add(new Funciones_MySQL() { Valor = clm.Name, Texto = Convert.ToString(texto) });
+                }
+                cboBuscar.DisplayMember = "Texto";
+                cboBuscar.ValueMember = "Valor";
+
+                Console.WriteLine(clm.HeaderText);
+                Console.WriteLine("jijijija");
+
+            }
 
 
         }
@@ -103,6 +117,44 @@ namespace MAP2A1HotelHeavens
         private void btnEliminar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(cboBuscar.Text))
+            {
+                Fail(cboBuscar, "Selecciona una opcion");
+                return;
+            }
+            string columnaFiltro = (((Funciones_MySQL)cboBuscar.SelectedItem).Valor.ToString());
+            if (dgbUsuarios.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dgbUsuarios.Rows)
+                {
+                    if (row.Cells[columnaFiltro].Value.ToString().Trim().ToUpper().Contains(txtbusqueda.Text.Trim().ToUpper()))
+                    {
+                        row.Visible = true;
+                    }
+                    else
+                    {
+                        row.Visible = false;
+                    }
+                }
+            }
+        }
+        private void Fail(Control ctrl, string msg)
+        {
+            errorProvider1.SetError(ctrl, msg);
+            lblMensaje.Text = "❌ " + msg.ToString();
+            ctrl.Focus();
+        }
+        private void btnlimpiarbuscador_Click(object sender, EventArgs e)
+        {
+            txtbuscar.Text = "";
+            foreach (DataGridViewRow row in dgbUsuarios.Rows)
+            {
+                row.Visible = true;
+            }
         }
     }
 }

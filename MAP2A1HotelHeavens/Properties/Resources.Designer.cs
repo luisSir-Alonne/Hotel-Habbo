@@ -211,6 +211,16 @@ namespace MAP2A1HotelHeavens.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon imgLogoHotelHeavensLP1 {
+            get {
+                object obj = ResourceManager.GetObject("imgLogoHotelHeavensLP1", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap menos {

@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.picMinimizar = new System.Windows.Forms.PictureBox();
-            this.picCerrar = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.label1 = new System.Windows.Forms.Label();
             this.msAreas = new System.Windows.Forms.MenuStrip();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panMostrar = new System.Windows.Forms.Panel();
             this.imiCheckIn = new FontAwesome.Sharp.IconMenuItem();
             this.imiCheckOut = new FontAwesome.Sharp.IconMenuItem();
             this.imiControlUsuario = new FontAwesome.Sharp.IconMenuItem();
@@ -41,38 +43,12 @@
             this.imiControlEmpleados = new FontAwesome.Sharp.IconMenuItem();
             this.imiMembresia = new FontAwesome.Sharp.IconMenuItem();
             this.imiAdmin = new FontAwesome.Sharp.IconMenuItem();
-            this.panMostrar = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.picMinimizar = new System.Windows.Forms.PictureBox();
+            this.picCerrar = new System.Windows.Forms.PictureBox();
+            this.msAreas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
-            this.msAreas.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // picMinimizar
-            // 
-            this.picMinimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            this.picMinimizar.Image = global::MAP2A1HotelHeavens.Properties.Resources.menos;
-            this.picMinimizar.Location = new System.Drawing.Point(1280, 7);
-            this.picMinimizar.Name = "picMinimizar";
-            this.picMinimizar.Size = new System.Drawing.Size(34, 43);
-            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picMinimizar.TabIndex = 7;
-            this.picMinimizar.TabStop = false;
-            this.picMinimizar.Click += new System.EventHandler(this.picMinimizar_Click);
-            // 
-            // picCerrar
-            // 
-            this.picCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            this.picCerrar.Image = global::MAP2A1HotelHeavens.Properties.Resources.cerrar;
-            this.picCerrar.Location = new System.Drawing.Point(1320, 7);
-            this.picCerrar.Name = "picCerrar";
-            this.picCerrar.Size = new System.Drawing.Size(34, 43);
-            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picCerrar.TabIndex = 6;
-            this.picCerrar.TabStop = false;
-            this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
             // 
             // menuStrip1
             // 
@@ -115,6 +91,51 @@
             this.msAreas.Size = new System.Drawing.Size(1366, 73);
             this.msAreas.TabIndex = 20;
             this.msAreas.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.msAreas_ItemClicked);
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.label3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label3.Location = new System.Drawing.Point(0, 725);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(1366, 43);
+            this.label3.TabIndex = 41;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.lblUsuario.Font = new System.Drawing.Font("HP Simplified", 12.25F);
+            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(204)))), ((int)(((byte)(200)))));
+            this.lblUsuario.Location = new System.Drawing.Point(122, 736);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(61, 20);
+            this.lblUsuario.TabIndex = 43;
+            this.lblUsuario.Text = "usuario";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.label2.Font = new System.Drawing.Font("HP Simplified", 20.25F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(204)))), ((int)(((byte)(200)))));
+            this.label2.Location = new System.Drawing.Point(12, 729);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 30);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "Usuario:";
+            // 
+            // panMostrar
+            // 
+            this.panMostrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.panMostrar.BackgroundImage = global::MAP2A1HotelHeavens.Properties.Resources.imgHotelFueraLP;
+            this.panMostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panMostrar.Font = new System.Drawing.Font("HP Simplified", 8.25F);
+            this.panMostrar.Location = new System.Drawing.Point(0, 129);
+            this.panMostrar.Name = "panMostrar";
+            this.panMostrar.Size = new System.Drawing.Size(1366, 641);
+            this.panMostrar.TabIndex = 21;
+            this.panMostrar.Paint += new System.Windows.Forms.PaintEventHandler(this.panMostrar_Paint);
             // 
             // imiCheckIn
             // 
@@ -244,50 +265,29 @@
             this.imiAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.imiAdmin.Click += new System.EventHandler(this.imiAdmin_Click);
             // 
-            // panMostrar
+            // picMinimizar
             // 
-            this.panMostrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            this.panMostrar.BackgroundImage = global::MAP2A1HotelHeavens.Properties.Resources.imgHotelFueraLP;
-            this.panMostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panMostrar.Font = new System.Drawing.Font("HP Simplified", 8.25F);
-            this.panMostrar.Location = new System.Drawing.Point(0, 133);
-            this.panMostrar.Name = "panMostrar";
-            this.panMostrar.Size = new System.Drawing.Size(1366, 637);
-            this.panMostrar.TabIndex = 21;
-            this.panMostrar.Paint += new System.Windows.Forms.PaintEventHandler(this.panMostrar_Paint);
+            this.picMinimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.picMinimizar.Image = global::MAP2A1HotelHeavens.Properties.Resources.menos;
+            this.picMinimizar.Location = new System.Drawing.Point(1280, 7);
+            this.picMinimizar.Name = "picMinimizar";
+            this.picMinimizar.Size = new System.Drawing.Size(34, 43);
+            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picMinimizar.TabIndex = 7;
+            this.picMinimizar.TabStop = false;
+            this.picMinimizar.Click += new System.EventHandler(this.picMinimizar_Click);
             // 
-            // label3
+            // picCerrar
             // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            this.label3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label3.Location = new System.Drawing.Point(0, 725);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1366, 43);
-            this.label3.TabIndex = 41;
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            this.lblUsuario.Font = new System.Drawing.Font("HP Simplified", 12.25F);
-            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(204)))), ((int)(((byte)(200)))));
-            this.lblUsuario.Location = new System.Drawing.Point(122, 736);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(61, 20);
-            this.lblUsuario.TabIndex = 43;
-            this.lblUsuario.Text = "usuario";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            this.label2.Font = new System.Drawing.Font("HP Simplified", 20.25F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(204)))), ((int)(((byte)(200)))));
-            this.label2.Location = new System.Drawing.Point(12, 729);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 30);
-            this.label2.TabIndex = 42;
-            this.label2.Text = "Usuario:";
+            this.picCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.picCerrar.Image = global::MAP2A1HotelHeavens.Properties.Resources.cerrar;
+            this.picCerrar.Location = new System.Drawing.Point(1320, 7);
+            this.picCerrar.Name = "picCerrar";
+            this.picCerrar.Size = new System.Drawing.Size(34, 43);
+            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picCerrar.TabIndex = 6;
+            this.picCerrar.TabStop = false;
+            this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
             // 
             // Form1
             // 
@@ -313,10 +313,10 @@
             this.Text = "Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             this.msAreas.ResumeLayout(false);
             this.msAreas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
