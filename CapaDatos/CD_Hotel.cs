@@ -138,14 +138,19 @@ namespace CapaDatos
             {
                 using (MySqlConnection oconexion = new MySqlConnection(Conexion.cadena))
                 {
-                    MySqlCommand cmd = new MySqlCommand("SP_ELIMINARUSUARIO", oconexion);
+                    MySqlCommand cmd = new MySqlCommand("SP_CHECKOUT", oconexion);
                     cmd.Parameters.AddWithValue("idP", obj.idUsuario);
                     cmd.Parameters.Add("respuesta", MySqlDbType.Bit).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("mensaje", MySqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("mensaje", MySqlDbType.VarChar, 100).Direction = ParameterDirection.Output;
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     oconexion.Open();
                     cmd.ExecuteNonQuery();
                     respuesta = Convert.ToBoolean(cmd.Parameters["respuesta"].Value);
+                    Console.WriteLine("Esta es la respuesta: " + respuesta.ToString());
+                    Console.WriteLine("Este es el mensaje: " + cmd.Parameters["mensaje"].Value.ToString());
+
+                    Console.WriteLine("pene");
+
                     mensaje = cmd.Parameters["mensaje"].Value.ToString();
 
                 }

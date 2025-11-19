@@ -113,9 +113,29 @@ namespace MAP2A1HotelHeavens
                 }
             }
         }
-
+        
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            Hotel semen = new Hotel()
+            {
+                idUsuario= Convert.ToInt32(txtId.Text)
+
+            };
+            string pene = string.Empty;
+
+
+
+            bool EL = new CN_Hotel().Eliminar(semen, out pene);
+            if (EL)
+            {
+                MessageBox.Show("Usuario eliminado correctamente");
+                dgbUsuarios.Rows.RemoveAt(Convert.ToInt32(txtIndice.Text));
+            }
+            else
+            {
+                MessageBox.Show("Error al eliminar el usuario: " + pene);
+            }
+
 
         }
 
