@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblMenuCerrar = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblNumdehabitacion = new System.Windows.Forms.Label();
@@ -56,10 +64,23 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.gpbFecha = new System.Windows.Forms.GroupBox();
+            this.dgbUsuarios = new System.Windows.Forms.DataGridView();
+            this.txtIndice = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NumeroHabitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NumPersonas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Reserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Salida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diasdeestancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diasrestantes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbTipodeHabitacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.gpbFecha.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgbUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMenuCerrar
@@ -339,7 +360,7 @@
             // mtcFecha
             // 
             this.mtcFecha.BackColor = System.Drawing.Color.Tan;
-            this.mtcFecha.CalendarDimensions = new System.Drawing.Size(3, 1);
+            this.mtcFecha.CalendarDimensions = new System.Drawing.Size(2, 1);
             this.mtcFecha.ForeColor = System.Drawing.Color.Black;
             this.mtcFecha.Location = new System.Drawing.Point(0, 24);
             this.mtcFecha.Name = "mtcFecha";
@@ -374,7 +395,7 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(949, 501);
+            this.button2.Location = new System.Drawing.Point(950, 513);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(395, 60);
             this.button2.TabIndex = 29;
@@ -408,10 +429,173 @@
             this.gpbFecha.ForeColor = System.Drawing.Color.White;
             this.gpbFecha.Location = new System.Drawing.Point(22, 370);
             this.gpbFecha.Name = "gpbFecha";
-            this.gpbFecha.Size = new System.Drawing.Size(752, 191);
+            this.gpbFecha.Size = new System.Drawing.Size(509, 191);
             this.gpbFecha.TabIndex = 34;
             this.gpbFecha.TabStop = false;
             this.gpbFecha.Text = "Fecha de Reserva";
+            // 
+            // dgbUsuarios
+            // 
+            this.dgbUsuarios.AllowUserToAddRows = false;
+            this.dgbUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.dgbUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgbUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.btnSeleccionar,
+            this.Id,
+            this.nombre,
+            this.NumeroHabitacion,
+            this.NumPersonas,
+            this.Reserva,
+            this.Salida,
+            this.Diasdeestancia,
+            this.Diasrestantes});
+            this.dgbUsuarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.dgbUsuarios.Location = new System.Drawing.Point(537, 129);
+            this.dgbUsuarios.Name = "dgbUsuarios";
+            this.dgbUsuarios.RowHeadersWidth = 51;
+            this.dgbUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgbUsuarios.Size = new System.Drawing.Size(817, 366);
+            this.dgbUsuarios.TabIndex = 100;
+            // 
+            // txtIndice
+            // 
+            this.txtIndice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.txtIndice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIndice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtIndice.ForeColor = System.Drawing.Color.White;
+            this.txtIndice.Location = new System.Drawing.Point(1298, 84);
+            this.txtIndice.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIndice.Name = "txtIndice";
+            this.txtIndice.Size = new System.Drawing.Size(57, 26);
+            this.txtIndice.TabIndex = 102;
+            this.txtIndice.Text = "0";
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtId.ForeColor = System.Drawing.Color.White;
+            this.txtId.Location = new System.Drawing.Point(1225, 84);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(57, 26);
+            this.txtId.TabIndex = 101;
+            this.txtId.Text = "0";
+            // 
+            // btnSeleccionar
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.btnSeleccionar.DefaultCellStyle = dataGridViewCellStyle1;
+            this.btnSeleccionar.HeaderText = "";
+            this.btnSeleccionar.MinimumWidth = 6;
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Width = 50;
+            // 
+            // Id
+            // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.Id.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Id.HeaderText = "id Usuario ";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
+            // nombre
+            // 
+            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
+            this.nombre.DefaultCellStyle = dataGridViewCellStyle3;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.MinimumWidth = 6;
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // NumeroHabitacion
+            // 
+            this.NumeroHabitacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.NumeroHabitacion.DefaultCellStyle = dataGridViewCellStyle4;
+            this.NumeroHabitacion.HeaderText = "Tipo de Habitación";
+            this.NumeroHabitacion.MinimumWidth = 6;
+            this.NumeroHabitacion.Name = "NumeroHabitacion";
+            this.NumeroHabitacion.ReadOnly = true;
+            // 
+            // NumPersonas
+            // 
+            this.NumPersonas.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.NumPersonas.DefaultCellStyle = dataGridViewCellStyle5;
+            this.NumPersonas.HeaderText = "Numero de personas";
+            this.NumPersonas.MinimumWidth = 6;
+            this.NumPersonas.Name = "NumPersonas";
+            this.NumPersonas.ReadOnly = true;
+            // 
+            // Reserva
+            // 
+            this.Reserva.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.Reserva.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Reserva.HeaderText = "Reserva ";
+            this.Reserva.MinimumWidth = 6;
+            this.Reserva.Name = "Reserva";
+            this.Reserva.ReadOnly = true;
+            // 
+            // Salida
+            // 
+            this.Salida.HeaderText = "Salida";
+            this.Salida.MinimumWidth = 6;
+            this.Salida.Name = "Salida";
+            this.Salida.Width = 125;
+            // 
+            // Diasdeestancia
+            // 
+            this.Diasdeestancia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            this.Diasdeestancia.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Diasdeestancia.HeaderText = "Dias de estancia";
+            this.Diasdeestancia.MinimumWidth = 6;
+            this.Diasdeestancia.Name = "Diasdeestancia";
+            this.Diasdeestancia.ReadOnly = true;
+            // 
+            // Diasrestantes
+            // 
+            this.Diasrestantes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(64)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.Diasrestantes.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Diasrestantes.HeaderText = "Dias restantes ";
+            this.Diasrestantes.MinimumWidth = 6;
+            this.Diasrestantes.Name = "Diasrestantes";
+            this.Diasrestantes.ReadOnly = true;
             // 
             // CheckIn
             // 
@@ -422,6 +606,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1366, 637);
             this.ControlBox = false;
+            this.Controls.Add(this.txtIndice);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.dgbUsuarios);
             this.Controls.Add(this.gpbFecha);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpHoraSalida);
@@ -456,6 +643,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.gpbFecha.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgbUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -489,5 +677,17 @@
         private System.Windows.Forms.DateTimePicker dtpHoraSalida;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox gpbFecha;
+        private System.Windows.Forms.DataGridView dgbUsuarios;
+        private System.Windows.Forms.TextBox txtIndice;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NumeroHabitacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NumPersonas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Reserva;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Salida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Diasdeestancia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Diasrestantes;
     }
 }

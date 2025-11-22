@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaEntidad;
+using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,6 +35,13 @@ namespace MAP2A1HotelHeavens
             dtpHoraReserva.ShowUpDown = true;
             dtpHoraSalida.Format = DateTimePickerFormat.Time;
             dtpHoraSalida.ShowUpDown = true;
+
+            List<Hotel> gertrudis = new CN_Hotel().Listar();
+            foreach (Hotel obj in gertrudis)
+            {
+                dgbUsuarios.Rows.Add(new object[] { "", obj.idUsuario, obj.nombre, obj.tipo_habitacion, obj.numeroPersonas, obj.reserva, obj.salida, obj.dias_estancia, obj.dias_restantes });
+
+            }
         }
 
         private void lblTipodehabitacion_Click(object sender, EventArgs e)
@@ -53,29 +62,41 @@ namespace MAP2A1HotelHeavens
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string nombre,  horadellegada, horadesalida, adultos, menores, diadellegada,diadesalida,a;
+            string nombre,  horadellegada, horadesalida, adultos, menores, diadellegada,diadesalida,habitacion = "";
             nombre = txtNombre.Text;
             horadellegada = dtpHoraReserva.Text.ToString();
             horadesalida = dtpHoraSalida.Text.ToString();
             adultos = numericUpDown1.Value.ToString();
             menores = numericUpDown2.Value.ToString();
-            if (radHabNormal.Checked)
+            RadioButton[] radio = { radHabNormal, radHabPresidencial, radHabSuit };
+            foreach (RadioButton rb in radio)
             {
-                tradicinal = "Tradicional";
-            }
-            else if (radHabSuit.Checked)
-            {
-                suit = "Suite";
-            }
-            else if (radHabPresidencial.Checked)
-            {
-                presidencial = "Presidencial";
+                if (rb.Checked)
+                {
+                    habitacion = rb.Text;
+                }
             }
             diadellegada = dtpInicioEstancia.Value.ToString("dd/MM/yyyy");
             diadesalida = dtpFinaldeEstancia.Value.ToString("dd/MM/yyyy");
-
+            int estancia = dtpHoraReserva.Value.Day - dtpFinaldeEstancia.Value.Day;
+            int diasrestantes = estancia - DateTime.Now.Day;
             string si=verify();
 
+            Hotel obj = new Hotel()
+            {
+                idUsuario = Convert.ToInt32(txtId.Text),
+                nombre = nombre,
+                tipo_habitacion = habitacion,
+                salida = Convert.ToDateTime(diadesalida),
+                reserva = Convert.ToDateTime(diadellegada),
+                dias_estancia = estancia,
+                dias_restantes = diasrestantes,
+                numeroPersonas = Convert.ToInt32(adultos) + Convert.ToInt32(menores),
+                 
+
+            };
+
+            
             if(!string.IsNullOrEmpty(si))
             {
                 MessageBox.Show($"Te falta \n {si}");
