@@ -26,17 +26,7 @@ namespace MAP2A1HotelHeavens
 
         private void btnConfimar_Click(object sender, EventArgs e)
         {
-            List<Hotel> hotel = new List<Hotel>();
-            Hotel objusuario = new Hotel();
-            string mensaje = string.Empty;
-            bool respuesta = new CN_Hotel().Registrar(objusuario,out mensaje);
-           hotel = new CN_Hotel().Listar();
-
-            if (!respuesta)
-            {
-                MessageBox.Show(mensaje);
-
-            }
+           
 
         }
 
@@ -62,7 +52,7 @@ namespace MAP2A1HotelHeavens
             List<Hotel> gertrudis = new CN_Hotel().Listar();
             foreach (Hotel obj in gertrudis)
             {
-                dgbUsuarios.Rows.Add(new object[] { "", obj.idUsuario, obj.nombre, obj.numero_habitacion, obj.tipo_habitacion, obj.numeroPersonas, obj.reserva, obj.salida, obj.dias_estancia, obj.dias_restantes });
+                dgbUsuarios.Rows.Add(new object[] { "", obj.idUsuario, obj.nombre, obj.numero_habitacion, obj.tipo_habitacion, obj.numeroPersonas, obj.menores, obj.reserva, obj.salida, obj.dias_estancia, obj.dias_restantes });
                 
             }
 

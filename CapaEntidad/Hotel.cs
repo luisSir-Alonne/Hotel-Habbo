@@ -17,6 +17,6 @@ namespace CapaEntidad
         public DateTime salida { get; set; }
         public int dias_estancia { get; set; }
         public int dias_restantes { get; set; }
-
+        public int menores { get; set; }
     }
 }

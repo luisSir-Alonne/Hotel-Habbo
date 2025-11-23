@@ -17,6 +17,8 @@ namespace MAP2A1HotelHeavens
         public LogIn()
         {
             InitializeComponent();
+            this.Icon = Properties.Resources.imgLogoHotelHeavensLP1;
+
         }
 
         private void LogIn_Load(object sender, EventArgs e)

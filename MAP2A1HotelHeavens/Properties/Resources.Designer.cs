@@ -19,10 +19,10 @@ namespace MAP2A1HotelHeavens.Properties {
     // a través de una herramienta como ResGen o Visual Studio.
     // Para agregar o quitar un miembro, edite el archivo .ResX y, a continuación, vuelva a ejecutar ResGen
     // con la opción /str o recompile su proyecto de VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace MAP2A1HotelHeavens.Properties {
         ///   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MAP2A1HotelHeavens.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace MAP2A1HotelHeavens.Properties {
         ///   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace MAP2A1HotelHeavens.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Avatar_1LP {
+        public static System.Drawing.Bitmap Avatar_1LP {
             get {
                 object obj = ResourceManager.GetObject("Avatar_1LP", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -73,7 +73,7 @@ namespace MAP2A1HotelHeavens.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Avatar_2LP {
+        public static System.Drawing.Bitmap Avatar_2LP {
             get {
                 object obj = ResourceManager.GetObject("Avatar_2LP", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -83,7 +83,7 @@ namespace MAP2A1HotelHeavens.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cerrar {
+        public static System.Drawing.Bitmap cerrar {
             get {
                 object obj = ResourceManager.GetObject("cerrar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -93,7 +93,7 @@ namespace MAP2A1HotelHeavens.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Gemini_Generated_Image_jpc517jpc517jpc5 {
+        public static System.Drawing.Bitmap Gemini_Generated_Image_jpc517jpc517jpc5 {
             get {
                 object obj = ResourceManager.GetObject("Gemini_Generated_Image_jpc517jpc517jpc5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -103,7 +103,7 @@ namespace MAP2A1HotelHeavens.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Gemini_Generated_Image_ubow9ubow9ubow9u {
+        public static System.Drawing.Bitmap Gemini_Generated_Image_ubow9ubow9ubow9u {
             get {
                 object obj = ResourceManager.GetObject("Gemini_Generated_Image_ubow9ubow9ubow9u", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -113,7 +113,7 @@ namespace MAP2A1HotelHeavens.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Gemini_Generated_Image_ukh5zqukh5zqukh5 {
+        public static System.Drawing.Bitmap Gemini_Generated_Image_ukh5zqukh5zqukh5 {
             get {
                 object obj = ResourceManager.GetObject("Gemini_Generated_Image_ukh5zqukh5zqukh5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -123,7 +123,7 @@ namespace MAP2A1HotelHeavens.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap hotelImagenLP {
+        public static System.Drawing.Bitmap hotelImagenLP {
             get {
                 object obj = ResourceManager.GetObject("hotelImagenLP", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -133,7 +133,7 @@ namespace MAP2A1HotelHeavens.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap imgcheckinLP {
+        public static System.Drawing.Bitmap imgcheckinLP {
             get {
                 object obj = ResourceManager.GetObject("imgcheckinLP", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -143,7 +143,7 @@ namespace MAP2A1HotelHeavens.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap imgHabitacionPresidencialLP {
+        public static System.Drawing.Bitmap imgHabitacionPresidencialLP {
             get {
                 object obj = ResourceManager.GetObject("imgHabitacionPresidencialLP", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -153,7 +153,7 @@ namespace MAP2A1HotelHeavens.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap imgHabitacionSimpleLP {
+        public static System.Drawing.Bitmap imgHabitacionSimpleLP {
             get {
                 object obj = ResourceManager.GetObject("imgHabitacionSimpleLP", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -163,7 +163,7 @@ namespace MAP2A1HotelHeavens.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap imgHabitacionSuitLP {
+        public static System.Drawing.Bitmap imgHabitacionSuitLP {
             get {
                 object obj = ResourceManager.GetObject("imgHabitacionSuitLP", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -173,7 +173,7 @@ namespace MAP2A1HotelHeavens.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap imgHotelFueraLP {
+        public static System.Drawing.Bitmap imgHotelFueraLP {
             get {
                 object obj = ResourceManager.GetObject("imgHotelFueraLP", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -183,7 +183,7 @@ namespace MAP2A1HotelHeavens.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap imgLogin {
+        public static System.Drawing.Bitmap imgLogin {
             get {
                 object obj = ResourceManager.GetObject("imgLogin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -193,7 +193,7 @@ namespace MAP2A1HotelHeavens.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap imgLoginHotelHeavensLP {
+        public static System.Drawing.Bitmap imgLoginHotelHeavensLP {
             get {
                 object obj = ResourceManager.GetObject("imgLoginHotelHeavensLP", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -203,7 +203,7 @@ namespace MAP2A1HotelHeavens.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap imgLogoHotelHeavensLP {
+        public static System.Drawing.Bitmap imgLogoHotelHeavensLP {
             get {
                 object obj = ResourceManager.GetObject("imgLogoHotelHeavensLP", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -213,7 +213,7 @@ namespace MAP2A1HotelHeavens.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
         /// </summary>
-        internal static System.Drawing.Icon imgLogoHotelHeavensLP1 {
+        public static System.Drawing.Icon imgLogoHotelHeavensLP1 {
             get {
                 object obj = ResourceManager.GetObject("imgLogoHotelHeavensLP1", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
@@ -223,7 +223,7 @@ namespace MAP2A1HotelHeavens.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap menos {
+        public static System.Drawing.Bitmap menos {
             get {
                 object obj = ResourceManager.GetObject("menos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));

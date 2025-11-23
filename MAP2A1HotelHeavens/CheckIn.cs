@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -23,25 +24,28 @@ namespace MAP2A1HotelHeavens
 
             select=new RadioButton[]{radHabNormal,radHabPresidencial,radHabSuit};
         }
+        public void cargar()
+        {
+            List<Hotel> gertrudis = new CN_Hotel().Listar();
+            foreach (Hotel obj in gertrudis)
+            {
+                dgbUsuarios.Rows.Add(new object[] { "", obj.idUsuario, obj.nombre,obj.tipo_habitacion, obj.numero_habitacion, obj.numeroPersonas,obj.menores, obj.reserva, obj.salida, obj.dias_estancia, obj.dias_restantes });
 
+            }
+        }
         private void toolTip1_Popup(object sender, PopupEventArgs e)
         {
-            toolTip1.SetToolTip(lblReserva, "Por favor teclea la hora en la terminaste el CheckIn");
         }
 
         private void CheckIn_Load(object sender, EventArgs e)
         {
-            dtpHoraReserva.Format = DateTimePickerFormat.Time;
-            dtpHoraReserva.ShowUpDown = true;
-            dtpHoraSalida.Format = DateTimePickerFormat.Time;
-            dtpHoraSalida.ShowUpDown = true;
+            dtpInicioEstancia.MinDate = DateTime.Today;
+            dtpFinaldeEstancia.MinDate = DateTime.Today.AddDays(1);
+            dtpFinaldeEstancia.Value = dtpFinaldeEstancia.MinDate;
+            mtcFecha.MinDate = DateTime.Today;
+            cargar();
+            cargarhabitaciones(radHabNormal.Text);
 
-            List<Hotel> gertrudis = new CN_Hotel().Listar();
-            foreach (Hotel obj in gertrudis)
-            {
-                dgbUsuarios.Rows.Add(new object[] { "", obj.idUsuario, obj.nombre, obj.tipo_habitacion, obj.numeroPersonas, obj.reserva, obj.salida, obj.dias_estancia, obj.dias_restantes });
-
-            }
         }
 
         private void lblTipodehabitacion_Click(object sender, EventArgs e)
@@ -51,109 +55,151 @@ namespace MAP2A1HotelHeavens
 
         private void radHabSuit_CheckedChanged(object sender, EventArgs e)
         {
+            if (radHabSuit.Checked)
+            {
+                cargarhabitaciones(radHabSuit.Text);
 
+            }
         }
 
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
             dtpInicioEstancia.Value = mtcFecha.SelectionRange.Start;
-            dtpFinaldeEstancia.Value = mtcFecha.SelectionRange.End;
+            if (mtcFecha.SelectionRange.Start != mtcFecha.SelectionRange.End)
+            {
+                dtpFinaldeEstancia.Value = mtcFecha.SelectionRange.End;
+            }
+            else
+            {
+                dtpFinaldeEstancia.Value = DateTime.Now.AddDays(1);
+
+            }
+        }
+
+        private void gpbFecha_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fail(Control ctrl, string msg)
+        {
+            epValidacion.SetError(ctrl, msg);
+            lblMensaje.Text = "❌ " + msg;
+            ctrl.Focus();
+        }
+
+        private void radHabNormal_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radHabNormal.Checked)
+            {
+                cargarhabitaciones(radHabNormal.Text);
+            }
+        }
+
+        private void radHabPresidencial_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radHabPresidencial.Checked)
+            {
+                cargarhabitaciones(radHabPresidencial.Text);
+
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string nombre,  horadellegada, horadesalida, adultos, menores, diadellegada,diadesalida,habitacion = "";
-            nombre = txtNombre.Text;
-            horadellegada = dtpHoraReserva.Text.ToString();
-            horadesalida = dtpHoraSalida.Text.ToString();
-            adultos = numericUpDown1.Value.ToString();
-            menores = numericUpDown2.Value.ToString();
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                Fail(txtNombre, "Inserta el nombre del huesped");
+                return;
+            }
+            if (nudAdultos.Value < 1)
+            {
+                Fail(nudAdultos, "Al menos un adulto debe ingresar");
+                return;
+            }
             RadioButton[] radio = { radHabNormal, radHabPresidencial, radHabSuit };
+            string tipo = "";
+
             foreach (RadioButton rb in radio)
             {
                 if (rb.Checked)
                 {
-                    habitacion = rb.Text;
+                    tipo = rb.Text;
                 }
             }
-            diadellegada = dtpInicioEstancia.Value.ToString("dd/MM/yyyy");
-            diadesalida = dtpFinaldeEstancia.Value.ToString("dd/MM/yyyy");
-            int estancia = dtpHoraReserva.Value.Day - dtpFinaldeEstancia.Value.Day;
-            int diasrestantes = estancia - DateTime.Now.Day;
-            string si=verify();
+            if (tipo == "")
+            {
+                Fail(grbTipodeHabitacion, "Es necesario el tipo de habitacion");
+                return;
+            }
+            if (cboHabitacion.SelectedItem == null)
+            {
+                Fail(cboHabitacion, "Es necesario el numero de habitacion");
 
+            }
+            string nombre = txtNombre.Text;
+            int numeroAdultos = Convert.ToInt32(nudAdultos.Value );
+            int numeroMenores = Convert.ToInt32(nudMenores.Value );
+            DateTime reserva = dtpInicioEstancia.Value, salida = dtpFinaldeEstancia.Value;
+            int estancia = salida.Day - reserva.Day;
+            int restantes = 0;
+            string numerohabitacion = cboHabitacion.Text;
+            Console.WriteLine("Este es el numero de habitacion: " + numerohabitacion);
+
+
+            if (reserva <= DateTime.Today)
+            {
+                restantes = estancia - DateTime.Now.Day;
+            }
             Hotel obj = new Hotel()
             {
-                idUsuario = Convert.ToInt32(txtId.Text),
                 nombre = nombre,
-                tipo_habitacion = habitacion,
-                salida = Convert.ToDateTime(diadesalida),
-                reserva = Convert.ToDateTime(diadellegada),
+                salida = salida,
+                reserva = reserva,
+                numeroPersonas = numeroAdultos,
+                menores = numeroMenores,
                 dias_estancia = estancia,
-                dias_restantes = diasrestantes,
-                numeroPersonas = Convert.ToInt32(adultos) + Convert.ToInt32(menores),
-                 
+                dias_restantes = restantes,
+                numero_habitacion = numerohabitacion,
+                tipo_habitacion = tipo,
+                
+
+
 
             };
+            Console.WriteLine(estancia);
+            string mensaje = string.Empty;
+            int idgenerado = new CN_Hotel().Registrar(obj, out mensaje);
 
-            
-            if(!string.IsNullOrEmpty(si))
+            Console.WriteLine(mensaje);
+            if (idgenerado != 0)
             {
-                MessageBox.Show($"Te falta \n {si}");
+                
+                    dgbUsuarios.Rows.Clear();
+                cargar();
             }
             else
             {
-                
-                txtNombre.Clear();
-                numericUpDown1.Value=numericUpDown1.Minimum;
-                numericUpDown2.Value=numericUpDown2.Minimum;
+                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                dtpHoraSalida.Value = DateTime.Today.AddHours(00);
-                dtpHoraReserva.Value = DateTime.Today.AddHours(00);
-
-                mtcFecha.SelectionStart=DateTime.Today;
-                foreach (RadioButton simon in select)
-                {
-                    simon.Checked = false;
-                }
-
-                notifyIcon1.BalloonTipTitle = "Check_In";
-                notifyIcon1.BalloonTipText = "Reistro Completado";
-                notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
-                notifyIcon1.ShowBalloonTip(1000);
             }
         }
-        private string verify()
+        private void cargarhabitaciones(string tipo)
         {
-            string llenado = "";
-            if (string.IsNullOrEmpty(txtNombre.Text))
-            {
-                llenado += "- Nombre del huésped\n";
-            }
-            if (!radHabNormal.Checked && !radHabSuit.Checked && !radHabPresidencial.Checked)
-            {
-                llenado += "- Tipo de habitación\n";
-            }
-            if (string.IsNullOrEmpty(dtpHoraReserva.Text) || dtpHoraReserva.Text.Contains("_"))
-            {
-                llenado += "- Hora de llegada\n";
-            }
-            if(dtpHoraReserva.Value.Hour<1 || dtpHoraReserva.Value.Hour >24)
-            {
-                llenado += "- Hora de llegada fuera del rango";
-            }
-            if (string.IsNullOrEmpty(dtpHoraSalida.Text) || dtpHoraSalida.Text.Contains("_"))
-            {
-                llenado += "- Hora de salida\n";
-            }
-            if(dtpHoraSalida.Value.Hour<1 || dtpHoraSalida.Value.Hour>24)
-            {
-                llenado += "- Hora salida fuera del rango";
-            }
+            cboHabitacion.Items.Clear();
+            List<Habitaciones> listas = new CN_Habitaciones().Listar();
 
-            
-            return llenado;
+            var filtradas = listas.Where(h => h.tipo == tipo).ToList();
+            foreach (var hab in filtradas)
+            {
+                cboHabitacion.Items.Add(new Funciones_MySQL() { Valor = hab.habitacion, Texto = hab.habitacion });
+
+            }
+            cboHabitacion.DisplayMember = "Texto";
+            cboHabitacion.ValueMember = "Texto";
+
 
         }
+
     }
 }

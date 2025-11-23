@@ -33,7 +33,7 @@ namespace MAP2A1HotelHeavens
             }
 
                 InitializeComponent();
-                
+            this.Icon = Properties.Resources.imgLogoHotelHeavensLP1;
 
         }
       

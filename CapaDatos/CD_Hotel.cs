@@ -11,6 +11,38 @@ namespace CapaDatos
 {
     public class CD_Hotel
     {
+        public bool habitacion(Hotel obj, out string mensaje) 
+        {
+            bool generado = false;
+            mensaje = string.Empty;
+            try
+            {
+                using (MySqlConnection oconexion = new MySqlConnection(Conexion.cadena))
+                {
+                    MySqlCommand cmd = new MySqlCommand("SP_EDITARHABITACION", oconexion);
+                    cmd.Parameters.AddWithValue("idP", obj.idUsuario);
+                    cmd.Parameters.AddWithValue("habitacionP", obj.numero_habitacion);
+                    cmd.Parameters.AddWithValue("tipo", obj.tipo_habitacion);
+
+                    cmd.Parameters.Add("respuesta", MySqlDbType.Bit).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("mensaje", MySqlDbType.VarChar,500).Direction = ParameterDirection.Output;
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    oconexion.Open();
+                    cmd.ExecuteNonQuery();
+                    generado = Convert.ToBoolean(cmd.Parameters["respuesta"].Value);
+                    mensaje = cmd.Parameters["mensaje"].Value.ToString();
+
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex);
+                generado = false;
+            }
+            return generado;
+
+        }
         public List<Hotel> Leer()
         {
             List<Hotel> hotel = new List<Hotel>();
@@ -36,7 +68,9 @@ namespace CapaDatos
                                 reserva =Convert.ToDateTime(dr["reserva"]),
                                 salida =Convert.ToDateTime(dr["salida"]),
                                 dias_estancia = Convert.ToInt32(dr["dias_estancia"]),
-                                dias_restantes = Convert.ToInt32(dr["dias_restantes"])
+                                dias_restantes = Convert.ToInt32(dr["dias_restantes"]), 
+                                menores = Convert.ToInt32(dr["numero_menores"])
+
                             });
                         }
                     }
@@ -50,32 +84,33 @@ namespace CapaDatos
             return hotel;
         }
 
-        public bool Registrar(Hotel obj, out string mensaje)
+        public int Registrar(Hotel obj, out string mensaje)
         {
-            bool generado = false;
+            int generado = 0;
             mensaje = String.Empty;
             try
             {
                 using (MySqlConnection oconexion = new MySqlConnection(Conexion.cadena))
                 {
                     MySqlCommand cmd = new MySqlCommand("SP_CHECKIN", oconexion);
-                    cmd.Parameters.AddWithValue("idP", obj.idUsuario);
-
                     cmd.Parameters.AddWithValue("nombreP", obj.nombre);
-                    cmd.Parameters.AddWithValue("numerohabitacionP", obj.numero_habitacion);
                     cmd.Parameters.AddWithValue("personasP", obj.numeroPersonas);
                     cmd.Parameters.AddWithValue("salidaP", obj.salida);
-                    cmd.Parameters.AddWithValue("tipoP", obj.tipo_habitacion);
                     cmd.Parameters.AddWithValue("restantesP", obj.dias_restantes);
                     cmd.Parameters.AddWithValue("estanciaP", obj.dias_estancia);
+                    cmd.Parameters.AddWithValue("menores", obj.menores);
+                    cmd.Parameters.AddWithValue("reserva", obj.reserva);
+                    cmd.Parameters.AddWithValue("tipo", obj.tipo_habitacion);
+                    cmd.Parameters.AddWithValue("numeroP", obj.numero_habitacion);
 
-                    cmd.Parameters.Add("idgenerado", MySqlDbType.Bit).Direction = ParameterDirection.Output;
+
+                    cmd.Parameters.Add("idgenerado", MySqlDbType.Int32).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("mensaje", MySqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
                     oconexion.Open();
                     cmd.ExecuteNonQuery();
-                    generado = Convert.ToBoolean(cmd.Parameters["idgenerado"].Value);
+                    generado = Convert.ToInt32(cmd.Parameters["idgenerado"].Value);
                     mensaje = cmd.Parameters["mensaje"].Value.ToString();
 
                 }
@@ -83,7 +118,9 @@ namespace CapaDatos
             catch (MySqlException ex)
             {
                 mensaje = ex.Message;
-                generado = false;
+                generado = 0;
+                Console.WriteLine(mensaje);
+
             }
             return generado;
 
@@ -125,6 +162,7 @@ namespace CapaDatos
             {
                 idgenerado = false;
                 mensaje = ex.Message;
+                Console.WriteLine(mensaje);
 
             }
             return idgenerado;
@@ -162,5 +200,8 @@ namespace CapaDatos
             }
             return respuesta;
         }
+        
+        
     }
+    
 }

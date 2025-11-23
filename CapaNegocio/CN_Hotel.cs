@@ -15,14 +15,39 @@ namespace CapaNegocio
         {
             return obj_hotel.Leer();
         }
-        public bool Registrar(Hotel obj, out string mensaje)
+        public bool actualizarhabitacion(Hotel obj, out string mensaje)
         {
             mensaje = string.Empty;
             if (obj.idUsuario == 0)
             {
-                mensaje += " Es necesario el Id del Cliente";
+                mensaje += " Es necesario el ID del Cliente";
 
             }
+            if (obj.tipo_habitacion == "")
+            {
+                mensaje += " Es necesario el Tipo de Habitacion del Cliente";
+
+            }
+            if (obj.numero_habitacion == "")
+            {
+                mensaje += " Es necesario el Numero de Habitacion del Cliente";
+
+            }
+            
+            if (mensaje != string.Empty)
+            {
+                return false;
+            }
+            else
+            {
+                return obj_hotel.habitacion(obj, out mensaje);
+
+            }
+        }
+        public int Registrar(Hotel obj, out string mensaje)
+        {
+            mensaje = string.Empty;
+           
             if (obj.nombre == "")
             {
                 mensaje += " Es necesario el Nombre del Cliente";
@@ -61,9 +86,19 @@ namespace CapaNegocio
                 mensaje += " Es necesario los Dias Restantes del Cliente";
 
             }
-            if(mensaje != string.Empty)
+            if (obj.tipo_habitacion == "")
             {
-                return false;
+                mensaje += " Es necesario el Tipo de Habitacion del Cliente";
+
+            }
+            if (obj.numero_habitacion == "")
+            {
+                mensaje += " Es necesario el Numero de Habitacion del Cliente";
+
+            }
+            if (mensaje != string.Empty)
+            {
+                return 0;
             }
             else
             {

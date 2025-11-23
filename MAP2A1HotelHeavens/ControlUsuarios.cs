@@ -22,18 +22,21 @@ namespace MAP2A1HotelHeavens
             epValidacion.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             lblMensaje.Text = "";
         }
-
-        private void ControlUsuarios_Load(object sender, EventArgs e)
+        public void cargar()
         {
-
-            lblMensaje.ForeColor = System.Drawing.Color.White;
-
             List<Usuario> listaUsuario = new CN_Usuario().Listar();
             foreach (Usuario item in listaUsuario)
             {
                 dgbUsuarios.Rows.Add(new object[] { "", item.id, item.nombre, item.correo, item.numeroTelefono, item.edad, item.sexo });
 
             }
+        }
+        private void ControlUsuarios_Load(object sender, EventArgs e)
+        {
+
+            lblMensaje.ForeColor = System.Drawing.Color.White;
+
+            cargar();
             foreach (DataGridViewColumn clm in dgbUsuarios.Columns)
             {
                 if (clm.Visible == true && clm.Name != "btnSeleccionar")
@@ -123,8 +126,8 @@ namespace MAP2A1HotelHeavens
                 Console.WriteLine("Este es el id generado aplicado" + usuariogenerado);
                 if (usuariogenerado != 0)
                 {
-                    dgbUsuarios.Rows.Add(new object[] { "", usuariogenerado, nombre, correo, tele, edad, sexo });
-
+                    dgbUsuarios.Rows.Clear();
+                    cargar();
                 }
                 else
                 {
@@ -139,13 +142,8 @@ namespace MAP2A1HotelHeavens
 
                 if (resultado)
                 {
-                    DataGridViewRow row = dgbUsuarios.Rows[Convert.ToInt32(txtIndice.Text)];
-                    row.Cells["Id"].Value = txtId.Text;
-                    row.Cells["nombre"].Value = nombre;
-                    row.Cells["telefono"].Value = tele;
-                    row.Cells["Correo"].Value = correo;
-                    row.Cells["edad"].Value = edad;
-                    row.Cells["sexo"].Value = sexo;
+                    dgbUsuarios.Rows.Clear();
+                    cargar();
 
                 }
                 else
@@ -255,7 +253,10 @@ namespace MAP2A1HotelHeavens
                     bool resultado = new CN_Usuario().Eliminar(obj_usuario, out mensaje);
                     if (resultado)
                     {
-                        dgbUsuarios.Rows.RemoveAt(Convert.ToInt32(txtIndice.Text));
+                        dgbUsuarios.Rows.Clear();
+
+                        cargar();
+
                         Limpiar();
 
                     }
