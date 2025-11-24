@@ -105,6 +105,11 @@ namespace MAP2A1HotelHeavens
             }
         }
 
+        private void dgbUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtNombre.Text))
