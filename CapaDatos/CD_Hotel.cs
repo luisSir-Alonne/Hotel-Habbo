@@ -11,7 +11,7 @@ namespace CapaDatos
 {
     public class CD_Hotel
     {
-        public bool habitacion(Hotel obj, out string mensaje) 
+        public bool habitacion(Hotel obj, Habitaciones hab, out string mensaje) 
         {
             bool generado = false;
             mensaje = string.Empty;
@@ -23,6 +23,8 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("idP", obj.idUsuario);
                     cmd.Parameters.AddWithValue("habitacionP", obj.numero_habitacion);
                     cmd.Parameters.AddWithValue("tipo", obj.tipo_habitacion);
+                    cmd.Parameters.AddWithValue("tipoAct", hab.tipo);
+                    cmd.Parameters.AddWithValue("habitacionAct", hab.habitacion);
 
                     cmd.Parameters.Add("respuesta", MySqlDbType.Bit).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("mensaje", MySqlDbType.VarChar,500).Direction = ParameterDirection.Output;

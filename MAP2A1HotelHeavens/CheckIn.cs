@@ -29,7 +29,7 @@ namespace MAP2A1HotelHeavens
             List<Hotel> gertrudis = new CN_Hotel().Listar();
             foreach (Hotel obj in gertrudis)
             {
-                dgbUsuarios.Rows.Add(new object[] { "", obj.idUsuario, obj.nombre,obj.tipo_habitacion, obj.numero_habitacion, obj.numeroPersonas,obj.menores, obj.reserva, obj.salida, obj.dias_estancia, obj.dias_restantes });
+                dgbUsuarios.Rows.Add(new object[] { obj.idUsuario, obj.nombre,obj.tipo_habitacion, obj.numero_habitacion, obj.numeroPersonas,obj.menores, obj.reserva, obj.salida, obj.dias_estancia, obj.dias_restantes });
 
             }
         }
@@ -45,6 +45,21 @@ namespace MAP2A1HotelHeavens
             mtcFecha.MinDate = DateTime.Today;
             cargar();
             cargarhabitaciones(radHabNormal.Text);
+            foreach (DataGridViewColumn clm in dgbUsuarios.Columns)
+            {
+                if (clm.Visible == true && clm.Name != "btnSeleccionar")
+                {
+                    string texto = clm.HeaderText;
+                    cbobusqueda.Items.Add(new Funciones_MySQL() { Valor = clm.Name, Texto = Convert.ToString(texto) });
+                }
+                cbobusqueda.DisplayMember = "Texto";
+                cbobusqueda.ValueMember = "Valor";
+
+                Console.WriteLine(clm.HeaderText);
+                Console.WriteLine("jijijija");
+
+            }
+
 
         }
 
@@ -108,6 +123,39 @@ namespace MAP2A1HotelHeavens
         private void dgbUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(cbobusqueda.Text))
+            {
+                Fail(cbobusqueda, "Selecciona una opcion");
+                return;
+            }
+            string columnaFiltro = (((Funciones_MySQL)cbobusqueda.SelectedItem).Valor.ToString());
+            if (dgbUsuarios.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dgbUsuarios.Rows)
+                {
+                    if (row.Cells[columnaFiltro].Value.ToString().Trim().ToUpper().Contains(txtbusqueda.Text.Trim().ToUpper()))
+                    {
+                        row.Visible = true;
+                    }
+                    else
+                    {
+                        row.Visible = false;
+                    }
+                }
+            }
+        }
+
+        private void btnlimpiarbuscador_Click(object sender, EventArgs e)
+        {
+            txtbusqueda.Text = "";
+            foreach (DataGridViewRow row in dgbUsuarios.Rows)
+            {
+                row.Visible = true;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -182,6 +230,7 @@ namespace MAP2A1HotelHeavens
                 
                     dgbUsuarios.Rows.Clear();
                 cargar();
+                Limpiar();
             }
             else
             {
@@ -205,6 +254,23 @@ namespace MAP2A1HotelHeavens
 
 
         }
+        private void Limpiar()
+        {
+            txtNombre.Text = "";
+            cboHabitacion.SelectedIndex = 0;
+            txtbusqueda.Text = "";
+            RadioButton[] radio = { radHabNormal, radHabPresidencial, radHabSuit };
+            foreach (RadioButton rb in radio)
+            {
+                rb.Checked = false;
+            }
+            radHabNormal.Checked = true;
+            dtpInicioEstancia.Value = DateTime.Today;
+            dtpFinaldeEstancia.Value = dtpInicioEstancia.Value.AddDays(1);
+            mtcFecha.SelectionStart = DateTime.Today;
+            mtcFecha.SelectionEnd = DateTime.Today.AddDays(1);
 
+
+        }
     }
 }

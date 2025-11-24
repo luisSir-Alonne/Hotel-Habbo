@@ -15,7 +15,7 @@ namespace CapaNegocio
         {
             return obj_hotel.Leer();
         }
-        public bool actualizarhabitacion(Hotel obj, out string mensaje)
+        public bool actualizarhabitacion(Hotel obj, Habitaciones hab,  out string mensaje)
         {
             mensaje = string.Empty;
             if (obj.idUsuario == 0)
@@ -33,14 +33,24 @@ namespace CapaNegocio
                 mensaje += " Es necesario el Numero de Habitacion del Cliente";
 
             }
-            
+            if (hab.habitacion == "")
+            {
+                mensaje += " Es neecsario el Numero de Habitacion a cambiar";
+
+            }
+            if (hab.tipo == "")
+            {
+                mensaje += " Es necesario el Tipo de Habitacion a cambiar";
+
+            }
+
             if (mensaje != string.Empty)
             {
                 return false;
             }
             else
             {
-                return obj_hotel.habitacion(obj, out mensaje);
+                return obj_hotel.habitacion(obj, hab, out mensaje);
 
             }
         }
