@@ -41,6 +41,8 @@
             this.checkedListBoxOcupadas = new System.Windows.Forms.CheckedListBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.clbNoDisponibles = new System.Windows.Forms.CheckedListBox();
+            this.cboNoDisponibles = new System.Windows.Forms.ComboBox();
             this.btnlimpiarbuscador = new FontAwesome.Sharp.IconButton();
             this.btnbuscar = new FontAwesome.Sharp.IconButton();
             this.txtbusqueda = new System.Windows.Forms.TextBox();
@@ -48,17 +50,20 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dgbUsuarios = new System.Windows.Forms.DataGridView();
+            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipohabitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numHabitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.btnCambiar = new System.Windows.Forms.Button();
             this.txtIndice = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblMensaje = new System.Windows.Forms.Label();
-            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipohabitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numHabitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnDesalojar = new System.Windows.Forms.Button();
+            this.btnAlojar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgbUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -139,6 +144,38 @@
             this.toolTip1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.toolTip1.IsBalloon = true;
             this.toolTip1.ToolTipTitle = "Hotel Havens";
+            // 
+            // clbNoDisponibles
+            // 
+            this.clbNoDisponibles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.clbNoDisponibles.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clbNoDisponibles.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clbNoDisponibles.ForeColor = System.Drawing.Color.White;
+            this.clbNoDisponibles.FormattingEnabled = true;
+            this.clbNoDisponibles.Location = new System.Drawing.Point(897, 198);
+            this.clbNoDisponibles.Name = "clbNoDisponibles";
+            this.clbNoDisponibles.Size = new System.Drawing.Size(336, 216);
+            this.clbNoDisponibles.TabIndex = 124;
+            this.toolTip1.SetToolTip(this.clbNoDisponibles, "Habitaciones ocupadas en el hotel.");
+            // 
+            // cboNoDisponibles
+            // 
+            this.cboNoDisponibles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.cboNoDisponibles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboNoDisponibles.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboNoDisponibles.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboNoDisponibles.ForeColor = System.Drawing.Color.White;
+            this.cboNoDisponibles.FormattingEnabled = true;
+            this.cboNoDisponibles.Items.AddRange(new object[] {
+            "Normal",
+            "Suite",
+            "Presidencial"});
+            this.cboNoDisponibles.Location = new System.Drawing.Point(898, 145);
+            this.cboNoDisponibles.Name = "cboNoDisponibles";
+            this.cboNoDisponibles.Size = new System.Drawing.Size(337, 25);
+            this.cboNoDisponibles.TabIndex = 125;
+            this.toolTip1.SetToolTip(this.cboNoDisponibles, "Tipo de habitaciones.");
+            this.cboNoDisponibles.SelectedIndexChanged += new System.EventHandler(this.cboNoDisponibles_SelectedIndexChanged);
             // 
             // btnlimpiarbuscador
             // 
@@ -231,76 +268,6 @@
             this.dgbUsuarios.TabIndex = 111;
             this.dgbUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbUsuarios_CellContentClick);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("HP Simplified", 40.25F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(204)))), ((int)(((byte)(200)))));
-            this.label3.Location = new System.Drawing.Point(12, 55);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(582, 72);
-            this.label3.TabIndex = 118;
-            this.label3.Text = "Control de Habitaciones";
-            this.label3.UseCompatibleTextRendering = true;
-            // 
-            // btnCambiar
-            // 
-            this.btnCambiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            this.btnCambiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCambiar.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCambiar.ForeColor = System.Drawing.Color.White;
-            this.btnCambiar.Location = new System.Drawing.Point(537, 517);
-            this.btnCambiar.Name = "btnCambiar";
-            this.btnCambiar.Size = new System.Drawing.Size(326, 42);
-            this.btnCambiar.TabIndex = 119;
-            this.btnCambiar.Text = "Cambiar de Habitacion";
-            this.btnCambiar.UseVisualStyleBackColor = false;
-            this.btnCambiar.Click += new System.EventHandler(this.btnCambiar_Click);
-            // 
-            // txtIndice
-            // 
-            this.txtIndice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            this.txtIndice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIndice.Font = new System.Drawing.Font("HP Simplified", 12F);
-            this.txtIndice.ForeColor = System.Drawing.Color.White;
-            this.txtIndice.Location = new System.Drawing.Point(1288, 71);
-            this.txtIndice.Margin = new System.Windows.Forms.Padding(2);
-            this.txtIndice.Name = "txtIndice";
-            this.txtIndice.Size = new System.Drawing.Size(57, 26);
-            this.txtIndice.TabIndex = 121;
-            this.txtIndice.Text = "0";
-            this.txtIndice.Visible = false;
-            // 
-            // txtId
-            // 
-            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtId.Font = new System.Drawing.Font("HP Simplified", 12F);
-            this.txtId.ForeColor = System.Drawing.Color.White;
-            this.txtId.Location = new System.Drawing.Point(1215, 71);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(57, 26);
-            this.txtId.TabIndex = 120;
-            this.txtId.Text = "0";
-            this.txtId.Visible = false;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // lblMensaje
-            // 
-            this.lblMensaje.AutoSize = true;
-            this.lblMensaje.BackColor = System.Drawing.Color.Transparent;
-            this.lblMensaje.Font = new System.Drawing.Font("HP Simplified", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lblMensaje.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.lblMensaje.Location = new System.Drawing.Point(878, 73);
-            this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(0, 20);
-            this.lblMensaje.TabIndex = 122;
-            // 
             // btnSeleccionar
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -361,6 +328,116 @@
             this.numHabitacion.Name = "numHabitacion";
             this.numHabitacion.ReadOnly = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("HP Simplified", 40.25F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(204)))), ((int)(((byte)(200)))));
+            this.label3.Location = new System.Drawing.Point(12, 55);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(582, 72);
+            this.label3.TabIndex = 118;
+            this.label3.Text = "Control de Habitaciones";
+            this.label3.UseCompatibleTextRendering = true;
+            // 
+            // btnCambiar
+            // 
+            this.btnCambiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.btnCambiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCambiar.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCambiar.ForeColor = System.Drawing.Color.White;
+            this.btnCambiar.Location = new System.Drawing.Point(535, 432);
+            this.btnCambiar.Name = "btnCambiar";
+            this.btnCambiar.Size = new System.Drawing.Size(337, 42);
+            this.btnCambiar.TabIndex = 119;
+            this.btnCambiar.Text = "Cambiar de Habitacion";
+            this.btnCambiar.UseVisualStyleBackColor = false;
+            this.btnCambiar.Click += new System.EventHandler(this.btnCambiar_Click);
+            // 
+            // txtIndice
+            // 
+            this.txtIndice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.txtIndice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIndice.Font = new System.Drawing.Font("HP Simplified", 12F);
+            this.txtIndice.ForeColor = System.Drawing.Color.White;
+            this.txtIndice.Location = new System.Drawing.Point(1288, 71);
+            this.txtIndice.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIndice.Name = "txtIndice";
+            this.txtIndice.Size = new System.Drawing.Size(57, 26);
+            this.txtIndice.TabIndex = 121;
+            this.txtIndice.Text = "0";
+            this.txtIndice.Visible = false;
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtId.Font = new System.Drawing.Font("HP Simplified", 12F);
+            this.txtId.ForeColor = System.Drawing.Color.White;
+            this.txtId.Location = new System.Drawing.Point(1215, 71);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(57, 26);
+            this.txtId.TabIndex = 120;
+            this.txtId.Text = "0";
+            this.txtId.Visible = false;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // lblMensaje
+            // 
+            this.lblMensaje.AutoSize = true;
+            this.lblMensaje.BackColor = System.Drawing.Color.Transparent;
+            this.lblMensaje.Font = new System.Drawing.Font("HP Simplified", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lblMensaje.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.lblMensaje.Location = new System.Drawing.Point(878, 73);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(0, 20);
+            this.lblMensaje.TabIndex = 122;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("HP Simplified", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label4.Location = new System.Drawing.Point(894, 175);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(220, 20);
+            this.label4.TabIndex = 123;
+            this.label4.Text = "Habitaciones no disponibles:";
+            // 
+            // btnDesalojar
+            // 
+            this.btnDesalojar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.btnDesalojar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDesalojar.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDesalojar.ForeColor = System.Drawing.Color.White;
+            this.btnDesalojar.Location = new System.Drawing.Point(898, 432);
+            this.btnDesalojar.Name = "btnDesalojar";
+            this.btnDesalojar.Size = new System.Drawing.Size(337, 42);
+            this.btnDesalojar.TabIndex = 126;
+            this.btnDesalojar.Text = "Desalojar";
+            this.btnDesalojar.UseVisualStyleBackColor = false;
+            this.btnDesalojar.Click += new System.EventHandler(this.btnDesalojar_Click);
+            // 
+            // btnAlojar
+            // 
+            this.btnAlojar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.btnAlojar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAlojar.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlojar.ForeColor = System.Drawing.Color.White;
+            this.btnAlojar.Location = new System.Drawing.Point(535, 497);
+            this.btnAlojar.Name = "btnAlojar";
+            this.btnAlojar.Size = new System.Drawing.Size(337, 42);
+            this.btnAlojar.TabIndex = 127;
+            this.btnAlojar.Text = "Alojar";
+            this.btnAlojar.UseVisualStyleBackColor = false;
+            this.btnAlojar.Click += new System.EventHandler(this.btnAlojar_Click);
+            // 
             // HabitacionesDisponibles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,6 +446,11 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1366, 637);
             this.ControlBox = false;
+            this.Controls.Add(this.btnAlojar);
+            this.Controls.Add(this.btnDesalojar);
+            this.Controls.Add(this.cboNoDisponibles);
+            this.Controls.Add(this.clbNoDisponibles);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.txtIndice);
             this.Controls.Add(this.txtId);
@@ -425,5 +507,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipohabitacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn numHabitacion;
+        private System.Windows.Forms.CheckedListBox clbNoDisponibles;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cboNoDisponibles;
+        private System.Windows.Forms.Button btnDesalojar;
+        private System.Windows.Forms.Button btnAlojar;
     }
 }

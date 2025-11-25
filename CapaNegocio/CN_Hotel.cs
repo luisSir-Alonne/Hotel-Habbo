@@ -190,6 +190,67 @@ namespace CapaNegocio
 
             }
         }
+        public bool editarhabitacion(Habitaciones obj, out string mensaje)
+        {
+            mensaje = string.Empty;
+            if (obj.habitacion == "")
+            {
+                mensaje += " Es necesario el Numero de Habitacion";
+
+            }
+            if (obj.tipo == "")
+            {
+                mensaje += " Es necesario el tipo de habitacion";
+
+            }
+            if (obj.disponible == null)
+            {
+                mensaje += " Es necesario especificar el estado de la habitacion";
+
+            }
+            if (mensaje != string.Empty)
+            {
+                return false;
+
+            }
+            else
+            {
+                return obj_hotel.actualizarHabitacion(obj, out mensaje);
+            }
+        }
+        public bool alojar(Habitaciones obj,Hotel obj_h, out string mensaje)
+        {
+            mensaje = string.Empty;
+            if (obj.habitacion == "")
+            {
+                mensaje += " Es necesario el Numero de Habitacion";
+
+            }
+            if (obj.tipo == "")
+            {
+                mensaje += " Es necesario el tipo de habitacion";
+
+            }
+            if (obj.disponible == null)
+            {
+                mensaje += " Es necesario especificar el estado de la habitacion";
+
+            }
+            if (obj_h.idUsuario == null)
+            {
+                mensaje = " Es necesario el Cliente al que se le va a asignar la habitacion";
+
+            }
+            if (mensaje != string.Empty)
+            {
+                return false;
+
+            }
+            else
+            {
+                return obj_hotel.alojar(obj, obj_h, out mensaje);
+            }
+        }
 
     }
 }

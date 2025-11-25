@@ -189,7 +189,6 @@ namespace CapaDatos
                     Console.WriteLine("Esta es la respuesta: " + respuesta.ToString());
                     Console.WriteLine("Este es el mensaje: " + cmd.Parameters["mensaje"].Value.ToString());
 
-                    Console.WriteLine("pene");
 
                     mensaje = cmd.Parameters["mensaje"].Value.ToString();
 
@@ -202,8 +201,69 @@ namespace CapaDatos
             }
             return respuesta;
         }
-        
-        
+        public bool actualizarHabitacion( Habitaciones obj_hab, out string mensaje )
+        {
+            bool respuesta = false;
+            mensaje = string.Empty;
+            try
+            {
+                using (MySqlConnection oconexion = new MySqlConnection(Conexion.cadena))
+                {
+                    MySqlCommand cmd = new MySqlCommand("SP_DESALOJAR", oconexion);
+                    cmd.Parameters.AddWithValue("habitacionP", obj_hab.habitacion);
+                    cmd.Parameters.AddWithValue("tipoP", obj_hab.tipo);
+                    cmd.Parameters.Add("respuesta", MySqlDbType.Bit).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("mensaje", MySqlDbType.VarChar,500).Direction = ParameterDirection.Output;
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    oconexion.Open();
+                    cmd.ExecuteNonQuery();
+                    respuesta = Convert.ToBoolean(cmd.Parameters["respuesta"].Value);
+                    mensaje = cmd.Parameters["mensaje"].Value.ToString();
+
+                }
+
+            }
+            catch (MySqlException ex)
+            {
+                mensaje = ex.Message;
+                respuesta = false;
+
+            }
+            return respuesta;
+        }
+        public bool alojar(Habitaciones obj_hab, Hotel obj_hotel,  out string mensaje)
+        {
+            bool respuesta = false;
+            mensaje = string.Empty;
+            try
+            {
+                using (MySqlConnection oconexion = new MySqlConnection(Conexion.cadena))
+                {
+                    MySqlCommand cmd = new MySqlCommand("SP_ALOJAR", oconexion);
+                    cmd.Parameters.AddWithValue("habitacionP", obj_hab.habitacion);
+                    cmd.Parameters.AddWithValue("tipoP", obj_hab.tipo);
+                    cmd.Parameters.AddWithValue("idP", obj_hotel.idUsuario);
+
+                    cmd.Parameters.Add("respuesta", MySqlDbType.Bit).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("mensaje", MySqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    oconexion.Open();
+                    cmd.ExecuteNonQuery();
+                    respuesta = Convert.ToBoolean(cmd.Parameters["respuesta"].Value);
+                    mensaje = cmd.Parameters["mensaje"].Value.ToString();
+
+                }
+
+            }
+            catch (MySqlException ex)
+            {
+                mensaje = ex.Message;
+                respuesta = false;
+
+            }
+            return respuesta;
+        }
+
     }
     
 }
