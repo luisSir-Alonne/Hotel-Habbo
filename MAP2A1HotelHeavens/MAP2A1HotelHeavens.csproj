@@ -132,12 +132,6 @@
     <Compile Include="ControlUsuarios.Designer.cs">
       <DependentUpon>ControlUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Desarrollador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Desarrollador.Designer.cs">
-      <DependentUpon>Desarrollador.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,12 +165,6 @@
     <Compile Include="SignIn.Designer.cs">
       <DependentUpon>SignIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventas.Designer.cs">
-      <DependentUpon>Ventas.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="CheckIn.resx">
       <DependentUpon>CheckIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,9 +179,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ControlUsuarios.resx">
       <DependentUpon>ControlUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Desarrollador.resx">
-      <DependentUpon>Desarrollador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -219,9 +204,6 @@
     </Compile>
     <EmbeddedResource Include="SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventas.resx">
-      <DependentUpon>Ventas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

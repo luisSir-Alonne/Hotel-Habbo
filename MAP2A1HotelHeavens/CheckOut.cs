@@ -33,16 +33,7 @@ namespace MAP2A1HotelHeavens
 
         private void CheckOut_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(93, 64, 55);
-            List<Impuestos> LImpuestos = new CN_Impuestos().Leer();
-
-            decimal totalImpuestos = 0;
-
-            foreach (Impuestos item in LImpuestos)
-            {
-                totalImpuestos += item.costo;
-            }
-
+          
         
 
 

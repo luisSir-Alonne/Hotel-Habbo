@@ -110,8 +110,7 @@ namespace MAP2A1HotelHeavens
 
         private void imiVentas_Click(object sender, EventArgs e)
         {
-            abrirFormulario(imiVentas, new Ventas());
-            cambiarColor();
+            
 
         }
 

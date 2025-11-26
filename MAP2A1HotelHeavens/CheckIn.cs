@@ -190,7 +190,7 @@ namespace MAP2A1HotelHeavens
                 Fail(cboHabitacion, "Es necesario el numero de habitacion");
 
             }
-            string nombre = txtNombre.Text;
+            string nombre = txtNombre.Text.Trim();
             int numeroAdultos = Convert.ToInt32(nudAdultos.Value );
             int numeroMenores = Convert.ToInt32(nudMenores.Value );
             DateTime reserva = dtpInicioEstancia.Value, salida = dtpFinaldeEstancia.Value;

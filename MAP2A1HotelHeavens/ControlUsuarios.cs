@@ -89,7 +89,7 @@ namespace MAP2A1HotelHeavens
             { Fail(mtbTelefono, "Completa el teléfono (10 dígitos)."); return; }
             btnRegistrar.Enabled = false;
 
-            string nombre = txtNombre.Text, edad = Convert.ToString(nudEdad.Value), tele = mtbTelefono.Text.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", ""), correo = txtCorreo.Text, sexo = "";
+            string nombre = txtNombre.Text.Trim(), edad = Convert.ToString(nudEdad.Value), tele = mtbTelefono.Text.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", ""), correo = txtCorreo.Text, sexo = "";
             RadioButton[] radio = { rbFemenino, rbMasculino };
             foreach (RadioButton rb in radio)
             {

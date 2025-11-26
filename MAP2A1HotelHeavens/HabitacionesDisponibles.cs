@@ -36,6 +36,21 @@ namespace MAP2A1HotelHeavens
             cboNoDisponibles.SelectedIndex = 0;
             CargarHabitacion(comboBoxTipo.SelectedItem.ToString());
             cargarnodisponibles(cboNoDisponibles.SelectedItem.ToString());
+            foreach (DataGridViewColumn clm in dgbUsuarios.Columns)
+            {
+                if (clm.Visible == true && clm.Name != "btnSeleccionar")
+                {
+                    string texto = clm.HeaderText;
+                    cbobusqueda.Items.Add(new Funciones_MySQL() { Valor = clm.Name, Texto = Convert.ToString(texto) });
+                }
+                cbobusqueda.DisplayMember = "Texto";
+                cbobusqueda.ValueMember = "Valor";
+
+                Console.WriteLine(clm.HeaderText);
+                Console.WriteLine("jijijija");
+
+            }
+
         }
 
         private void comboBoxTipo_SelectedIndexChanged(object sender, EventArgs e)
@@ -274,9 +289,10 @@ namespace MAP2A1HotelHeavens
                 Fail(checkedListBoxOcupadas, "Selecciona una habitacion");
                 return;
             }
-            if (dgbUsuarios.Rows[Convert.ToInt32(txtIndice.Text)].Cells[""].Value.ToString() == "No seleccinonada")
+            if (dgbUsuarios.Rows[Convert.ToInt32(txtIndice.Text)].Cells["numHabitacion"].Value.ToString() != "No asignada")
             {
-
+                Fail(btnAlojar, "Habitacion ya asignada");
+                return;
             }
             Console.WriteLine("Este es el estado de la habitacion" + habitacion.habitacion);
             string numero = habitacion.habitacion, tipo = habitacion.tipo;

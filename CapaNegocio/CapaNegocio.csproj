@@ -94,8 +94,6 @@
     <Compile Include="CN_Empleado.cs" />
     <Compile Include="CN_Habitaciones.cs" />
     <Compile Include="CN_Hotel.cs" />
-    <Compile Include="CN_Impuestos.cs" />
-    <Compile Include="CN_Ingresos.cs" />
     <Compile Include="CN_Permiso.cs" />
     <Compile Include="CN_Rol.cs" />
     <Compile Include="CN_Usuario.cs" />

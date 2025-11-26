@@ -30,7 +30,7 @@ namespace MAP2A1HotelHeavens
         {
             buttonIniciar.Enabled = false;
             List<Empleado> listaUsuarios = new CN_Empleado().Listar();
-            Empleado ousuario = new CN_Empleado().Listar().Where(u => u.nombre == textBoxUsuario.Text && u.clave == textBoxContraseña.Text).FirstOrDefault();
+            Empleado ousuario = new CN_Empleado().Listar().Where(u => u.nombre == textBoxUsuario.Text.Trim() && u.clave == textBoxContraseña.Text.Trim()).FirstOrDefault();
             if (ousuario != null)
             {
                 var n = new Form1();

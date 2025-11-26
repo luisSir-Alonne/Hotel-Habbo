@@ -31,18 +31,17 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.label1 = new System.Windows.Forms.Label();
             this.msAreas = new System.Windows.Forms.MenuStrip();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panMostrar = new System.Windows.Forms.Panel();
             this.imiCheckIn = new FontAwesome.Sharp.IconMenuItem();
             this.imiCheckOut = new FontAwesome.Sharp.IconMenuItem();
             this.imiControlUsuario = new FontAwesome.Sharp.IconMenuItem();
-            this.imiVentas = new FontAwesome.Sharp.IconMenuItem();
             this.imiHotel = new FontAwesome.Sharp.IconMenuItem();
             this.imiControlEmpleados = new FontAwesome.Sharp.IconMenuItem();
             this.imiMembresia = new FontAwesome.Sharp.IconMenuItem();
             this.imiAdmin = new FontAwesome.Sharp.IconMenuItem();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panMostrar = new System.Windows.Forms.Panel();
             this.picMinimizar = new System.Windows.Forms.PictureBox();
             this.picCerrar = new System.Windows.Forms.PictureBox();
             this.msAreas.SuspendLayout();
@@ -81,7 +80,6 @@
             this.imiCheckIn,
             this.imiCheckOut,
             this.imiControlUsuario,
-            this.imiVentas,
             this.imiHotel,
             this.imiControlEmpleados,
             this.imiMembresia,
@@ -91,51 +89,6 @@
             this.msAreas.Size = new System.Drawing.Size(1366, 73);
             this.msAreas.TabIndex = 20;
             this.msAreas.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.msAreas_ItemClicked);
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            this.label3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label3.Location = new System.Drawing.Point(0, 725);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1366, 43);
-            this.label3.TabIndex = 41;
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            this.lblUsuario.Font = new System.Drawing.Font("HP Simplified", 12.25F);
-            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(204)))), ((int)(((byte)(200)))));
-            this.lblUsuario.Location = new System.Drawing.Point(122, 736);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(61, 20);
-            this.lblUsuario.TabIndex = 43;
-            this.lblUsuario.Text = "usuario";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            this.label2.Font = new System.Drawing.Font("HP Simplified", 20.25F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(204)))), ((int)(((byte)(200)))));
-            this.label2.Location = new System.Drawing.Point(12, 729);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 30);
-            this.label2.TabIndex = 42;
-            this.label2.Text = "Usuario:";
-            // 
-            // panMostrar
-            // 
-            this.panMostrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            this.panMostrar.BackgroundImage = global::MAP2A1HotelHeavens.Properties.Resources.imgHotelFueraLP;
-            this.panMostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panMostrar.Font = new System.Drawing.Font("HP Simplified", 8.25F);
-            this.panMostrar.Location = new System.Drawing.Point(0, 129);
-            this.panMostrar.Name = "panMostrar";
-            this.panMostrar.Size = new System.Drawing.Size(1366, 641);
-            this.panMostrar.TabIndex = 21;
-            this.panMostrar.Paint += new System.Windows.Forms.PaintEventHandler(this.panMostrar_Paint);
             // 
             // imiCheckIn
             // 
@@ -184,22 +137,6 @@
             this.imiControlUsuario.Text = "Control Usuario";
             this.imiControlUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.imiControlUsuario.Click += new System.EventHandler(this.imiControlUsuario_Click);
-            // 
-            // imiVentas
-            // 
-            this.imiVentas.AutoSize = false;
-            this.imiVentas.Font = new System.Drawing.Font("HP Simplified", 9F);
-            this.imiVentas.ForeColor = System.Drawing.Color.White;
-            this.imiVentas.IconChar = FontAwesome.Sharp.IconChar.CashRegister;
-            this.imiVentas.IconColor = System.Drawing.Color.White;
-            this.imiVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.imiVentas.IconSize = 50;
-            this.imiVentas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.imiVentas.Name = "imiVentas";
-            this.imiVentas.Size = new System.Drawing.Size(122, 69);
-            this.imiVentas.Text = "Ventas";
-            this.imiVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.imiVentas.Click += new System.EventHandler(this.imiVentas_Click);
             // 
             // imiHotel
             // 
@@ -264,6 +201,51 @@
             this.imiAdmin.Text = "Administradores";
             this.imiAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.imiAdmin.Click += new System.EventHandler(this.imiAdmin_Click);
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.label3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label3.Location = new System.Drawing.Point(0, 725);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(1366, 43);
+            this.label3.TabIndex = 41;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.lblUsuario.Font = new System.Drawing.Font("HP Simplified", 12.25F);
+            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(204)))), ((int)(((byte)(200)))));
+            this.lblUsuario.Location = new System.Drawing.Point(122, 736);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(61, 20);
+            this.lblUsuario.TabIndex = 43;
+            this.lblUsuario.Text = "usuario";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.label2.Font = new System.Drawing.Font("HP Simplified", 20.25F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(204)))), ((int)(((byte)(200)))));
+            this.label2.Location = new System.Drawing.Point(12, 729);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 30);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "Usuario:";
+            // 
+            // panMostrar
+            // 
+            this.panMostrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.panMostrar.BackgroundImage = global::MAP2A1HotelHeavens.Properties.Resources.imgHotelFueraLP;
+            this.panMostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panMostrar.Font = new System.Drawing.Font("HP Simplified", 8.25F);
+            this.panMostrar.Location = new System.Drawing.Point(0, 129);
+            this.panMostrar.Name = "panMostrar";
+            this.panMostrar.Size = new System.Drawing.Size(1366, 641);
+            this.panMostrar.TabIndex = 21;
+            this.panMostrar.Paint += new System.Windows.Forms.PaintEventHandler(this.panMostrar_Paint);
             // 
             // picMinimizar
             // 
@@ -331,7 +313,6 @@
         private FontAwesome.Sharp.IconMenuItem imiCheckIn;
         private FontAwesome.Sharp.IconMenuItem imiCheckOut;
         private FontAwesome.Sharp.IconMenuItem imiControlUsuario;
-        private FontAwesome.Sharp.IconMenuItem imiVentas;
         private FontAwesome.Sharp.IconMenuItem imiHotel;
         private FontAwesome.Sharp.IconMenuItem imiAdmin;
         private FontAwesome.Sharp.IconMenuItem imiControlEmpleados;

@@ -26,7 +26,7 @@ namespace MAP2A1HotelHeavens
         {
             revisar();
             btnRegistrar.Enabled = false;
-            string nombre = txtNombre.Text, clave = txtClave.Text, correo = txtCorreo.Text;
+            string nombre = txtNombre.Text.Trim(), clave = txtClave.Text.Trim(), correo = txtCorreo.Text.Trim();
             string mensaje = string.Empty;
             Empleado usr = new Empleado()
             {
