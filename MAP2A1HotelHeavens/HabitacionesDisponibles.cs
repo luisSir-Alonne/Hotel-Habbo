@@ -274,6 +274,10 @@ namespace MAP2A1HotelHeavens
                 Fail(checkedListBoxOcupadas, "Selecciona una habitacion");
                 return;
             }
+            if (dgbUsuarios.Rows[Convert.ToInt32(txtIndice.Text)].Cells[""].Value.ToString() == "No seleccinonada")
+            {
+
+            }
             Console.WriteLine("Este es el estado de la habitacion" + habitacion.habitacion);
             string numero = habitacion.habitacion, tipo = habitacion.tipo;
                 int id = Convert.ToInt32(txtId.Text), idhabitacion = habitacion.idhabitacion;
