@@ -20,7 +20,7 @@ namespace MAP2A1HotelHeavens
 
         private static Empleado empleadoActual; 
         // Esto es para llamar al usuario actual, es practicamente un nuevo objeto pero en si el objeto que se va a utilizar en el programa para cargar los privilegios
-        public Form1(Empleado obj_empleado = null)
+        public Form1(Empleado obj_empleado)
         {
             if (obj_empleado == null)
             {

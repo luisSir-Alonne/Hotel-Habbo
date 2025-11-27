@@ -33,7 +33,7 @@ namespace MAP2A1HotelHeavens
             Empleado ousuario = new CN_Empleado().Listar().Where(u => u.nombre == textBoxUsuario.Text.Trim() && u.clave == textBoxContraseña.Text.Trim()).FirstOrDefault();
             if (ousuario != null)
             {
-                var n = new Form1();
+                var n = new Form1(ousuario);
                 n.Show();
                 this.Hide();
 
