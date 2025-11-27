@@ -112,6 +112,8 @@ namespace MAP2A1HotelHeavens
         }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            lblMensaje.Text = "";
+            epValidacion.Clear();
             revisar();
             btnRegistrar.Enabled = false;
             string nombre = txtNombre.Text.Trim(), clave = txtClave.Text.Trim(), correo = txtCorreo.Text.Trim();
@@ -184,7 +186,8 @@ namespace MAP2A1HotelHeavens
 
         private void btnVerClaves_Click(object sender, EventArgs e)
         {
-
+            lblMensaje.Text = "";
+            epValidacion.Clear();
             if (!dgbUsuarios.Columns["Clave"].Visible)
             {
                 btnVerClaves.Enabled = false;
@@ -220,6 +223,8 @@ namespace MAP2A1HotelHeavens
 
         private void btnDegradar_Click(object sender, EventArgs e)
         {
+            lblMensaje.Text = "";
+            epValidacion.Clear();
             revisar();
             string nombre = txtNombre.Text.Trim(), clave = txtClave.Text.Trim(), correo = txtCorreo.Text.Trim();
             string mensaje = string.Empty;
@@ -317,6 +322,8 @@ namespace MAP2A1HotelHeavens
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
+            lblMensaje.Text = "";
+            epValidacion.Clear();
             if (string.IsNullOrWhiteSpace(cbobusqueda.Text))
             {
                 Fail(cbobusqueda, "Selecciona una opcion");

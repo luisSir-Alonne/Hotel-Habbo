@@ -69,6 +69,8 @@ namespace MAP2A1HotelHeavens
         
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            lblMensaje.Text = "";
+            epValidacion.Clear();
             Console.WriteLine("Se ejecuto el boton de registrar");
             if (string.IsNullOrWhiteSpace(txtNombre.Text))
             { Fail(txtNombre, "Escribe el nombre completo."); return; }
@@ -190,6 +192,8 @@ namespace MAP2A1HotelHeavens
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
+            lblMensaje.Text = "";
+            epValidacion.Clear();
             if (string.IsNullOrWhiteSpace(cbobusqueda.Text))
             {
                 Fail(cbobusqueda, "Selecciona una opcion");
@@ -233,6 +237,8 @@ namespace MAP2A1HotelHeavens
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            lblMensaje.Text = "";
+            epValidacion.Clear();
             if ((txtId.Text == "0"))
             {
                 Fail(btnEliminar, "Selecciona el Usuario a Eliminar");

@@ -160,6 +160,9 @@ namespace MAP2A1HotelHeavens
 
         private void button2_Click(object sender, EventArgs e)
         {
+            lblMensaje.Text = "";
+            epValidacion.Clear();
+
             if (string.IsNullOrWhiteSpace(txtNombre.Text))
             {
                 Fail(txtNombre, "Inserta el nombre del huesped");

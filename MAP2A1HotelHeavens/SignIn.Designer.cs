@@ -342,6 +342,7 @@
             // 
             // cbobusqueda
             // 
+            this.cbobusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbobusqueda.FormattingEnabled = true;
             this.cbobusqueda.Location = new System.Drawing.Point(668, 113);
             this.cbobusqueda.Name = "cbobusqueda";

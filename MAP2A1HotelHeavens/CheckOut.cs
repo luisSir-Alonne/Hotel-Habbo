@@ -122,6 +122,8 @@ namespace MAP2A1HotelHeavens
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            lblMensaje.Text = "";
+            errorProvider1.Clear();
             if (string.IsNullOrWhiteSpace(cboBuscar.Text))
             {
                 Fail(cboBuscar, "Selecciona una opcion");
