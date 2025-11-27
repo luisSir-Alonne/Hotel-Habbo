@@ -132,7 +132,9 @@ namespace MAP2A1HotelHeavens
                 }
             }
             lblUsuario.Text = empleadoActual.nombre;
-
+            linkLabel1.BringToFront();
+            linkLabel2.BringToFront();
+            
         }
 
         private void imiAdmin_Click(object sender, EventArgs e)
@@ -169,6 +171,31 @@ namespace MAP2A1HotelHeavens
         {
             abrirFormulario(imiMembresia, new SignIn());
             cambiarColor();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+          
+                System.Diagnostics.Process.Start("https://docs.google.com/document/d/1s5L-NDZbTqtSMNrGLLdFvGNIirYcWU_X8vWQXHl4HKg/edit?usp=drive_link");
+            
+            
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://docs.google.com/document/d/1s5L-NDZbTqtSMNrGLLdFvGNIirYcWU_X8vWQXHl4HKg/edit?usp=drive_link");
+
+        }
+
+        private void linkLabel2_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://docs.google.com/document/d/1LFCIfcFfsHpfDmXSn_0OjT6ZqXGEy7oq/edit?usp=sharing&ouid=100974091851532108742&rtpof=true&sd=true");
+
         }
     }
 }
